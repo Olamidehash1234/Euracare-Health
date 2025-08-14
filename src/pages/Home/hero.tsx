@@ -26,7 +26,7 @@ export default function Hero() {
             <img
                 src="/home/lifeline.svg"
                 alt="Background Illustration"
-                className="hidden lg:block absolute right-0 top-[380px] -translate-y-1/2 lg:w-auto lg:h-auto"
+                className="hidden lg:block absolute right-0 top-[375px] -translate-y-1/2 lg:w-auto lg:h-auto"
                 style={{ zIndex: 1 }}
             />
 
@@ -56,7 +56,7 @@ export default function Hero() {
                                 placeholder="How can we help you?"
                                 className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D]
                            placeholder-[#0C2141] font-medium shadow-lg shadow-black/10
-                           focus:outline-none focus:ring-2 focus:ring-[#0f2d46]/30"
+                           focus:outline-none"
                             />
                         </div>
                     </form>
