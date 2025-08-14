@@ -5,15 +5,24 @@ export default function Navbar() {
 
   return (
     <nav className="sticky w-full z-40 bg-white border-b border-gray-200 top-[44px] lg:top-[52px]">
-      <div className="px-[24px] lg:px-[80px] md:px-[40px]">
-        <div className="flex justify-between h-[85px] items-center">
+      <div className="px-[16px] lg:px-[80px] md:px-[40px]">
+        <div className="flex justify-between lg:h-[85px] h-[58px] items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/"><img
-              src="/logo.svg"
-              alt="Euracare Logo"
-              className=""
-            /></a>
+            <a href="/">
+              {/* Desktop Logo */}
+              <img
+                src="/logo.svg"
+                alt="Euracare Logo"
+                className="hidden lg:block"
+              />
+              {/* Mobile Logo */}
+              <img
+                src="/logo-mobile.svg"
+                alt="Euracare Mobile Logo"
+                className="block lg:hidden"
+              />
+            </a>
           </div>
 
           {/* Desktop Menu */}

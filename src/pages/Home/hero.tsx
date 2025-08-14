@@ -30,7 +30,7 @@ export default function Hero() {
                 style={{ zIndex: 1 }}
             />
 
-            <div className="relative px-[24px] lg:px-20 h-[563px] flex items-center">
+            <div className="relative px-[16px] lg:px-20 h-[563px] flex items-center">
                 <div className="w-full lg:w-[712px] lg:mb-[72px]">
                     {/* Heading */}
                     <h1 className="text-white font-medium leading-[30px] lg:leading-[63px] tracking-tight lg:tracking-[-1.5px] text-[24px] lg:text-[54px]">
@@ -54,12 +54,29 @@ export default function Hero() {
                                 type="text"
                                 id="hero-search"
                                 placeholder="How can we help you?"
-                                className="w-full h-14 lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D]
+                                className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D]
                            placeholder-[#0C2141] font-medium shadow-lg shadow-black/10
                            focus:outline-none focus:ring-2 focus:ring-[#0f2d46]/30"
                             />
                         </div>
                     </form>
+
+                    {/* Get Started & Call Button - mobile only */}
+                    <div className="block lg:hidden mt-[40px]">
+                        <div className="text-white text-[16px] font-medium mb-3 leading-[30px]">GET STARTED</div>
+                        <a
+                            href="tel:+23470038722273"
+                            className="w-full flex items-center justify-center border-[2px] border-white rounded-full py-3 px-4"
+                            style={{ minHeight: "55px" }}
+                        >
+                            <img
+                                src="/home/call.svg"
+                                alt="Call Icon"
+                                className="mr-[10px]"
+                            />
+                            <span className="text-white text-[16px] leading-[27px] font-medium">Call us today</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
