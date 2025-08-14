@@ -1,4 +1,4 @@
-// import HeroSection from './hero';
+import HeroSection from './hero';
 // import WhyChooseUs from './whychooseus';
 // import AboutPage from './about';
 // import ServicesPage from './services';
@@ -10,8 +10,8 @@
 const Homepage = () => {
   return (
     <div>
-        {/* <HeroSection />
-        <WhyChooseUs />
+        <HeroSection />
+        {/* <WhyChooseUs />
         <AboutPage />
         <ServicesPage />
         <TestimonialPage />
