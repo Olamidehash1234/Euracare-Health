@@ -4,8 +4,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 left-0 w-full z-50w-full z-40 bg-white border-b border-gray-200 top-[44px] lg:top-[52px]">
-      <div className="px-4 lg:px-[80px] md:px-[40px]">
+    <nav className="sticky w-full z-40 bg-white border-b border-gray-200 top-[44px] lg:top-[52px]">
+      <div className="px-[24px] lg:px-[80px] md:px-[40px]">
         <div className="flex justify-between h-[85px] items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">

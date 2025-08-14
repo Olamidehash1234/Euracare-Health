@@ -1,11 +1,17 @@
 export default function Hero() {
     return (
-        <section className="relative w-full h-full lg:pt-[100px]">
-            {/* Background Image */}
+        <section className="relative w-full lg:pt-[100px]">
+            {/* Background Image - Desktop */}
             <img
                 src="/home/hero.png"
                 alt="Happy family"
-                className="absolute inset-0 w-full h-full object-center lg:object-cover"
+                className="hidden lg:block absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Background Image - Mobile */}
+            <img
+                src="/home/hero-mobile.png"
+                alt="Happy family mobile"
+                className="block lg:hidden absolute inset-0 w-full h-full object-cover"
             />
 
             {/* Gradient Overlay */}
@@ -24,23 +30,23 @@ export default function Hero() {
                 style={{ zIndex: 1 }}
             />
 
-            <div className="relative px-4 lg:px-20 lg:h-[563px] h-[563px] flex items-center">
+            <div className="relative px-[24px] lg:px-20 h-[563px] flex items-center">
                 <div className="w-full lg:w-[712px] lg:mb-[72px]">
                     {/* Heading */}
-                    <h1 className="text-white font-medium leading-tight lg:leading-[63px] tracking-tight lg:tracking-[-1.5px] text-4xl lg:text-[54px]">
+                    <h1 className="text-white font-medium leading-[30px] lg:leading-[63px] tracking-tight lg:tracking-[-1.5px] text-[24px] lg:text-[54px]">
                         Get expert treatment,
                         <br />
                         focused on you
                     </h1>
 
                     {/* Search bar */}
-                    <form className="mt-6 lg:mt-[20px] w-full" onSubmit={(e) => e.preventDefault()}>
+                    <form className="mt-[20px] w-full" onSubmit={(e) => e.preventDefault()}>
                         <label htmlFor="hero-search" className="sr-only">
                             Search
                         </label>
                         <div className="relative w-full">
                             {/* Search icon */}
-                            <span className="absolute inset-y-0 left-[40px] flex items-center">
+                            <span className="absolute inset-y-0 left-[24px] lg:left-[40px] flex items-center">
                                 <img src="/home/search.svg" alt="" />
                             </span>
 
@@ -48,8 +54,8 @@ export default function Hero() {
                                 type="text"
                                 id="hero-search"
                                 placeholder="How can we help you?"
-                                className="w-full h-14 lg:h-[72px] lg:pl-[90px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white lg:text-[16px] text-[#02070D]
-                           placeholder-[#0C2141] shadow-lg shadow-black/10
+                                className="w-full h-14 lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D]
+                           placeholder-[#0C2141] font-medium shadow-lg shadow-black/10
                            focus:outline-none focus:ring-2 focus:ring-[#0f2d46]/30"
                             />
                         </div>
