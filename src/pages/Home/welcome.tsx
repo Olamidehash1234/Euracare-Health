@@ -34,7 +34,7 @@ export default function HeroEuracare() {
 
           {/* Video column */}
           <div className="w-full">
-            <div className="lg:h-[401px] h-[215px] overflow-hidden lg:rounded-[16px] rounded-[8px] shadow-xl bg-black">
+            <div className="lg:h-[401px] h-[270px] overflow-hidden lg:rounded-[16px] rounded-[8px] shadow-xl bg-black">
               <iframe
                 className="h-full w-full"
                 src={videoSrc}
