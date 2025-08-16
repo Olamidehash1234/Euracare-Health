@@ -1,7 +1,7 @@
 import HeroSection from './hero';
 import Welcome from './welcome'
 import Partner from './partners';
-// import ServicesPage from './services';
+import ServicesPage from './service';
 // import TestimonialPage from './testimonial';
 // import FAQ from './FAQ'
 // import Partners from './partners'
@@ -13,11 +13,7 @@ const Homepage = () => {
         <HeroSection />
         <Welcome />
         <Partner />
-        {/* <ServicesPage />
-        <TestimonialPage />
-        <FAQ/>
-        <Partners />
-        <Feedback /> */}
+        <ServicesPage />
     </div>
   );
 };

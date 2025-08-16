@@ -6,7 +6,7 @@ export default function HeroEuracare() {
   return (
     <section className="bg-white">
       <div className="px-[16px] lg:px-20">
-        <div className="grid items-center gap-[40px] py-[60px] lg:py-20 lg:grid-cols-2 lg:gap-[80px]">
+        <div className="grid items-center gap-[40px] pt-[60px] lg:py-20 lg:grid-cols-2 lg:gap-[80px]">
           {/* Text column */}
           <div>
             {/* Headline */}

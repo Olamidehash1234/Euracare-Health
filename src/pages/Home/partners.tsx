@@ -45,7 +45,7 @@ export default function InsurancePartners() {
   ];
 
   return (
-    <div className="bg-white py-8 px-4 lg:pl-20 lg:pr-0">
+    <div className="bg-white py-[40px] px-4 lg:pl-20 lg:pr-0 overflow-x-hidden">
       <div className="">
         <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8">
           {/* Label */}
@@ -55,29 +55,48 @@ export default function InsurancePartners() {
             </h3>
           </div>
           
-          {/* Partners Grid */}
+          {/* Partners Marquee */}
           <div className="flex-1">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 lg:gap-6 items-center">
-              {partners.map((partner, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center justify-center h-12 lg:h-14 transition-opacity hover:opacity-80"
-                >
-                  {partner.logo}
-                </div>
-              ))}
+            <div className=" overflow-x-hidden scrollbar-hide pr-4 lg:pr-8">
+              <div className="flex items-center gap-[40px] lg:gap-[94px] animate-marquee whitespace-nowrap">
+                {partners.map((partner, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center h-auto lg:h-auto transition-opacity hover:opacity-80 min-w-[150px]"
+                  >
+                    {partner.logo}
+                  </div>
+                ))}
+                {/* Duplicate for seamless marquee */}
+                {partners.map((partner, index) => (
+                  <div
+                    key={`dup-${index}`}
+                    className="flex items-center justify-center h-auto lg:h-auto transition-opacity hover:opacity-80 min-w-[150px]"
+                  >
+                    {partner.logo}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
         }
         .scrollbar-hide::-webkit-scrollbar {
           display: none;
+        }
+        .animate-marquee {
+          display: flex;
+          animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
       `}</style>
     </div>
