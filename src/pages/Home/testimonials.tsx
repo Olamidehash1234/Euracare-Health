@@ -1,85 +1,141 @@
-import React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from 'react';
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
-type Testimonial = {
-  id: number;
-  image: string;
-  quote: string;
-  author: string;
-};
+const PatientTestimonials = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    image: "/images/testimonials/testimonial1.jpg",
-    quote: "Caring and Comprehensive Antenatal Care",
-    author: "Halima Yusuf (Antenatal & Postnatal Care)",
-  },
-  {
-    id: 2,
-    image: "/images/testimonials/testimonial2.jpg",
-    quote: "Life–Changing Cardiology Support",
-    author: "Mr. Chuka Nwokedi (Interventional Cardiology)",
-  },
-  {
-    id: 3,
-    image: "/images/testimonials/testimonial3.jpg",
-    quote: "Exceptional Service and Professionalism",
-    author: "Mrs. Lola Adebayo (General Medicine)",
-  },
-];
+  const testimonials = [
+    {
+      id: 2,
+      quote: "Caring and Comprehensive Antenatal Care",
+      author: "Halima Yusuf",
+      department: "Antenatal & Postnatal Care",
+      image: "/api/placeholder/400/300",
+      video: "/api/placeholder/400/300"
+    },
+    {
+      id: 2,
+      quote: "Life-Changing Cardiology Support",
+      author: "Mr. Chuka Nwokedi",
+      department: "Interventional Cardiology",
+      image: "/api/placeholder/400/300"
+    },
+    {
+      id: 1,
+      quote: "Exceptional Service and Professionalism",
+      author: "Mrs. Lola Adebayo",
+      department: "General Medicine",
+      image: "/api/placeholder/400/300"
+    }
+  ];
 
-const TestimonialsSection: React.FC = () => {
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const getVisibleSlides = () => {
+    const slides = [];
+    for (let i = 0; i < 3; i++) {
+      const index = (currentSlide + i) % testimonials.length;
+      slides.push(testimonials[index]);
+    }
+    return slides;
+  };
+
   return (
-    <section className="px-6 md:px-16 lg:px-24 py-12 bg-white">
-      {/* Section Header */}
-      <div className="flex justify-between items-center mb-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-          What Our Patients <br /> Have To Say
-        </h2>
+    <div className="bg-white pb-[60px] lg:pb-[80px] lg:pt-0 px-4 lg:px-20">
+      <div className="">
+        {/* Header Section */}
+        <div className="flex justify-between items-end mb-[30px] lg:mb-[40px]">
+          <div>
+            <h2 className="text-[24px] lg:text-[40px] lg:tracking-[-0.8px] tracking-[-0.5px] font-medium text-[#02070D] leading-[40px]">
+              What Our Patients <br className='hidden lg:block'/>
+              Have To Say
+            </h2>
+          </div>
 
-        {/* Arrows */}
-        <div className="hidden md:flex items-center gap-3">
-          <button className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-200 hover:bg-gray-300 transition">
-            <ChevronLeft className="w-5 h-5 text-gray-700" />
-          </button>
-          <button className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-900 hover:bg-blue-800 transition">
-            <ChevronRight className="w-5 h-5 text-white" />
-          </button>
+          {/* Navigation Arrows */}
+          <div className=" hidden lg:flex space-x-3">
+            <button
+              onClick={prevSlide}
+              className="w-12 h-12 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200 flex items-center justify-center"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-700" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-900 transition-colors duration-200 flex items-center justify-center"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-6 h-6 text-white" />
+            </button>
+          </div>
+        </div>
+
+        {/* Testimonials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[40px]">
+          {getVisibleSlides().map((testimonial, index) => (
+            <div key={`${testimonial.id}-${currentSlide}-${index}`} className="flex flex-col rounded-2xl overflow-hidden shadow-sm">
+              {/* Video Section */}
+              <div className="relative w-full" style={{ height: 240 }}>
+                <video
+                  className="w-full h-full object-cover"
+                  src={testimonial.video || ""}
+                  poster={testimonial.image}
+                  controls={false}
+                  muted
+                  loop
+                  autoPlay
+                  style={{ background: "#eee" }}
+                />
+                {/* Watch Video Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <button
+                    className="flex items-center gap-[6px] px-[20px] py-[10px] rounded-full bg-[#0C2141] text-white text-[14px] leading-[20px] font-medium shadow-lg hover:bg-[#0B1F37] transition"
+                    aria-label="Watch Video"
+                  >
+                    <img src="/video-circle.svg" alt="" />
+                    <span className="text-base font-semibold">Watch Video</span>
+                  </button>
+                </div>
+              </div>
+
+              {/* Quote & Author Section */}
+              <div
+                className="flex flex-col justify-between h-full lg:p-[30px] p-[20px]"
+                style={{ background: "#FEF8F5", height: 162 }}
+              >
+                <h3 className="text-[20px] lg:text-[26px] tracking-[-0.5px] lg:tracking-[-1.56px] font-medium lg:leading-[34px] text-gray-900 mb-[10px] leading-[34px]">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </h3>
+                <p className="font-semibold text-[14px] leading-[24px] italic text-[#000000] tracking-[-0.3px]">
+                  — {testimonial.author} ({testimonial.department})
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile Navigation Dots */}
+        <div className="flex justify-center space-x-2 mt-8 md:hidden">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors duration-200 ${index === currentSlide ? 'bg-blue-900' : 'bg-gray-300'
+                }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
-
-      {/* Testimonials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((t) => (
-          <div
-            key={t.id}
-            className="bg-[#fefaf9] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition"
-          >
-            {/* Image with Overlay Button */}
-            <div className="relative">
-              <img
-                src={t.image}
-                alt={t.author}
-                className="w-full h-56 object-cover"
-              />
-              <button className="absolute inset-0 m-auto w-36 py-2 rounded-full bg-blue-900 text-white font-medium flex items-center justify-center shadow-md hover:bg-blue-800 transition">
-                ▶ Watch Video
-              </button>
-            </div>
-
-            {/* Quote & Author */}
-            <div className="p-5">
-              <p className="text-lg font-semibold italic text-gray-900">
-                “{t.quote}”
-              </p>
-              <p className="mt-3 text-sm text-gray-700">— {t.author}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+    </div>
   );
 };
 
-export default TestimonialsSection;
+export default PatientTestimonials;

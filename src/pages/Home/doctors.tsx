@@ -38,7 +38,7 @@ const doctors: Doctor[] = [
 
 const DoctorsSection: React.FC = () => {
   return (
-    <section className="px-[16px] lg:px-20 py-[60px] lg:py-[80px] bg-white">
+    <section className="px-[16px] lg:px-20 pt-[60px] pb-[30px] lg:py-[80px] bg-white">
       {/* Section Header */}
       <div className="flex justify-between items-end mb-[43px] lg:mb-[60px]">
         <div>
