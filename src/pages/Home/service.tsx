@@ -43,7 +43,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/cardiac.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -74,7 +74,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/back.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -106,7 +106,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/dentist.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -139,7 +139,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/postnatal.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -171,7 +171,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/weight.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -203,7 +203,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/dermatology.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -234,7 +234,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="https://images.unsplash.com/photo-1584433144859-1fc3ab64a957?q=80&w=400&auto=format&fit=crop"
+                    src="/home/dermatology.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"

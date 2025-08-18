@@ -1,31 +1,40 @@
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  department: string;
+  image: string;
+  video?: string | null;
+}
+
 const PatientTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
-      id: 2,
+      id: 1,
       quote: "Caring and Comprehensive Antenatal Care",
       author: "Halima Yusuf",
       department: "Antenatal & Postnatal Care",
-      image: "/api/placeholder/400/300",
-      video: "/api/placeholder/400/300"
+      image: "/home/test-img.png",
+      video: null
     },
     {
       id: 2,
       quote: "Life-Changing Cardiology Support",
       author: "Mr. Chuka Nwokedi",
       department: "Interventional Cardiology",
-      image: "/api/placeholder/400/300"
+      image: "/home/test-img.png"
     },
     {
-      id: 1,
+      id: 3,
       quote: "Exceptional Service and Professionalism",
       author: "Mrs. Lola Adebayo",
       department: "General Medicine",
-      image: "/api/placeholder/400/300"
+      image: "/home/test-img.png"
     }
   ];
 
@@ -38,7 +47,7 @@ const PatientTestimonials = () => {
   };
 
   const getVisibleSlides = () => {
-    const slides = [];
+    const slides: Testimonial[] = [];
     for (let i = 0; i < 3; i++) {
       const index = (currentSlide + i) % testimonials.length;
       slides.push(testimonials[index]);
@@ -91,18 +100,36 @@ const PatientTestimonials = () => {
             >
               {/* Video Section */}
               <div className="relative w-full" style={{ height: 240 }}>
-                <video
-                  className="w-full h-full object-cover"
-                  src={testimonial.video || ""}
-                  poster={testimonial.image}
-                  controls={false}
-                  muted
-                  loop
-                  autoPlay
-                  style={{ background: "#eee" }}
-                />
+                {testimonial.video ? (
+                  <>
+                    <div className="absolute inset-0 bg-[#01010199] z-10"></div>
+                    <video
+                      className="w-full h-full object-cover"
+                      src={testimonial.video}
+                      poster={testimonial.image}
+                      controls={false}
+                      muted
+                      loop
+                      autoPlay
+                      playsInline
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        e.currentTarget.poster = testimonial.image;
+                      }}
+                    />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-[#01010199] z-10"></div>
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.author} 
+                      className="w-full h-full object-cover"
+                    />
+                  </>
+                )}
                 {/* Watch Video Button Overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center z-20">
                   <button
                     className="flex items-center gap-[6px] px-[20px] py-[10px] rounded-full bg-[#0C2141] text-white text-[14px] leading-[20px] font-medium shadow-lg hover:bg-[#0B1F37] transition"
                     aria-label="Watch Video"
