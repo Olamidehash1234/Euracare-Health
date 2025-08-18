@@ -4,8 +4,7 @@ import Partner from './partners';
 import ServicesPage from './service';
 import Doctors from './doctors';
 import TestimonialsSec from './testimonials'
-// import Partners from './partners'
-// import Feedback from './feedback'
+import NewsSection from './news'
 
 const Homepage = () => {
   return (
@@ -16,6 +15,7 @@ const Homepage = () => {
         <ServicesPage />
         <Doctors />
         <TestimonialsSec />
+        <NewsSection />
     </div>
   );
 };

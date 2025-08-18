@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PatientTestimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -53,13 +53,13 @@ const PatientTestimonials = () => {
         <div className="flex justify-between items-end mb-[30px] lg:mb-[40px]">
           <div>
             <h2 className="text-[24px] lg:text-[40px] lg:tracking-[-0.8px] tracking-[-0.5px] font-medium text-[#02070D] leading-[40px]">
-              What Our Patients <br className='hidden lg:block'/>
+              What Our Patients <br className='hidden lg:block' />
               Have To Say
             </h2>
           </div>
 
           {/* Navigation Arrows */}
-          <div className=" hidden lg:flex space-x-3">
+          <div className=" hidden lg:flex space-x-[10px]">
             <button
               onClick={prevSlide}
               className="w-12 h-12 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200 flex items-center justify-center"
@@ -77,10 +77,18 @@ const PatientTestimonials = () => {
           </div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[40px]">
+        {/* Testimonials Grid - Modified for mobile */}
+        <div className="block lg:grid lg:grid-cols-3 lg:gap-[40px]">
           {getVisibleSlides().map((testimonial, index) => (
-            <div key={`${testimonial.id}-${currentSlide}-${index}`} className="flex flex-col rounded-2xl overflow-hidden shadow-sm">
+            <div 
+              key={`${testimonial.id}-${currentSlide}-${index}`} 
+              className={`
+                flex flex-col rounded-2xl overflow-hidden
+                ${index === 0 ? 'block' : 'hidden'} 
+                lg:block 
+                ${index > 0 ? 'lg:mt-0 mt-6' : ''}
+              `}
+            >
               {/* Video Section */}
               <div className="relative w-full" style={{ height: 240 }}>
                 <video
@@ -107,8 +115,8 @@ const PatientTestimonials = () => {
 
               {/* Quote & Author Section */}
               <div
-                className="flex flex-col justify-between h-full lg:p-[30px] p-[20px]"
-                style={{ background: "#FEF8F5", height: 162 }}
+                className="flex flex-col justify-between h-[142px] lg:h-[162px] h-full lg:p-[30px] p-[20px]"
+                style={{ background: "#FEF8F5"}}
               >
                 <h3 className="text-[20px] lg:text-[26px] tracking-[-0.5px] lg:tracking-[-1.56px] font-medium lg:leading-[34px] text-gray-900 mb-[10px] leading-[34px]">
                   &ldquo;{testimonial.quote}&rdquo;
@@ -121,17 +129,22 @@ const PatientTestimonials = () => {
           ))}
         </div>
 
-        {/* Mobile Navigation Dots */}
-        <div className="flex justify-center space-x-2 mt-8 md:hidden">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${index === currentSlide ? 'bg-blue-900' : 'bg-gray-300'
-                }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+        {/* Mobile Navigation - Modified position and styling */}
+        <div className="flex lg:hidden space-x-[10px] mt-[30px]">
+          <button
+            onClick={prevSlide}
+            className="w-12 h-12 rounded-full bg-gray-300 hover:bg-gray-400 transition-colors duration-200 flex items-center justify-center"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6 text-gray-700" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="w-12 h-12 rounded-full bg-[#0C2141] hover:bg-[#0B1F37] transition-colors duration-200 flex items-center justify-center"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
         </div>
       </div>
     </div>
