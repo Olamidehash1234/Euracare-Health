@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import SearchModal from '../../components/SearchModal';
+
 export default function Hero() {
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+
     return (
         <section className="relative w-full lg:pt-[100px]">
             {/* Background Image - Desktop */}
@@ -40,12 +45,11 @@ export default function Hero() {
                     </h1>
 
                     {/* Search bar */}
-                    <form className="mt-[20px] w-full" onSubmit={(e) => e.preventDefault()}>
+                    <div className="mt-[20px] w-full">
                         <label htmlFor="hero-search" className="sr-only">
                             Search
                         </label>
                         <div className="relative w-full">
-                            {/* Search icon */}
                             <span className="absolute inset-y-0 left-[24px] lg:left-[40px] flex items-center">
                                 <img src="/home/search.svg" alt="" />
                             </span>
@@ -54,12 +58,12 @@ export default function Hero() {
                                 type="text"
                                 id="hero-search"
                                 placeholder="How can we help you?"
-                                className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D]
-                           placeholder-[#0C2141] font-medium shadow-lg shadow-black/10
-                           focus:outline-none"
+                                className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#5D6B80] rounded-full bg-white text-[14px] lg:text-[16px] text-[#02070D] placeholder-[#0C2141] font-medium shadow-lg shadow-black/10 focus:outline-none cursor-pointer"
+                                onClick={() => setIsSearchOpen(true)}
+                                readOnly
                             />
                         </div>
-                    </form>
+                    </div>
 
                     {/* Get Started & Call Button - mobile only */}
                     <div className="block lg:hidden mt-[40px]">
@@ -79,6 +83,12 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+
+            {/* Search Modal */}
+            <SearchModal 
+                isOpen={isSearchOpen} 
+                onClose={() => setIsSearchOpen(false)} 
+            />
         </section>
     );
 }
