@@ -27,7 +27,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-[30px]">
-            <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <a href="/about" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               About Euracare
             </a>
             <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
@@ -93,7 +93,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className=" md:flex lg:hidden px-4 pb-4 space-y-3">
-          <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <a href="/about" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             About Euracare
           </a>
           <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
