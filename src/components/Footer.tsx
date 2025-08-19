@@ -21,7 +21,7 @@ const EuracareFooter = () => {
     <footer className="bg-white border-t border-[#00000033]">
       {/* Header Section */}
       <div className="px-[16px] lg:px-20 py-[60px] lg:py-[80px]">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-[30px] lg:mb-[40px]">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center lg:flex-row lg:items-center lg:justify-between mb-[30px] lg:mb-[40px]">
           {/* Logo */}
           <img src="/logo-ft.svg" alt="Euracare Logo" className="h-[50px] w-[135px] lg:h-auto lg:w-auto mb-[10px] lg:mb-0"/>
 
@@ -54,7 +54,7 @@ const EuracareFooter = () => {
         <div className='w-full h-[1px] bg-[#626F82] mb-[20px] lg:mb-[64px]'></div>
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] lg:gap-[50px] mb-[20px] lg:mb-[40px]">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-[20px] lg:gap-[50px] mb-[20px] lg:mb-[40px]">
           {/* About Euracare */}
           <div>
             <h3 
@@ -168,7 +168,7 @@ const EuracareFooter = () => {
         <div className="border-t border-[#626F82] pt-6 lg:pt-[20px]">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             {/* Legal Links */}
-            <div className="flex flex-wrap items-center space-x-6 lg:space-x-[24px] mb-4 lg:mb-0">
+            <div className="flex flex-wrap items-center sm:justify-center space-x-6 lg:space-x-[24px] mb-4 lg:mb-0">
               <a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[14px] lg:tracking-[-0.54px] transition-colors font-medium">Cookie settings</a>
               <span className="text-[#010101]">·</span>
               <a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[14px] lg:tracking-[-0.54px] transition-colors font-medium">Privacy Policy</a>
@@ -177,7 +177,7 @@ const EuracareFooter = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-[#010101] text-[14px] lg:leading-[21px] font-medium lg:tracking-[-0.42px]">
+            <div className="text-[#010101] sm:text-center text-[14px] lg:leading-[21px] font-medium lg:tracking-[-0.42px]">
               <p>Euracare Nigeria. Registration number: XXXXXXXXXXX.  © Copyright 2025 - Euracare Nigeria</p>
             </div>
           </div>

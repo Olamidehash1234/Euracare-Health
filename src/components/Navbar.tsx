@@ -92,7 +92,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden px-4 pb-4 space-y-3">
+        <div className=" md:flex lg:hidden px-4 pb-4 space-y-3">
           <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             About Euracare
           </a>

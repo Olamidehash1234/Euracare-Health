@@ -38,7 +38,7 @@ export default function ServiceLines() {
 
           {/* Right column */}
           <div className="flex flex-col lg:flex-row pb-16 lg:pb-[80px] gap-[16px]">
-            <div className="flex flex-col gap-[20px] lg:py-[260px]">
+            <div className="flex flex-col lg:flex lg:flex-col sm:grid sm:grid-cols-3 gap-[20px] lg:py-[260px]">
               <div>
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
@@ -134,7 +134,7 @@ export default function ServiceLines() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-[20px] lg:pt-[80px]">
+            <div className="flex flex-col lg:flex lg:flex-col sm:order-1 sm:grid sm:grid-cols-3 gap-[20px] lg:pt-[80px]">
               <div>
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">

@@ -68,7 +68,7 @@ const EuracareNews = () => {
 
           {/* News Grid - Takes up 3 columns on desktop */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-[16px] h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-[16px] h-full">
               {newsItems.map((item, index) => (
                 <div 
                   key={index} 
@@ -91,7 +91,7 @@ const EuracareNews = () => {
           </div>
         </div>
 
-        <div className="mt-[16px] grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-[16px]">
+        <div className="mt-[16px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[16px]">
           {additionalNews.map((item, index) => (
             <div key={index} className="bg-white rounded-[12px] p-[20px] lg:p-[25px] transition-all duration-200 cursor-pointer group justify-between">
               <div>
