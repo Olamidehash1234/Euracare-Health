@@ -1,10 +1,11 @@
 import Hero from './hero';
+import Doctors from './doctors'
 
 export default function Contact() {
     return (
         <div>
             <Hero />
-            {/* Additional content for the Contact page can be added here */}
+            <Doctors />
         </div>
     );
 }
