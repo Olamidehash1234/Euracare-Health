@@ -1,10 +1,11 @@
-// import Hero from './hero'
-// import Consult from './consult'
+import Hero from './hero'
+import Service from './service'
+
 export default function ServicePage() {
     return (
         <div>
-            {/* <Hero />
-            <Consult /> */}
+            <Hero />
+            <Service />
         </div>
     );
 }

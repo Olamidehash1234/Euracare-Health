@@ -30,10 +30,10 @@ export default function Navbar() {
             <a href="/about" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               About Euracare
             </a>
-            <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <a href="/services" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               Our Services
             </a>
-            <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <a href="/doctors" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               Find a Doctor
             </a>
             <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
@@ -96,10 +96,10 @@ export default function Navbar() {
           <a href="/about" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             About Euracare
           </a>
-          <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <a href="/services" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             Our Services
           </a>
-          <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <a href="/doctors" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             Find a Doctor
           </a>
           <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">

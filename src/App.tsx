@@ -5,7 +5,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Consult from './pages/Consultation'
 // import PatientPortal from './pages/patientPortal'
-import Contact from './pages/Contact';
+import FindDoctor from './pages/FindDoctor';
 // import FeedbackForm from './pages/feedbackform';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Route path="/appointment" element={<Consult />} />
           {/* <Route path="/feedback" element={<FeedbackForm />} /> */}
           {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/doctors" element={<FindDoctor />} />
         </Route>
       </Routes>
     </BrowserRouter>
