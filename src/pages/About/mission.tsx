@@ -13,21 +13,21 @@ export default function MissionVision() {
 
   return (
     <section className="bg-white text-[#0B1F3B]">
-      <div className="px-4 lg:px-20 py-12 lg:py-20">
+      <div className="px-4 lg:px-20 py-[40px] lg:py-20">
         {/* Eyebrow */}
-        <p className="text-xs lg:text-[14px] font-medium lg:leading-[20px] uppercase text-[#0C2141]">
+        <p className="text-[14px] font-medium leading-[20px] uppercase text-[#0C2141]">
           Euracare Mission and Vision
         </p>
 
         {/* Main Heading */} 
-        <h1 className="text-[24px] lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-tight lg:tracking-[-1.8px] max-w-[719px]">
+        <h1 className="mt-[4px] lg:mt-0 text-[22px] text-[#0C2141] lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-tight lg:tracking-[-1.8px] max-w-[719px]">
           Our mission is to commit to the care and
           <br className="hidden sm:block" />
           improvement of human life above all else.
         </h1>
 
         {/* Cards */}
-        <div className="mt-10 lg:mt-[40px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[25px]">
+        <div className="mt-[30px] lg:mt-[40px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] lg:gap-[25px]">
           {items.map((item, i) => (
             <div
               key={i}
@@ -41,9 +41,9 @@ export default function MissionVision() {
         </div>
 
         {/* Big Quote / Vision */}
-        <div className="mt-14 lg:mt-[60px]">
+        <div className="mt-[40px] lg:mt-[60px]">
           <div className="max-w-6xl mx-auto">
-            <p className="text-[28px] lg:text-[56px] font-medium lg:leading-[60px] tracking-tight lg:tracking-[-1.8px]">
+            <p className="text-[24px] leading-[30px] lg:text-[56px] font-medium lg:leading-[60px] tracking-tight lg:tracking-[-1.8px]">
               <span aria-hidden className="pr-2">
                 “
               </span>

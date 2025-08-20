@@ -1,6 +1,6 @@
 export default function ValuesSection() {
   return (
-    <section className="px-6 py-12 lg:px-[80px] lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[95px] ">
+    <section className="px-[16px] py-[60px] lg:px-[80px] lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[95px] ">
       {/* Left Image */}
       <div>
         <img
@@ -12,11 +12,11 @@ export default function ValuesSection() {
 
       {/* Right Content */}
       <div>
-        <h2 className="text-3xl lg:text-[50px] font-medium text-[#0C2141] leading-snug lg:leading-[50px] lg:tracking-[-1.8px] mb-6 lg:mb-[20px]">
-          Actions speak louder <br /> than words
+        <h2 className="text-[20px] lg:text-[50px] font-medium text-[#0C2141] leading-snug lg:leading-[50px] lg:tracking-[-1.8px] mb-6 lg:mb-[20px]">
+          Actions speak louder <br className="hidden lg:block"/> than words
         </h2>
 
-        <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[16px] leading-relaxed lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
+        <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[14px] lg:text-[16px] leading-relaxed lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
           <p>
             At Euracare Hospital, our unwavering commitment is to the health,
             dignity, and overall well-being of every individual we have the

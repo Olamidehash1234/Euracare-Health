@@ -5,7 +5,7 @@ export default function TestimonialWithCTA() {
                 {/* Testimonial */}
                 <div className=" mx-auto max-w-6xl">
                     <blockquote>
-                        <p className="text-[28px] lg:text-[56px] font-medium lg:leading-[60px] tracking-tight lg:tracking-[-1.8px]">
+                        <p className="text-[24px] leading-[30px] lg:text-[56px] font-medium lg:leading-[60px] tracking-tight lg:tracking-[-1.8px]">
                             <span aria-hidden className="pr-2">“</span>
                             From the moment I walked into Euracare, I knew I was in good hands. The
                             reception staff were warm and efficient, and my doctor took time to explain
@@ -27,7 +27,7 @@ export default function TestimonialWithCTA() {
                 </div>
 
                 {/* Image + CTA */}
-                <div className="mt-10 lg:mt-[80px] flex fle-col lg:flex-row justify-between lg:gap-[127px] gap-8 items-center">
+                <div className="mt-[60px] lg:mt-[80px] flex flex-col lg:flex-row justify-between lg:gap-[127px] gap-[20px] items-center">
                     {/* Image */}
                     <div className="">
                         <div className="relative overflow-hidden rounded-2xl shadow-[0_1px_0_rgba(0,0,0,0.03)]">
@@ -40,7 +40,7 @@ export default function TestimonialWithCTA() {
                     </div>
 
                     {/* Right content */}
-                    <div className="flex flex-col justify-end gap-[197px]">
+                    <div className="flex flex-col justify-end lg:gap-[197px]">
                         <div>
                             <h3 className="text-2xl lg:text-[40px] font-medium tracking-tight lg:tracking-[-1.8px] lg:leading-[48px]">
                                 Euracare Code of conduct

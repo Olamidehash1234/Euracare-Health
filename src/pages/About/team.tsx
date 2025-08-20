@@ -56,25 +56,25 @@ const LeadershipTeam = () => {
     ];
 
     return (
-        <div className="bg-[#FEF8F5] py-12 px-4 lg:py-20 lg:px-20">
+        <div className="bg-[#FEF8F5] py-[40px] px-4 lg:py-20 lg:px-20">
             <div className="">
                 {/* Header Section */}
-                <div className="flex flex-col lg:flex-row items-end justify-between mb-[30px] lg:mb-[40px]">
+                <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-[30px] lg:mb-[40px]">
                     <div>
                         <p className="text-[14px] font-medium leading-[20px] uppercase text-[#0C2141]">
                             OUR LEADERSHIP EXPERTISE
                         </p>
-                        <h1 className="mt-4 text-3xl lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-[-1.8px] text-[#0B1F3B] max-w-[562px]">
+                        <h1 className="mt-[4px] text-[#0C2141] lg:mt-0 text-[22px] lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-tight lg:tracking-[-1.8px] max-w-[562px]">
                             A diverse team driven by expertise, compassion, and commitment.
                         </h1>
                     </div>
 
                     {/* Tab Toggle */}
-                    <div className="inline-flex rounded-[12px] bg-white overflow-hidden shadow-sm border border-[#000000]">
+                    <div className="inline-flex rounded-[12px] mt-[20px] bg-white overflow-hidden border border-[#000000]">
                         <button
                             onClick={() => setActiveTab('Board of Directors')}
-                            className={`px-6 py-3 lg:px-[49px] lg:py-[20px] lg:tracking-[-0.3px] text-[16px] font-medium transition-all duration-100 ${activeTab === 'Board of Directors'
-                                    ? 'bg-slate-800 text-white'
+                            className={`px-6 py-3 lg:px-[49px] lg:py-[20px] lg:tracking-[-0.3px] text-[14px] lg:text-[16px] font-medium transition-all duration-100 ${activeTab === 'Board of Directors'
+                                    ? 'bg-[#0C2141] text-white'
                                     : 'text-[#0C2141] hover:text-gray-900'
                                 }`}
                         >
@@ -82,8 +82,8 @@ const LeadershipTeam = () => {
                         </button>
                         <button
                             onClick={() => setActiveTab('Our Team')}
-                            className={`px-6 py-3 lg:px-[78px] lg:py-[20px] text-[16px] lg:tracking-[-0.3px] font-medium transition-all duration-100 ${activeTab === 'Our Team'
-                                    ? 'bg-slate-800 text-white'
+                            className={`px-6 py-3 lg:px-[78px] lg:py-[20px] text-[14px] lg:text-[16px] lg:tracking-[-0.3px] font-medium transition-all duration-100 ${activeTab === 'Our Team'
+                                    ? 'bg-[#0C2141] text-white'
                                     : 'text-[#0C2141] hover:text-gray-900'
                                 }`}
                         >
