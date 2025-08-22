@@ -1,8 +1,12 @@
 import { useParams } from "react-router-dom";
-import { services } from "../data";
+import { services } from "../../../../data/services";
 import Hero from "./hero";
 import Button from "./button"
 import Overview from './overview'
+import Doctor from './doctors'
+import Test from './test';
+import Conditions from './conditions';
+import Faq from './faq'
 // import Details from "./details"; // Add more sections as needed
 
 export default function ServiceDynamicPage() {
@@ -18,6 +22,10 @@ export default function ServiceDynamicPage() {
             <Hero service={service} />
             <Button />
             <Overview service={service} />
+            <Doctor service={service} />
+            <Test service={service} />
+            <Conditions service={service} />
+            <Faq service={service} />
             {/* <Details service={service} /> */}
             {/* Add more sections here */}
         </div>

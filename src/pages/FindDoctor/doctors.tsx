@@ -1,64 +1,6 @@
 import { useState } from "react";
-
-type Doctor = {
-  id: number;
-  name: string;
-  specialty: string;
-  image: string;
-};
-
-const doctors: Doctor[] = [
-  {
-    id: 1,
-    name: "Dr Hammed Ninalowo",
-    specialty: "Interventional Radiology, Oncology, Vascular Surgery",
-    image: "/home/doctors/doc1.png",
-  },
-  {
-    id: 2,
-    name: "Dr Pearl Aba Anoa Scott",
-    specialty: "Oncology",
-    image: "/home/doctors/doc2.png",
-  },
-  {
-    id: 3,
-    name: "Dr Asare Kwaku Offei",
-    specialty:
-      "Gastroenterology, General Surgery, Hepatobiliary Surgeon, Oncology",
-    image: "/home/doctors/doc3.png",
-  },
-  {
-    id: 4,
-    name: "Dr Theodora Pepera",
-    specialty: "Antenatal & Postnatal Care, Gynaecology",
-    image: "/home/doctors/doc4.png",
-  },
-  {
-    id: 5,
-    name: "Dr Theodora Pepera",
-    specialty: "Antenatal & Postnatal Care, Gynaecology",
-    image: "/home/doctors/doc4.png",
-  },
-  {
-    id: 6,
-    name: "Dr Hammed Ninalowo",
-    specialty: "Interventional Radiology, Oncology, Vascular Surgery",
-    image: "/home/doctors/doc1.png",
-  },
-  {
-    id: 7,
-    name: "Dr Theodora Pepera",
-    specialty: "Antenatal & Postnatal Care, Gynaecology",
-    image: "/home/doctors/doc4.png",
-  },
-  {
-    id: 8,
-    name: "Dr Theodora Pepera",
-    specialty: "Antenatal & Postnatal Care, Gynaecology",
-    image: "/home/doctors/doc4.png",
-  },
-  
-];
+import type { Doctor } from "../../data/doctors";
+import { doctors } from "../../data/doctors";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
@@ -68,7 +10,7 @@ export default function ServicesGrid() {
     // Filter doctors based on search query
     const filteredDoctors = doctors.filter((doc) =>
         doc.name.toLowerCase().includes(query.toLowerCase()) ||
-        doc.specialty.toLowerCase().includes(query.toLowerCase())
+        doc.specialty.some(s => s.toLowerCase().includes(query.toLowerCase()))
     );
 
     // Calculate pagination
@@ -175,22 +117,17 @@ export default function ServicesGrid() {
             {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px] lg:gap-y-[20px]">
                 {currentDoctors.map((doc) => (
-                    <div
-                        key={doc.id}
-                        className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px] flex-grow"
-                    >
-                        {/* Doctor Image */}
-                        <img
-                            src={doc.image}
-                            alt={doc.name}
-                            className="object-cover mb-[10px]"
-                        />
+                    <div key={doc.id} className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px] flex-grow">
+                        <img src={doc.image} alt={doc.name} className="object-cover mb-[10px]" />
                         <div className="flex flex-col flex-1 justify-between w-full">
                             <div>
-                                <h3 className="text-[16px] font-medium lg:tracking-[-0.5px] text-[#02070D] lg:leading-[26px]">{doc.name}</h3>
-                                <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">{doc.specialty}</p>
+                                <h3 className="text-[16px] font-medium lg:tracking-[-0.5px] text-[#02070D] lg:leading-[26px]">
+                                    {doc.name}
+                                </h3>
+                                <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">
+                                    {doc.specialty.join(", ")}
+                                </p>
                             </div>
-                            {/* Profile Button */}
                             <button className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition">
                                 View Profile
                             </button>

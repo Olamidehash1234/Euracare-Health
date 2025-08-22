@@ -14,7 +14,7 @@ export default function MedicalNavigation() {
           {navItems.map((item, index) => (
             <div
               key={item.id}
-              className={`flex-1 px-6 py-4 lg:py-[22px] text-center cursor-pointer transition-colors duration-200 hover:bg-slate-700 ${
+              className={`flex-1 px-6 py-4 lg:py-[22px] text-center border-b-[1.5px] cursor-pointer transition-colors duration-200 hover:bg-slate-700 ${
                 index !== navItems.length - 1 ? 'border-r-[2px] border-[#F8F8F880]' : ''
               }`}
             >

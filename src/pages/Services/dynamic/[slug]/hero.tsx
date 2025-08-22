@@ -1,4 +1,4 @@
-import type { ServiceData } from "../data";
+import type { ServiceData } from "../../../../data/services";
 
 export default function Hero({ service }: { service: ServiceData }) {
     return (

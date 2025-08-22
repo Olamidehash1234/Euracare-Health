@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { services } from "./dynamic/data";
+import { services } from "../../data/services";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
