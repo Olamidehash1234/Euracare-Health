@@ -3,7 +3,7 @@ import type { ServiceData } from "../../../../data/services";
 export default function Test({ service }: { service: ServiceData }) {
     return (
         <div className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[80px] lg:pb-[0px]">
-            <div className="mb-[43px] lg:mb-[60px]">
+            <div className="mb-[30px] lg:mb-[60px]">
                 <p className="text-[14px] lg:mb-[10px] leading-[20px] font-medium text-[#02070D] uppercase">
                     Tests and Diagnostics
                 </p>
@@ -12,7 +12,7 @@ export default function Test({ service }: { service: ServiceData }) {
                 </h2>
             </div>
 
-            <div className="mt-[40px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
+            <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[20px] lg:gap-y-[40px] lg:gap-x-[25px]">
                 {service.testList?.map((v) => (
                     <article
                         key={v}
@@ -20,8 +20,8 @@ export default function Test({ service }: { service: ServiceData }) {
                     >
                         <div className="flex flex-col">
                             <div className="flex gap-[16px] items-center">
-                                <img src="/service-d/test.svg" alt="" />
-                                <h3 className="text-lg lg:text-[16px] font-normal tracking-tight lg:leading-[26px] lg:tracking-[-0.5px] text-[#02070D]">
+                                <img src="/service-d/test.svg" alt="" className="w-[32px] h-[32px] lg:h-auto lg:w-auto"/>
+                                <h3 className="text-[14px] lg:text-[16px] font-normal tracking-[-0.5px] leading-[20px] lg:leading-[26px] lg:tracking-[-0.5px] text-[#02070D]">
                                     {v}
                                 </h3>
                             </div>

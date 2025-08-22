@@ -7,7 +7,7 @@ export default function MedicalNavigation() {
   ];
 
   return (
-    <div className="sticky top-0 lg:top-[138px] w-full">
+    <div className="sticky top-[100px] z-40 lg:top-[138px] w-full">
       {/* Desktop Navigation */}
       <nav className="hidden lg:block bg-[#0C2141] text-white">
         <div className="flex">
@@ -33,7 +33,7 @@ export default function MedicalNavigation() {
           {navItems.map((item) => (
             <div
               key={item.id}
-              className="bg-[#0C2141] px-4 py-4 text-center cursor-pointer transition-colors duration-200 hover:bg-slate-700"
+              className="bg-[#0C2141] px-4 py-4 text-center border-b-[1.5px] cursor-pointer transition-colors duration-200 hover:bg-slate-700"
             >
               <div className="text-sm font-medium">
                 <span className="text-slate-300">{item.id}</span>
@@ -50,12 +50,12 @@ export default function MedicalNavigation() {
           {navItems.map((item, index) => (
             <div
               key={item.id}
-              className={`flex-shrink-0 px-6 py-4 text-center cursor-pointer transition-colors duration-200 hover:bg-slate-700 whitespace-nowrap ${
+              className={`flex-shrink-0 px-6 py-4 text-center border-b-[1.5px] cursor-pointer transition-colors duration-200 hover:bg-slate-700 whitespace-nowrap ${
                 index !== navItems.length - 1 ? 'border-r border-slate-600' : ''
               }`}
             >
-              <div className="text-sm font-medium">
-                <span className="text-slate-300">{item.id}</span>
+              <div className="font-normal">
+                <span className="text-[14px] text-slate-300">{item.id}</span>
                 <span className="ml-2 text-white">{item.title}</span>
               </div>
             </div>

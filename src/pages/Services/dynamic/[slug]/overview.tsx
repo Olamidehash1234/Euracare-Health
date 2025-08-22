@@ -6,17 +6,17 @@ export default function MedicalContentVideo({ service }: { service: ServiceData 
     const videoSrc = `https://www.youtube.com/embed/${videoId}?si=Q6VFw_wxLDZvBzs2`;
 
     return (
-        <div className="w-full px-4 py-8 lg:py-20 lg:px-[130px]">
+        <div className="w-full px-4 pt-[40px] pb-[103px] lg:py-20 lg:px-[130px]">
             {/* Text Content */}
-            <div className="mb-8 lg:mb-[40px]">
-                <p className="text-[#02070D] leading-relaxed text-justify text-sm lg:text-[18px] lg:leading-[32px]">
+            <div className="mb-[40px]">
+                <p className="text-[#02070D] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
                     {service.overviewText}
                 </p>
             </div>
 
             {/* Video Container */}
             <div className="w-full max-w-5xl mx-auto">
-                <div className="lg:h-[500px] h-[270px] overflow-hidden lg:rounded-[16px] rounded-[8px] shadow-xl bg-black">
+                <div className="lg:h-[500px] h-[215px] overflow-hidden lg:rounded-[16px] rounded-[8px] shadow-xl bg-black">
                     <iframe
                         className="h-full w-full"
                         src={videoSrc}
