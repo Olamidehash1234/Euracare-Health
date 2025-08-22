@@ -2,7 +2,7 @@ import type { ServiceData } from "../../../../data/services";
 
 export default function Test({ service }: { service: ServiceData }) {
     return (
-        <div className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[80px] lg:pb-[0px]">
+        <div id="tests" className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[80px] lg:pb-[0px]">
             <div className="mb-[30px] lg:mb-[60px]">
                 <p className="text-[14px] lg:mb-[10px] leading-[20px] font-medium text-[#02070D] uppercase">
                     Tests and Diagnostics

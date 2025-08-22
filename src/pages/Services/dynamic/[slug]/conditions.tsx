@@ -2,7 +2,7 @@ import type { ServiceData } from "../../../../data/services";
 
 export default function Conditions({ service }: { service: ServiceData }) {
     return (
-        <div className="px-[16px] pt-[0px] lg:px-[80px] lg:pt-[120px] lg:pb-[80px]">
+        <div id="conditions" className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[120px] lg:pb-[80px]">
             <div className="mb-[30px] lg:mb-[60px]">
                 <p className="text-[14px] lg:mb-[10px] leading-[20px] font-medium text-[#02070D] uppercase">
                     Conditions and Procedures
@@ -30,5 +30,5 @@ export default function Conditions({ service }: { service: ServiceData }) {
                 ))}
             </div>
         </div>
-    )
+    );
 }

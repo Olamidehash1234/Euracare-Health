@@ -68,5 +68,28 @@ export const services: ServiceData[] = [
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
     },
-    // ...add other services with unique slugs...
+    {
+        slug: "bariatric-weight-loss-surgery",
+        title: "Bariatric & Weight Loss Surgery",
+        description: "We offer safe, effective bariatric and weight loss surgeries—including gastric bypass and sleeve gastrectomy—to support long-term weight management, improve overall health, and reduce obesity-related conditions.",
+        image: "/services/weight.png",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Bariatric & Weight Loss Surgery service is dedicated to providing comprehensive care for individuals seeking weight loss solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include surgical and non-surgical options. We focus on addressing the root causes of obesity, promoting healthy lifestyle changes, and ensuring long-term success for our patients."
+    },
+    {
+        slug: "dentistry",
+        title: "Dentistry",
+        description: "We offer a comprehensive range of dental services, including preventive care, restorative treatments, and cosmetic procedures, to help you achieve and maintain a healthy, beautiful smile.",
+        image: "/services/dentist.png",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    },
+    {
+        slug: "dermatology",
+        title: "Dermatology",
+        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+        image: "/services/dermatology.png",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    },
 ];

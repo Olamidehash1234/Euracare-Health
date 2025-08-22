@@ -14,7 +14,7 @@ export default function ServiceDoctors({ service }: { service: ServiceData }) {
     // }
 
     return (
-        <div className="bg-[#0C2141] px-[16px] py-[60px] lg:px-[80px] lg:py-[80px]">
+        <div id="doctors" className="bg-[#0C2141] px-[16px] py-[60px] lg:px-[80px] lg:py-[80px]">
             <div className="mb-[40px] lg:mb-[60px]">
                 <p className="text-[14px] lg:mb-[10px] leading-[20px] font-medium text-white uppercase">
                     Our Doctors

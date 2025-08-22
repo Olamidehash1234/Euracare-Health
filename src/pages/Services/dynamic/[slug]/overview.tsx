@@ -6,7 +6,7 @@ export default function MedicalContentVideo({ service }: { service: ServiceData 
     const videoSrc = `https://www.youtube.com/embed/${videoId}?si=Q6VFw_wxLDZvBzs2`;
 
     return (
-        <div className="w-full px-4 pt-[40px] pb-[103px] lg:py-20 lg:px-[130px]">
+        <div id="overview" className="w-full px-4 py-8 lg:py-20 lg:px-[130px]">
             {/* Text Content */}
             <div className="mb-[40px]">
                 <p className="text-[#02070D] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
