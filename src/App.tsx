@@ -7,6 +7,7 @@ import Consult from './pages/Consultation'
 // import PatientPortal from './pages/patientPortal'
 import FindDoctor from './pages/FindDoctor';
 // import FeedbackForm from './pages/feedbackform';
+import ServiceDynamicPage from './pages/Services/dynamic/[slug]';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           {/* <Route path="/feedback" element={<FeedbackForm />} /> */}
           {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
           <Route path="/doctors" element={<FindDoctor />} />
+          <Route path="/services/dynamic/:slug" element={<ServiceDynamicPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

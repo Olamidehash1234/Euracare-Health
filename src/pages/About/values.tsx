@@ -1,5 +1,3 @@
-import React from "react";
-
 type Value = {
     title: string;
     description: string;
