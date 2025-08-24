@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
+import SearchSuggestions from './SearchSuggestions';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -35,8 +36,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredSuggestions, setFilteredSuggestions] =
-    useState<typeof suggestions>([]);
 
   useEffect(() => {
     if (isOpen) {
@@ -46,15 +45,6 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
-    if (value.trim() === '') {
-      setFilteredSuggestions([]);
-      return;
-    }
-
-    const filtered = suggestions.filter((item) =>
-      item.title.toLowerCase().includes(value.toLowerCase())
-    );
-    setFilteredSuggestions(filtered);
   };
 
   if (!isOpen) return null;
@@ -97,32 +87,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
               </div>
 
               {/* Search Suggestions */}
-              {searchTerm && (
-                <div className="mt-[10px] bg-white rounded-[48px] border border-[#0C2141] p-4 lg:p-[30px]">
-                  {filteredSuggestions.length > 0 ? (
-                    <div className="space-y-[10px] lg:space-[20px]">
-                      {filteredSuggestions.map((suggestion, index) => (
-                        <button
-                          key={index}
-                          className="w-full text-left p-2 hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                          <div className="text-[16px] flex gap-[10px] lg:gap-[20px] font-medium text-[#02070D]">
-                            <img src="/search-b.svg" alt="" />
-                            {suggestion.title}
-                          </div>
-                          {/* <div className="text-[14px] text-[#626F82]">
-                            {suggestion.description}
-                          </div> */}
-                        </button>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="py-[0px] lg:pl-[60px] lg:py-[20px]">
-                      <p className="text-[24px] lg:text-[40px] text-[#02070D] font-medium lg:leading-[44px]">No results found for {searchTerm}</p>
-                    </div>
-                  )}
-                </div>
-              )}
+              <SearchSuggestions
+                searchTerm={searchTerm}
+                suggestions={suggestions}
+                // Optionally handle onSelect
+              />
 
               
                 <div className="mt-[40px] lg:mt-[20px] max-w-[864px]">
@@ -151,6 +120,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     document.body
   );
 };
+
+
+
 
 const styles = `
   .scrollbar-hide {
