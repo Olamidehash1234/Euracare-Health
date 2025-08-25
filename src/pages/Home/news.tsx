@@ -38,9 +38,11 @@ const EuracareNews = () => {
   return (
     <div className="bg-[#EFF8F8] px-[16px] py-[60px] lg:py-[80px] lg:px-[80px]">
       <div className="">
-        <h1 className="text-[24px] leading-[30px] tracking-[-0.5px] lg:text-[40px] lg:leading-[40px] font-medium lg:tracking-[-0.8px] text-[#02070D] mb-6 lg:mb-[60px]">
+        <h1 className="text-[24px] leading-[30px] tracking-[-0.5px] lg:text-[40px] lg:leading-[40px] font-medium lg:tracking-[-0.8px] text-[#02070D]">
           Latest from Euracare
         </h1>
+
+        <p className="mt-[10px] max-w-[900px] text-[16px] lg:leading-[24px] mb-6 lg:mb-[60px]">Stay informed with the latest from Euracare—from expert health tips and breakthrough procedures to events, medical milestones, and stories that shape the future of healthcare in Nigeria.</p>
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-[16px]">
           {/* Featured Article - Takes up 2 columns on desktop */}

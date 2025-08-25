@@ -39,10 +39,12 @@ export default function Hero() {
                 <div className="w-full lg:w-[712px] lg:mb-[72px]">
                     {/* Heading */}
                     <h1 className="text-white font-medium leading-[30px] lg:leading-[63px] tracking-tight lg:tracking-[-1.5px] text-[24px] lg:text-[54px]">
-                        Get expert treatment,
+                        Redefining Private
                         <br />
-                        focused on you
+                        Healthcare in Nigeria
                     </h1>
+
+                    <p className='text-[16px] text-white mt-[10px]'>At Euracare, we deliver premium medical care tailored to your needs—led by internationally trained specialists, powered by advanced diagnostics, and grounded in genuine compassion.</p>
 
                     {/* Search bar */}
                     <div className="mt-[20px] w-full">

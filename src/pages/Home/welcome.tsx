@@ -12,18 +12,16 @@ export default function HeroEuracare() {
             {/* Headline */}
             <h1 className="text-[#02070D] tracking-tight lg:tracking-[-1.8px]">
               <span className=" text-[24px] lg:text-[44px] font-medium leading-[24px] lg:leading-[44px]">
-                Welcome to <br className="hidden lg:block"/> Euracare Nigeria
+                Welcome to Euracare<br className="hidden lg:block"/> Multispecialty Hospital
               </span>
             </h1>
 
             <div className="mt-[20px] text-justify lg:mt-[40px] text-[#02070D] text-[14px] lg:text-[16px] tracking-[-0.54px] lg:leading-[27px] leading-[20px] space-y-4">
               <p>
-                To provide world-class medical services to patients without the
-                stress and expense of international travel. To offer corporate
-                companies and insurers efficient healthcare solutions for their
-                employees and customers. To make available to physicians a
-                technologically advanced and optimized work platform.
+                Euracare is a leading multispecialty hospital in Lagos, redefining healthcare in Nigeria. We bring global medical standards home—offering cutting-edge treatments, world-class expertise, state-of-the-art technology, and truly personalised care—ensuring every patient receives the attention, comfort, and excellence they deserve.
               </p>
+
+              <p>You no longer need to travel abroad to receive the highest standard of care. At Euracare, we deliver world-class medical expertise, advanced diagnostics, and personalised attention—right here in Lagos. Whether it’s a routine check-up or a complex procedure, your health is in expert hands, close to home.</p>
             </div>
 
             {/* Tagline */}
