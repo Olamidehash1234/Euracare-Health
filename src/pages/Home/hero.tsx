@@ -31,7 +31,7 @@ export default function Hero() {
             <img
                 src="/home/lifeline.svg"
                 alt="Background Illustration"
-                className="hidden lg:block absolute right-0 top-[375px] -translate-y-1/2 lg:w-auto lg:h-auto"
+                className="hidden lg:block absolute right-0 top-[405px] -translate-y-1/2 lg:w-auto lg:h-auto"
                 style={{ zIndex: 1 }}
             />
 
@@ -44,7 +44,7 @@ export default function Hero() {
                         Healthcare in Nigeria
                     </h1>
 
-                    <p className='text-[16px] text-white mt-[10px]'>At Euracare, we deliver premium medical care tailored to your needs—led by internationally trained specialists, powered by advanced diagnostics, and grounded in genuine compassion.</p>
+                    <p className='text-[13px] lg:text-[16px] text-white mt-[10px]'>At Euracare, we deliver premium medical care tailored to your needs—led by internationally trained specialists, powered by advanced diagnostics, and grounded in genuine compassion.</p>
 
                     {/* Search bar */}
                     <div className="mt-[20px] w-full">

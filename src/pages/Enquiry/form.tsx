@@ -29,7 +29,7 @@ export default function ContactForm() {
     'No Preference'
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,7 +37,7 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSelectOption = (field, value) => {
+  const handleSelectOption = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -49,14 +49,14 @@ export default function ContactForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
 
   return (
     <div className="w-full max-w-6xl mx-auto px-[16px] py-[60px] lg:px-0 lg:py-20">
-      <div className="space-y-6 lg:space-y-[14px]">
+      <form onSubmit={handleSubmit} className="space-y-6 lg:space-y-[14px]">
         {/* Name Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-[20px]">
           <div>
@@ -91,12 +91,13 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-[20px]">
           <div>
             <label htmlFor="email" className="block text-[14px] lg:text-[16px] text-[#010101] mb-2 lg:mb-[16px] lg:leading-[27px]">
-              Email Address
+              Email Address*
             </label>
             <input
               type="email"
               id="email"
               name="email"
+              required={true}
               value={formData.email}
               onChange={handleInputChange}
               className="w-full py-[16px] px-[20px] lg:py-[20px] border border-[#010101] text-[14px] lg:text-[16px] rounded-[48px] outline-none transition-all duration-200"
@@ -104,12 +105,13 @@ export default function ContactForm() {
           </div>
           <div>
             <label htmlFor="phone" className="block text-[14px] lg:text-[16px] text-[#010101] mb-2 lg:mb-[16px] lg:leading-[27px]">
-              Phone Number
+              Phone Number*
             </label>
             <input
               type="tel"
               id="phone"
               name="phone"
+              required={true}
               value={formData.phone}
               onChange={handleInputChange}
               className="w-full py-[16px] px-[20px] lg:py-[20px] border border-[#010101] text-[14px] lg:text-[16px] rounded-[48px] outline-none transition-all duration-200"
@@ -214,14 +216,13 @@ export default function ContactForm() {
         {/* Submit Button */}
         <div>
           <button
-            type="button"
-            onClick={handleSubmit}
+            type="submit"
             className="bg-[#0C2141] lg:mt-[60px] hover:bg-slate-900 text-white py-[14px] lg:leading-[27px] w-[227px] rounded-[48px] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2"
           >
             Submit
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 }

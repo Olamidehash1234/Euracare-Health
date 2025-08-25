@@ -10,10 +10,10 @@ export default function Hero() {
                         Enquiry Form
                     </h1>
                     <div className="space-y-[20px]">
-                        <p className="text-white leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">If your query is urgent please contact us via the phone number for the fastest response</p>
-                        <p className="text-white leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">For general enquiries and appointments, please contact the hospital on <span className="font-bold hover:underline underline-offset-[4px]"><a href="tel:+23470038722273">+234 700 3872 2273</a></span>. Alternatively fill in the form below and we will contact you asap.</p>
-                        <p className="text-white leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">Please fill in your details</p>
-                        <p className="text-white leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">*Indicates required fields</p>
+                        <p className="text-white leading-[20px] lg:leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">If your query is urgent please contact us via the phone number for the fastest response</p>
+                        <p className="text-white leading-[20px] lg:leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">For general enquiries and appointments, please contact the hospital on <span className="font-bold hover:underline underline-offset-[4px]"><a href="tel:+23470038722273">+234 700 3872 2273</a></span>. Alternatively fill in the form below and we will contact you asap.</p>
+                        <p className="text-white leading-[20px] lg:leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">Please fill in your details</p>
+                        <p className="text-white leading-[20px] lg:leading-[24px] text-[14px] lg:text-[16px] tracking-[0.5px]">*Indicates required fields</p>
                     </div>
                 </div>
             </div>

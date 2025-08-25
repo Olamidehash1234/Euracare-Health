@@ -18,12 +18,12 @@ export default function ServicesGrid() {
     const currentServices = filteredServices.slice(startIndex, endIndex);
 
     // Reset to first page when search query changes
-    const handleSearch = (e) => {
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
         setCurrentPage(1);
     };
 
-    const handlePageChange = (page) => {
+    const handlePageChange = (page: number) => {
         setCurrentPage(page);
         // Scroll to top of services section
         window.scrollTo({ top: 420, behavior: 'smooth' });

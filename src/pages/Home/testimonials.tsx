@@ -65,7 +65,7 @@ const PatientTestimonials = () => {
               Hear from our Patients
             </h2>
 
-            <p className='mt-[10px] max-w-[700px] text-[16px] lg:leading-[24px]'>We’re proud to be the first choice for individuals and families who demand the highest standard of care. These are their words, their journeys, and their reasons for choosing Euracare.</p>
+            <p className='mt-[10px] max-w-[700px] text-[14px] lg:text-[16px] lg:leading-[24px]'>We’re proud to be the first choice for individuals and families who demand the highest standard of care. These are their words, their journeys, and their reasons for choosing Euracare.</p>
           </div>
 
           {/* Navigation Arrows */}
