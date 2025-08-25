@@ -31,24 +31,6 @@ const values: Value[] = [
     },
 ];
 
-function SquircleCrossIcon() {
-    // navy squircle with a white rounded cross (compact, like in the reference)
-    return (
-        <svg
-            aria-hidden
-            viewBox="0 0 48 48"
-            className="h-11 w-11 flex-none"
-            role="img"
-        >
-            <rect x="2" y="2" width="44" height="44" rx="12" fill="#0B1F3B" />
-            <path
-                d="M26.5 12.5a2.5 2.5 0 0 0-5 0v8h-8a2.5 2.5 0 0 0 0 5h8v8a2.5 2.5 0 0 0 5 0v-8h8a2.5 2.5 0 0 0 0-5h-8v-8Z"
-                fill="white"
-            />
-        </svg>
-    );
-}
-
 export default function CoreValues() {
     return (
         <section className="bg-[#F6F9FB]">
@@ -66,7 +48,7 @@ export default function CoreValues() {
 
                 {/* Grid */}
                 <div className="mt-[40px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[70px]">
-                    {values.map((v, idx) => (
+                    {values.map((v) => (
                         <article
                             key={v.title}
                             className="pb-[20px] lg:pb-[40px] border-b border-[#676767]"
@@ -92,3 +74,4 @@ export default function CoreValues() {
         </section>
     );
 }
+                        

@@ -16,7 +16,7 @@ export default function ValuesSection() {
           Actions speak louder <br className="hidden lg:block"/> than words
         </h2>
 
-        <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[14px] lg:text-[16px] leading-relaxed lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
+        <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[14px] lg:text-[16px] leading-[20px] lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
           <p>
             At Euracare Hospital, our unwavering commitment is to the health,
             dignity, and overall well-being of every individual we have the

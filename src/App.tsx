@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Consult from './pages/Consultation'
-// import PatientPortal from './pages/patientPortal'
+import EnquiryPage from './pages/Enquiry';
 import FindDoctor from './pages/FindDoctor';
 // import FeedbackForm from './pages/feedbackform';
 import ServiceDynamicPage from './pages/Services/dynamic/[slug]';
@@ -18,7 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/appointment" element={<Consult />} />
-          {/* <Route path="/feedback" element={<FeedbackForm />} /> */}
+          <Route path="/enquiry" element={<EnquiryPage />} />
           {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
           <Route path="/doctors" element={<FindDoctor />} />
           <Route path="/services/dynamic/:slug" element={<ServiceDynamicPage />} />

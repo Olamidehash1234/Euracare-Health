@@ -33,7 +33,6 @@ const suggestions = [
 ];
 
 const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
-  const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -80,8 +79,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                   type="text"
                   value={searchTerm}
                   onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search for services, conditions, or treatments"
-                  className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#ADB4BF] rounded-full bg-white lg:text-[16px] text-[#02070D] placeholder-[#0C2141] font-medium shadow-black/10 focus:outline-none"
+                  placeholder=""
+                  className="w-full h-[56px] lg:h-[72px] lg:pl-[90px] pl-[52px] pr-4 border-[1px] border-[#ADB4BF] rounded-full bg-white lg:text-[16px] text-[#02070D] placeholder-[#0C2141] font-medium shadow-black/10 focus:outline-none focus:border-[#0C2141]"
                   autoFocus
                 />
               </div>

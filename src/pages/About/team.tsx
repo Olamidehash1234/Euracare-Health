@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const LeadershipTeam = () => {
     const [activeTab, setActiveTab] = useState('Board of Directors');

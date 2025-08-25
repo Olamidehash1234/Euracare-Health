@@ -7,21 +7,16 @@ export default function ServiceLines() {
           {/* Left: Sticky text area */}
           <div className="flex">
             <div className="lg:sticky lg:top-0 lg:h-screen flex items-center py-[60px] lg:pt-[260px] lg:mb-[260px]">
-              <div className="lg:max-w-[448px]">
+              <div className="lg:max-w-[460px]">
                 <p className="mb-0 lg:mb-[20px] uppercase font-medium text-[14px] leading-[20px] text-white">
-                  Our Service Lines
+                  Our Services
                 </p>
                 <h2 className="text-[24px] sm:text-4xl lg:text-[40px] font-medium leading-[40px] lg:leading-[40px] lg:tracking-[-1.8px] tracking-tight text-white">
-                  Access specialised
-                  <br className="hidden lg:block" /> care
+                  Excellence in Every Specialty
                 </h2>
 
                 <p className="mt-[20px] text-justify lg:mt-[40px] font-normal text-[14px] lg:leading-[22px] leading-[20px] text-white">
-                  We offer specialised care across all areas of medicine to
-                  treat a broad range of conditions, including those that are
-                  very rare. Our experts collaborate on multidisciplinary teams
-                  to share knowledge and offer holistic and tailored treatment
-                  plans.
+                  At Euracare, we offer a full spectrum of medical services designed for individuals who expect nothing less than excellence. From advanced diagnostics to minimally invasive procedures and complex surgeries, every service is delivered by specialists with global training and deep local insight. Whether you need preventive care or a second opinion on a serious condition, our multidisciplinary teams work collaboratively to deliver clear answers, rapid access, and the highest level of medical precision.
                 </p>
 
                 <button

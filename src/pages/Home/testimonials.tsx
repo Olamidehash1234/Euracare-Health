@@ -59,12 +59,13 @@ const PatientTestimonials = () => {
     <div className="bg-white pb-[60px] lg:pb-[80px] lg:pt-0 px-4 lg:px-20">
       <div className="">
         {/* Header Section */}
-        <div className="flex justify-between items-end mb-[30px] lg:mb-[40px]">
+        <div className="flex justify-between items-center mb-[30px] lg:mb-[40px]">
           <div>
             <h2 className="text-[24px] lg:text-[40px] lg:tracking-[-0.8px] tracking-[-0.5px] font-medium text-[#02070D] leading-[40px]">
-              What Our Patients <br className='hidden lg:block' />
-              Have To Say
+              Hear from our Patients
             </h2>
+
+            <p className='mt-[10px] max-w-[700px] text-[14px] lg:text-[16px] lg:leading-[24px]'>We’re proud to be the first choice for individuals and families who demand the highest standard of care. These are their words, their journeys, and their reasons for choosing Euracare.</p>
           </div>
 
           {/* Navigation Arrows */}
