@@ -7,27 +7,27 @@ const values: Value[] = [
     {
         title: "Accountability",
         description:
-            "We place integrity and responsibility at the centre of everything we do.",
+            "We act with integrity and take responsibility in everything we do.",
     },
     {
         title: "Respect",
         description:
-            "We are an internationally diverse team and we respect all cultures and backgrounds.",
+            "We value diversity and honor every individual’s culture, background, and perspective.",
     },
     {
         title: "Empathy",
         description:
-            "We see every patient as an individual and we strive to address their specific needs.",
+            "Every patient matters. We listen, understand, and put their needs first.",
     },
     {
         title: "Excellence",
         description:
-            "We deliver services of an exceptional quality and professional standard to our patients.",
+            "We provide world class care, driven by innovation and a commitment to delivering exceptional outcomes.",
     },
     {
         title: "Commitment",
         description:
-            "We are committed to making the best international standard of care available locally.",
+            "We are dedicated to bringing international standards of healthcare to every patient locally.",
     },
 ];
 

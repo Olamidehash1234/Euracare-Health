@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function ServiceLines() {
   return (
     <section className="relative w-full bg-[#0C2141] text-white">
@@ -35,10 +37,10 @@ export default function ServiceLines() {
 
           {/* Right column */}
           <div className="flex flex-col lg:flex-row pb-16 lg:pb-[80px] gap-[16px]">
-            <div className="flex flex-col lg:flex lg:flex-col sm:grid sm:grid-cols-3 gap-[20px] lg:py-[260px]">
+            <div className="flex flex-col lg:flex lg:flex-col sm:grid sm:grid-cols-3 gap-[20px] lg:py-[220px]">
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/cardiac.png"
                     alt="Advanced Cardiac Imaging"
@@ -60,16 +62,18 @@ export default function ServiceLines() {
                     <h3 className="text-white text-[16px] lg:text-[18px] font-medium mb-[10px] leading-[24px]">
                       Advanced Cardiac <br className="hidden lg:block" /> Imaging
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/advanced-cardiac-imaging" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/back.png"
                     alt="Advanced Cardiac Imaging"
@@ -92,16 +96,18 @@ export default function ServiceLines() {
                       Back & Spine <br className="hidden lg:block" />
                       Surgery
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/back-spine-surgery" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/dentist.png"
                     alt="Advanced Cardiac Imaging"
@@ -123,9 +129,11 @@ export default function ServiceLines() {
                     <h3 className="text-white text-[16px] lg:text-[18px] font-medium mb-[10px] leading-[24px]">
                       Dentistry
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/dentistry" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -134,7 +142,7 @@ export default function ServiceLines() {
             <div className="flex flex-col lg:flex lg:flex-col sm:order-1 sm:grid sm:grid-cols-3 gap-[20px] lg:pt-[80px]">
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/postnatal.png"
                     alt="Advanced Cardiac Imaging"
@@ -157,16 +165,18 @@ export default function ServiceLines() {
                       Antenatal & Postnatal <br className="hidden lg:block" />
                       Care
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/antenatal-postnatal-care" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/weight.png"
                     alt="Advanced Cardiac Imaging"
@@ -189,16 +199,18 @@ export default function ServiceLines() {
                       Bariatric & Weight Loss <br className="hidden lg:block" />
                       Surgery
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/bariatric-weight-loss-surgery" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/dermatology.png"
                     alt="Advanced Cardiac Imaging"
@@ -220,16 +232,18 @@ export default function ServiceLines() {
                     <h3 className="text-white text-[16px] lg:text-[18px] font-medium mb-[10px] leading-[24px]">
                       Dermatology
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/dermatology" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div>
                 {/* Advanced Cardiac Imaging Card */}
-                <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px]  shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
+                <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
                     src="/home/dermatology.png"
                     alt="Advanced Cardiac Imaging"
@@ -251,9 +265,11 @@ export default function ServiceLines() {
                     <h3 className="text-white text-[16px] lg:text-[18px] font-medium mb-[10px] leading-[24px]">
                       Ear, Nose and Throat <br className="hidden lg:block" /> (ENT)
                     </h3>
-                    <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                      Learn More
-                    </button>
+                    <Link to="/services/dynamic/ear-nose-throat-ent" className="inline-block">
+                      <button className="border border-white rounded-full px-[30px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

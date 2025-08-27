@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,6 +28,23 @@ export default function ContactForm() {
     'Text Message',
     'No Preference'
   ];
+
+  const natureDropdownRef = useRef<HTMLDivElement>(null);
+  const contactDropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (natureDropdownRef.current && !natureDropdownRef.current.contains(event.target as Node)) {
+        setIsNatureOpen(false);
+      }
+      if (contactDropdownRef.current && !contactDropdownRef.current.contains(event.target as Node)) {
+        setIsContactOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -124,7 +141,7 @@ export default function ContactForm() {
           <label htmlFor="natureOfEnquiry" className="block text-[14px] lg:text-[16px] text-[#010101] mb-2 lg:mb-[16px] lg:leading-[27px]">
             Nature of Enquiry
           </label>
-          <div className="relative">
+          <div className="relative" ref={natureDropdownRef}>
             <button
               type="button"
               onClick={() => setIsNatureOpen(!isNatureOpen)}
@@ -172,7 +189,7 @@ export default function ContactForm() {
           <label htmlFor="contactPreference" className="block text-[14px] lg:text-[16px] text-[#010101] mb-2 lg:mb-[16px] lg:leading-[27px]">
             How would you like us to contact you?
           </label>
-          <div className="relative">
+          <div className="relative" ref={contactDropdownRef}>
             <button
               type="button"
               onClick={() => setIsContactOpen(!isContactOpen)}

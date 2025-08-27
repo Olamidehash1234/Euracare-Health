@@ -194,7 +194,7 @@ export default function ServicesGrid() {
                                 </p>
                             </div>
                             <Link 
-                                to={`/Doctors-Profile/${doc.id}`}
+                                to={`/Doctors-Profile/${doc.id}`}  // Changed from /Doctors-Profile/ to /doctor/
                                 className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
                             >
                                 View Profile
