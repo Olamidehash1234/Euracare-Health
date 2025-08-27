@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 type FooterSection = 'about' | 'services' | 'media' | 'contact';
 
@@ -33,22 +34,22 @@ const EuracareFooter = () => {
 
         {/* Action Buttons */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[32px] mb-[30px] lg:mb-[40px]">
-          <button className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
+          <Link to="/enquiry" className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
             <img src="/footer/phone.svg" alt="" />
             Book Appointment
-          </button>
-          <button className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
+          </Link>
+          <Link to="/" className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
             <img src="/footer/career.svg" alt="" />
             Careers at Euracare
-          </button>
-          <button className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
+          </Link>
+          <Link to="/doctors" className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
             <img src="/footer/find.svg" alt="" />
             Find a doctor
-          </button>
-          <button className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
+          </Link>
+          <Link to="/" className="flex items-center justify-center gap-[8px] py-[12px] lg:py-[22px] lg:text-[16px] leading-[27px] lg:tracking-[-0.54px] border border-[#010101] rounded-full text-[#010101] hover:bg-gray-50 transition-colors">
             <img src="/footer/insurance.svg" alt="" />
             Insurance & Payment Info
-          </button>
+          </Link>
         </div>
 
         <div className='w-full h-[1px] bg-[#626F82] mb-[20px] lg:mb-[64px]'></div>
@@ -67,11 +68,11 @@ const EuracareFooter = () => {
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.about ? 'hidden lg:block' : ''}`}>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Who we are</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Vision & mission</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Mission Statement</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Team</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Accreditations & Awards</a></li>
+              <li><Link to="/about" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Who we are</Link></li>
+              <li><Link to="/about/vision-mission" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Vision & mission</Link></li>
+              <li><Link to="/about/mission-statement" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Mission Statement</Link></li>
+              <li><Link to="/about/team" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Our Team</Link></li>
+              <li><Link to="/about/accreditations" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Accreditations & Awards</Link></li>
             </ul>
           </div>
 
@@ -89,11 +90,11 @@ const EuracareFooter = () => {
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.services ? 'hidden lg:block' : ''}`}>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cancer care</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cardiac care</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Neurosciences</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Gynaecology & Obstetrics</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Orthopaedics</a></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cancer care</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Cardiac care</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Neurosciences</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Gynaecology & Obstetrics</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Orthopaedics</Link></li>
             </ul>
           </div>
 
@@ -111,10 +112,10 @@ const EuracareFooter = () => {
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.media ? 'hidden lg:block' : ''}`}>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Blogs and articles</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">News & Press</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Patient stories</a></li>
-              <li><a href="#" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Careers</a></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Blogs and articles</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">News & Press</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Patient stories</Link></li>
+              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Careers</Link></li>
             </ul>
           </div>
 

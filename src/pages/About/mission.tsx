@@ -1,7 +1,7 @@
 export default function MissionVision() {
   const items = [
     {
-      text: "To offer corporate companies and insurers efficient healthcare solutions for their employees and customers",
+      text: "To offer corporate companies and insurers efficient healthcare solutions for their employees and customers.",
     },
     {
       text: "To provide world-class medical services to patients without the stress and expense of international travel.",
@@ -20,10 +20,8 @@ export default function MissionVision() {
         </p>
 
         {/* Main Heading */} 
-        <h1 className="mt-[4px] lg:mt-0 text-[22px] text-[#0C2141] lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-tight lg:tracking-[-1.8px] max-w-[719px]">
-          Our mission is to commit to the care and
-          <br className="hidden sm:block" />
-          improvement of human life above all else.
+        <h1 className="mt-[4px] lg:mt-0 text-[22px] text-[#0C2141] lg:text-[40px] font-medium leading-tight lg:leading-[48px] tracking-tight lg:tracking-[-1.8px]">
+          To deliver world-class, patient-focused care using advanced medical technology, evidence-based protocols, and a compassionate approach.
         </h1>
 
         {/* Cards */}

@@ -1,40 +1,6 @@
 import React from "react";
-
-type Doctor = {
-  id: number;
-  name: string;
-  specialty: string;
-  image: string;
-};
-
-const doctors: Doctor[] = [
-  {
-    id: 1,
-    name: "Dr Hammed Ninalowo",
-    specialty: "Interventional Radiology, Oncology, Vascular Surgery",
-    image: "/home/doctors/doc1.png",
-  },
-  {
-    id: 2,
-    name: "Dr Pearl Aba Anoa Scott",
-    specialty: "Oncology",
-    image: "/home/doctors/doc2.png",
-  },
-  {
-    id: 3,
-    name: "Dr Asare Kwaku Offei",
-    specialty:
-      "Gastroenterology, General Surgery, Hepatobiliary Surgeon, Oncology",
-    image: "/home/doctors/doc3.png",
-  },
-  {
-    id: 4,
-    name: "Dr Theodora Pepera",
-    specialty: "Antenatal & Postnatal Care, Gynaecology",
-    image: "/home/doctors/doc4.png",
-  },
-  
-];
+import { Link } from "react-router-dom";
+import { doctors } from "../../data/doctors";
 
 const DoctorsSection: React.FC = () => {
   return (
@@ -75,9 +41,12 @@ const DoctorsSection: React.FC = () => {
                 <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">{doc.specialty}</p>
               </div>
               {/* Profile Button */}
-              <button className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition">
+              <Link 
+                to={`/Doctors-Profile/${doc.id}`}  // Changed from /Doctors-Profile/ to /doctor/
+                className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
+              >
                 View Profile
-              </button>
+              </Link>
             </div>
           </div>
         ))}

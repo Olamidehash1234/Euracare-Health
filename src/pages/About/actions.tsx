@@ -18,30 +18,15 @@ export default function ValuesSection() {
 
         <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[14px] lg:text-[16px] leading-[20px] lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
           <p>
-            At Euracare Hospital, our unwavering commitment is to the health,
-            dignity, and overall well-being of every individual we have the
-            privilege to serve. We believe that every patient is more than a
-            case or condition — they are a unique individual with their own
-            story, needs, and aspirations. That is why we place our patients at
-            the very heart of everything we do, ensuring that their voices are
-            heard, their concerns are addressed, and their care is personalised
-            to suit their specific circumstances.
+            At Euracare Hospital, our unwavering commitment is to the health, dignity, and overall well-being of every individual we have the privilege to serve. We believe that every patient is more than a case or condition — they are a unique individual with their own story, needs, and aspirations. That is why we place our patients at the very heart of everything we do, ensuring that their voices are heard, their concerns are addressed, and their care is personalised to suit their specific circumstances
           </p>
 
           <p>
-            We recognise and celebrate the intrinsic value of each person, and
-            we approach healthcare with a dedication to inclusion, compassion,
-            and respect. These values shape the way we interact not only with
-            our patients, but also with their families and our colleagues. By
-            fostering an environment where empathy meets medical excellence, we
-            ensure that every patient experiences care that is not only
-            clinically advanced but also deeply human.
+            We recognise and celebrate the intrinsic value of each person, and we approach healthcare with a dedication to inclusion, compassion, and respect. These values shape the way we interact not only with our patients, but also with their families and our colleagues. By fostering an environment where empathy meets medical excellence, we ensure that every patient experiences care that is not only clinically advanced but also deeply human
           </p>
 
           <p>
-            Our goal is to create a supportive space where trust is built,
-            healing is prioritised, and lives are improved — one patient at a
-            time.
+            Our goal is to create a supportive space where trust is built, healing is prioritised, and lives are improved — one patient at a time
           </p>
         </div>
       </div>
