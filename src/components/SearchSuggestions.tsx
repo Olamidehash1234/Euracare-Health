@@ -23,7 +23,7 @@ const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
   );
 
   return (
-    <div className="mt-[10px] bg-white rounded-[48px] border border-[#0C2141] p-4 lg:p-[30px]">
+    <div className="mt-[10px] bg-[#F8F8F8] rounded-[48px] border border-[#0C2141] p-4 lg:p-[30px]">
       {filteredSuggestions.length > 0 ? (
         <div className="space-y-[10px] lg:space-[20px]">
           {filteredSuggestions.map((suggestion, index) => (

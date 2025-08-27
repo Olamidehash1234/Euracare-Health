@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { KeyboardEvent } from "react"
 import { doctors } from "../../data/doctors";
 import SearchSuggestions from "../../components/SearchSuggestions";
+import { Link } from 'react-router-dom';
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
@@ -178,13 +179,6 @@ export default function ServicesGrid() {
                 </h1>
             )}
 
-            {/* Results info */}
-            {/* <div className="mb-6 text-sm text-[#02070D]">
-                {filteredDoctors.length > 0
-                    ? <>Showing {startIndex + 1}-{Math.min(endIndex, filteredDoctors.length)} of {filteredDoctors.length} doctors{confirmedSearch && ` for "${confirmedSearch}"`}</>
-                    : null}
-            </div> */}
-
             {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px] lg:gap-y-[20px]">
                 {currentDoctors.map((doc) => (
@@ -199,9 +193,12 @@ export default function ServicesGrid() {
                                     {doc.specialty.join(", ")}
                                 </p>
                             </div>
-                            <button className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition">
+                            <Link 
+                                to={`/Doctors-Profile/${doc.id}`}
+                                className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
+                            >
                                 View Profile
-                            </button>
+                            </Link>
                         </div>
                     </div>
                 ))}
