@@ -19,15 +19,16 @@ export default function ServiceLines() {
                   At Euracare, we offer a full spectrum of medical services designed for individuals who expect nothing less than excellence. From advanced diagnostics to minimally invasive procedures and complex surgeries, every service is delivered by specialists with global training and deep local insight. Whether you need preventive care or a second opinion on a serious condition, our multidisciplinary teams work collaboratively to deliver clear answers, rapid access, and the highest level of medical precision.
                 </p>
 
-                
-                <button
-                  className="mt-[40px] w-full lg:w-auto justify-center lg:mt-[80px] lg:text-[16px] inline-flex items-center gap-[8px] rounded-full border border-[#F8F8F8] px-5 py-3 lg:px-[96px] lg:py-[22px] text-sm font-medium text-white transition hover:bg-white/10"
-                >
-                  <img src="/home/search2.svg" alt="" />
-                  <span>
-                    View all <span className="font-bold">Services</span>
-                  </span>
-                </button>
+                <a href="/services">
+                  <button
+                    className="mt-[40px] w-full lg:w-auto justify-center lg:mt-[80px] lg:text-[16px] inline-flex items-center gap-[8px] rounded-full border border-[#F8F8F8] px-5 py-3 lg:px-[96px] lg:py-[22px] text-sm font-medium text-white transition hover:bg-white/10"
+                  >
+                    <img src="/home/search2.svg" alt="" />
+                    <span>
+                      View all <span className="font-bold">Services</span>
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>

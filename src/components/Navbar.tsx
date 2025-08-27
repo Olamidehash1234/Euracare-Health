@@ -46,14 +46,16 @@ export default function Navbar() {
 
           {/* Call Button */}
           <div className="hidden lg:flex">
-            <button className="flex items-center border-[1px] border-[#02070D] px-5 py-[14px] px-[40px] rounded-[48px] hover:bg-gray-100 transition">
-              <img
-                src="/navbar/call.svg"
-                alt="Call Icon"
-                className="mr-2"
-              />
-              <span className="text-[16px] font-medium lg:leading-[27px]">Call us today</span>
-            </button>
+            <a href="tel:+23470038722273">
+              <button className="flex items-center border-[1px] border-[#02070D] px-5 py-[14px] px-[40px] rounded-[48px] hover:bg-gray-100 transition">
+                <img
+                  src="/navbar/call.svg"
+                  alt="Call Icon"
+                  className="mr-2"
+                />
+                <span className="text-[16px] font-medium lg:leading-[27px]">Call us today</span>
+              </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
