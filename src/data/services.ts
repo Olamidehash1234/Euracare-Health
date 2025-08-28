@@ -17,13 +17,22 @@ export type ServiceData = {
 
 export const services: ServiceData[] = [
     {
-        slug: "advanced-cardiac-imaging",
-        title: "Advanced Cardiac Imaging",
-        description: "Our Advanced Cardiac Imaging service uses state-of-the-art technology—such as echocardiography, CT, and MRI—to provide precise, non-invasive assessments of heart structure and function, enabling early diagnosis and tailored treatment plans.",
+        slug: "interventional-cardiology",
+        title: "Interventional Cardiology",
+        description: "Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.",
+        image: "/services/cardiac.png",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "Interventional Cardiology at Euracare focuses on minimally invasive techniques to diagnose and treat cardiovascular conditions. Our team of specialists utilizes advanced imaging and catheter-based procedures to provide effective solutions for complex heart issues. This approach not only enhances patient comfort but also promotes faster recovery times compared to traditional surgical methods.",
+    },
+     {
+        slug: "interventional-radiology",
+        title: "Interventional Radiology",
+        description: "We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.",
         image: "/services/cardiac.png",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Advanced Cardiac Imaging at Euracare provides comprehensive diagnostic solutions using cutting-edge technology. Our state-of-the-art imaging equipment, combined with the expertise of our specialists, enables precise visualization of heart structures and function. This allows for early detection of cardiovascular conditions, accurate diagnosis, and the development of targeted treatment strategies. Our advanced imaging capabilities include 3D echocardiography, cardiac CT, and MRI, offering detailed insights into heart health while ensuring patient comfort and safety.",
     },
+    
     {
         slug: "antenatal-postnatal-care",
         title: "Antenatal & Postnatal Care",

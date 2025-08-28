@@ -65,7 +65,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.</p>
 
-                      <Link to="/services/dynamic/advanced-cardiac-imaging" className="inline-block">
+                      <Link to="/services/dynamic/interventional-cardiology" className="inline-block">
                         <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                           Learn More
                         </button>
@@ -101,7 +101,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.</p>
 
-                    <Link to="/services/dynamic/back-spine-surgery" className="inline-block">
+                    <Link to="/services/dynamic/interventional-radiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -185,7 +185,7 @@ export default function ServiceLines() {
               <div>
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/dentist.png"
+                    src="/home/surgery.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
