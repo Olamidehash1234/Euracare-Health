@@ -62,7 +62,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                 onClick={onClose}
                 className="flex items-center gap-[10px]"
               >
-                close
+                Close
                 <img src="/close-square.svg" alt="Close" className="w-6 h-6" />
               </button>
             </div>
