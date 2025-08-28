@@ -137,7 +137,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.</p>
 
-                    <Link to="/services/dynamic/back-spine-surgery" className="inline-block">
+                    <Link to="/services/dynamic/adult-pediatric-cardiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -173,7 +173,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being.</p>
 
-                    <Link to="/services/dynamic/back-spine-surgery" className="inline-block">
+                    <Link to="/services/dynamic/bariatric-weight-loss-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -208,7 +208,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results</p>
 
-                    <Link to="/services/dynamic/dentistry" className="inline-block">
+                    <Link to="/services/dynamic/general-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -318,7 +318,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.</p>
 
-                    <Link to="/services/dynamic/dermatology" className="inline-block">
+                    <Link to="/services/dynamic/urology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -354,7 +354,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.</p>
 
-                    <Link to="/services/dynamic/ear-nose-throat-ent" className="inline-block">
+                    <Link to="/services/dynamic/family-geriatric-medicine" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -391,7 +391,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.</p>
 
-                    <Link to="/services/dynamic/ear-nose-throat-ent" className="inline-block">
+                    <Link to="/services/dynamic/general-medicine" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -427,7 +427,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans</p>
 
-                    <Link to="/services/dynamic/ear-nose-throat-ent" className="inline-block">
+                    <Link to="/services/dynamic/radiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>

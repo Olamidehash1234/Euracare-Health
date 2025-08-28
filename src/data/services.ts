@@ -104,16 +104,40 @@ export const services: ServiceData[] = [
     {
         slug: "orthopedic-surgery",
         title: "Orthopedic Surgery",
-        description: "Our Back & Spine Surgery services offer advanced diagnosis and minimally invasive treatments for spinal disorders, chronic back pain, herniated discs, and injuries—focused on restoring mobility and improving quality of life.",
+        description: "Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.",
         image: "/services/spine.png",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
     },
     {
-        slug: "dentistry",
-        title: "Dentistry",
-        description: "We offer a comprehensive range of dental services, including preventive care, restorative treatments, and cosmetic procedures, to help you achieve and maintain a healthy, beautiful smile.",
-        image: "/services/dentist.png",
+        slug: "urology",
+        title: "Urology",
+        description: "We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.",
+        image: "/home/urology.jpg",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+    },
+    {
+        slug: "family-geriatric-medicine",
+        title: "Family & Geriatric Medicine",
+        description: "We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.",
+        image: "/home/geri.jpg",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+    },
+    {
+        slug: "general-medicine",
+        title: "General Medicine",
+        description: "Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.",
+        image: "/home/medicine.jpg",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+    },
+    {
+        slug: "radiology",
+        title: "Radiology",
+        description: "With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans.",
+        image: "/home/radio.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
