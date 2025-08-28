@@ -28,62 +28,86 @@ export const services: ServiceData[] = [
         slug: "interventional-radiology",
         title: "Interventional Radiology",
         description: "We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.",
-        image: "/services/cardiac.png",
+        image: "/home/inter.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Advanced Cardiac Imaging at Euracare provides comprehensive diagnostic solutions using cutting-edge technology. Our state-of-the-art imaging equipment, combined with the expertise of our specialists, enables precise visualization of heart structures and function. This allows for early detection of cardiovascular conditions, accurate diagnosis, and the development of targeted treatment strategies. Our advanced imaging capabilities include 3D echocardiography, cardiac CT, and MRI, offering detailed insights into heart health while ensuring patient comfort and safety.",
     },
     
+    // {
+    //     slug: "antenatal-postnatal-care",
+    //     title: "Antenatal & Postnatal Care",
+    //     description: "We provide comprehensive care before and after childbirth, including regular check-ups, diagnostic screenings, nutritional guidance, and emotional support—ensuring the health and well-being of both mother and baby at every stage.",
+    //     image: "/services/postnatal.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "Our goal is to provide regular check-ups that allow doctors to treat and prevent potential health problems throughout the course of the pregnancy and to promote healthy lifestyles that benefit both mother and child. During check-ups, pregnant women receive medical information over maternal physiological changes in pregnancy, biological changes, and prenatal nutrition including prenatal vitamins. Recommendations on management and healthy lifestyle changes are also made during regular check-ups. Prenatal screening is playing important roll to reduce the frequency of maternal death, miscarriages, birth defects, low birth weight, neonatal infections and other preventable health problems. Euracare’s specialists provide comprehensive range of Antenatal and Postnatal Care services.",
+    //     testList: ["Blood tests during pregnancy", "Checking your blood group", "Rh negative blood and Anti D injections", "Haemoglobin", "Sickle cells", "Rubella", "Syphilis", "Hepatitis B & C", "HIV and AIDS", "Urine test", "Glucose challenge test for gestational diabetes", "Pap smear (smear test)"],
+    //     conditionList: ["Consultations", "An ultrasound dating scan at 6-10 weeks", "An ultrasound anomaly scan at 18-22 weeks", "An ultrasound nuchal translucency scan at 11-14 (for the detection of cardiovascular abnormalities)", "Postpartum health checks", "Family planning"],
+    //     faqs: [
+    //         {
+    //             question: "What is antenatal care, and why is it important?",
+    //             answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
+    //         },
+    //         {
+    //             question: "When should I start antenatal visits at Euracare?",
+    //             answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
+    //         },
+    //         {
+    //             question: "What services are included in Euracare's antenatal care package?",
+    //             answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
+    //         },
+    //         {
+    //             question: "Do you offer childbirth education or antenatal classes?",
+    //             answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
+    //         },
+    //         {
+    //             question: "What should I expect during a postnatal check-up?",
+    //             answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
+    //         },
+    //         {
+    //             question: "How soon after delivery should I come for a postnatal visit?",
+    //             answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
+    //         }
+    //     ]
+    // },
     {
-        slug: "antenatal-postnatal-care",
-        title: "Antenatal & Postnatal Care",
-        description: "We provide comprehensive care before and after childbirth, including regular check-ups, diagnostic screenings, nutritional guidance, and emotional support—ensuring the health and well-being of both mother and baby at every stage.",
-        image: "/services/postnatal.png",
+        slug: "adult-pediatric-cardiology",
+        title: "Adult & Pediatric Cardiology",
+        description: "From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.",
+        image: "/home/child.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "Our goal is to provide regular check-ups that allow doctors to treat and prevent potential health problems throughout the course of the pregnancy and to promote healthy lifestyles that benefit both mother and child. During check-ups, pregnant women receive medical information over maternal physiological changes in pregnancy, biological changes, and prenatal nutrition including prenatal vitamins. Recommendations on management and healthy lifestyle changes are also made during regular check-ups. Prenatal screening is playing important roll to reduce the frequency of maternal death, miscarriages, birth defects, low birth weight, neonatal infections and other preventable health problems. Euracare’s specialists provide comprehensive range of Antenatal and Postnatal Care services.",
-        testList: ["Blood tests during pregnancy", "Checking your blood group", "Rh negative blood and Anti D injections", "Haemoglobin", "Sickle cells", "Rubella", "Syphilis", "Hepatitis B & C", "HIV and AIDS", "Urine test", "Glucose challenge test for gestational diabetes", "Pap smear (smear test)"],
-        conditionList: ["Consultations", "An ultrasound dating scan at 6-10 weeks", "An ultrasound anomaly scan at 18-22 weeks", "An ultrasound nuchal translucency scan at 11-14 (for the detection of cardiovascular abnormalities)", "Postpartum health checks", "Family planning"],
-        faqs: [
-            {
-                question: "What is antenatal care, and why is it important?",
-                answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
-            },
-            {
-                question: "When should I start antenatal visits at Euracare?",
-                answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
-            },
-            {
-                question: "What services are included in Euracare's antenatal care package?",
-                answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
-            },
-            {
-                question: "Do you offer childbirth education or antenatal classes?",
-                answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
-            },
-            {
-                question: "What should I expect during a postnatal check-up?",
-                answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
-            },
-            {
-                question: "How soon after delivery should I come for a postnatal visit?",
-                answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
-            }
-        ]
-    },
-    {
-        slug: "back-spine-surgery",
-        title: "Back & Spine Surgery",
-        description: "Our Back & Spine Surgery services offer advanced diagnosis and minimally invasive treatments for spinal disorders, chronic back pain, herniated discs, and injuries—focused on restoring mobility and improving quality of life.",
-        image: "/services/spine.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+        overviewText: "At Euracare, our Adult & Pediatric Cardiology service is dedicated to providing advanced diagnostic and therapeutic options for patients with heart conditions. Our team of experienced cardiologists utilizes state-of-the-art technology to treat a wide range of conditions, including congenital heart defects, arrhythmias, and coronary artery disease. We focus on accurate diagnosis, effective treatment plans, and compassionate care to improve the heart health of our patients."
     },
     {
         slug: "bariatric-weight-loss-surgery",
         title: "Bariatric & Weight Loss Surgery",
-        description: "We offer safe, effective bariatric and weight loss surgeries—including gastric bypass and sleeve gastrectomy—to support long-term weight management, improve overall health, and reduce obesity-related conditions.",
+        description: "Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being",
         image: "/services/weight.png",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Bariatric & Weight Loss Surgery service is dedicated to providing comprehensive care for individuals seeking weight loss solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include surgical and non-surgical options. We focus on addressing the root causes of obesity, promoting healthy lifestyle changes, and ensuring long-term success for our patients."
+    },
+    {
+        slug: "general-surgery",
+        title: "General Surgery",
+        description: "Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results.",
+        image: "/home/surgery.jpg",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our General Surgery service is dedicated to providing comprehensive care for individuals seeking surgical solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include minimally invasive and open surgical options. We focus on ensuring the best possible outcomes through meticulous planning and compassionate care."
+    },
+    {
+        slug: "gastroenterology",
+        title: "Gastroenterology",
+        description: "We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.",
+        image: "/home/gas.jpg",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our General Surgery service is dedicated to providing comprehensive care for individuals seeking surgical solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include minimally invasive and open surgical options. We focus on ensuring the best possible outcomes through meticulous planning and compassionate care."
+    },
+    {
+        slug: "orthopedic-surgery",
+        title: "Orthopedic Surgery",
+        description: "Our Back & Spine Surgery services offer advanced diagnosis and minimally invasive treatments for spinal disorders, chronic back pain, herniated discs, and injuries—focused on restoring mobility and improving quality of life.",
+        image: "/services/spine.png",
+        heroImage: "/service-d/hero-img.png",
+        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
     },
     {
         slug: "dentistry",

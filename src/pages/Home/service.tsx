@@ -78,7 +78,7 @@ export default function ServiceLines() {
                 {/* Antenatal care */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/back.png"
+                    src="/home/inter.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -223,7 +223,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/postnatal.png"
+                    src="/home/gas.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -246,7 +246,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.</p>
 
-                    <Link to="/services/dynamic/antenatal-postnatal-care" className="inline-block">
+                    <Link to="/services/dynamic/gastroenterology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -259,7 +259,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/weight.png"
+                    src="/home/back.png"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -282,7 +282,7 @@ export default function ServiceLines() {
 
                     <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.</p>
 
-                    <Link to="/services/dynamic/bariatric-weight-loss-surgery" className="inline-block">
+                    <Link to="/services/dynamic/orthopedic-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
                         Learn More
                       </button>
@@ -295,7 +295,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/dermatology.png"
+                    src="/home/urology.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -331,7 +331,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/dermatology.png"
+                    src="/home/geri.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -367,7 +367,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/dermatology.png"
+                    src="/home/medicine.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -404,7 +404,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/dermatology.png"
+                    src="/home/radio.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
