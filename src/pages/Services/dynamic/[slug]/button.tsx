@@ -2,8 +2,8 @@ export default function MedicalNavigation() {
   const navItems = [
     { id: '01', title: 'Overview', sectionId: 'overview' },
     { id: '02', title: 'Our Doctors', sectionId: 'doctors' },
-    { id: '03', title: 'Conditions and Procedures', sectionId: 'conditions' },
-    { id: '04', title: 'Tests and Diagnostics', sectionId: 'tests' }
+    { id: '03', title: 'Tests and Diagnostics', sectionId: 'tests' },
+    { id: '04', title: 'Conditions and Procedures', sectionId: 'conditions' },
   ];
 
   const scrollToSection = (sectionId: string) => {
