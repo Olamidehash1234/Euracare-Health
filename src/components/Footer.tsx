@@ -64,7 +64,7 @@ const EuracareFooter = () => {
             >
               ABOUT EURACARE
               <span className="lg:hidden">
-                {openSections.about ? <img src="/footer/dash.svg" alt="minus" /> : '+'}
+                {openSections.about ? <img src="/footer/dash.svg" alt="minus" /> : <span className="text-[32px] font-light">+</span>}
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.about ? 'hidden lg:block' : ''}`}>
@@ -86,7 +86,7 @@ const EuracareFooter = () => {
             >
               SERVICE LINES
               <span className="lg:hidden">
-                {openSections.services ? <img src="/footer/dash.svg" alt="" /> : '+'}
+                {openSections.services ? <img src="/footer/dash.svg" alt="" /> : <span className="text-[32px] font-light">+</span>}
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.services ? 'hidden lg:block' : ''}`}>
@@ -108,7 +108,7 @@ const EuracareFooter = () => {
             >
               MEDIA
               <span className="lg:hidden">
-                {openSections.media ? <img src="/footer/dash.svg" alt="" /> : '+'}
+                {openSections.media ? <img src="/footer/dash.svg" alt="" /> : <span className="text-[32px] font-light">+</span>}
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.media ? 'hidden lg:block' : ''}`}>
@@ -129,7 +129,7 @@ const EuracareFooter = () => {
             >
               CONTACT
               <span className="lg:hidden">
-                {openSections.contact ? <img src="/footer/dash.svg" alt="" /> : '+'}
+                {openSections.contact ? <img src="/footer/dash.svg" alt="" /> : <span className="text-[32px] font-light">+</span>}
               </span>
             </h3>
             <div className={`${!openSections.contact ? 'hidden lg:block' : ''}`}>
