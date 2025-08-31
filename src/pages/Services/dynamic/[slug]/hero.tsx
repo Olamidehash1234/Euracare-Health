@@ -4,7 +4,7 @@ export default function Hero({ service }: { service: ServiceData }) {
     return (
         <section className="relative overflow-hidden w-full lg:h-[400px] lg:pt-[50px]"
             style={{
-                backgroundImage: `url('${service.heroImage}')`,
+                backgroundImage: `url('${service.image}')`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat"
             }}>

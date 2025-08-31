@@ -142,207 +142,255 @@ export const services: ServiceData[] = [
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
-        slug: "dermatology",
-        title: "Dermatology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "ear-nose-throat",
-        title: "Ear, Nose and Throat (ENT)",
-        description: "We offer a comprehensive range of ENT services, including diagnosis and treatment of conditions affecting the ear, nose, and throat.",
-        image: "/services/dermatology.png",
+        slug: "neurology-and-neurosurgery",
+        title: "Neurology & Neurosurgery",
+        description: "Our Neurology and Neurosurgery team diagnoses and treats conditions of the brain, spine, and nervous system. From migraines to complex neurosurgical procedures, we provide integrated, patient-centered care.",
+        image: "/home/neuro.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
         slug: "endocrinology-and-diabetology",
-        title: "Endocrinology and Diabetology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        title: "Endocrinology & Diabetology",
+        description: "We manage hormonal and metabolic disorders, including diabetes, thyroid disease, and adrenal conditions. Our specialists work closely with patients to optimize treatment and improve long-term health.",
+        image: "/home/diabetes.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
-        slug: "fertility-services",
-        title: "Fertility Services",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        slug: "nutrition-and-wellness",
+        title: "Nutrition and Wellness",
+        description: "Our nutritionists provide personalized dietary plans to support weight management, chronic disease prevention, and overall wellness. We combine scientific expertise with practical advice for sustainable results",
+        image: "/home/nutri.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
-        slug: "gastroenterology",
-        title: "Gastroenterology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        slug: "breast-surgery",
+        title: "Breast Surgery",
+        description: "We offer advanced surgical care for benign and malignant breast conditions. Our approach is compassionate, precise, and tailored to each patient’s needs, with a focus on both health and aesthetics.",
+        image: "/home/neuro.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
-        slug: "general-medicine",
-        title: "General Medicine",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "general-surgery",
-        title: "General Surgery",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        slug: "dermatology",
+        title: "Dermatology",
+        description: "Our dermatologists diagnose and treat skin, hair, and nail conditions, offering both medical and aesthetic dermatology services. We use the latest techniques to promote healthy skin and confidence.",
+        image: "/home/dermatology.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
         slug: "gynaecology",
         title: "Gynaecology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "Haematology",
-        title: "Haematology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "international-patients",
-        title: "International Patients",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "interventinal-cardiology",
-        title: "Interventional Cardiology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "neurology-neurosurgery",
-        title: "Neurology & Neurosurgery",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "nutritionist",
-        title: "Nutritionist",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "oncology",
-        title: "Oncology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "Oncology is a branch of medical science dealing with tumours, including the origin, development, diagnosis, and treatment of malignant neoplasms. Different types of doctors often work together to create a patient’s overall treatment plan that combines different types of treatments. Euracare provides Surgical Oncology services and cancer treatment using cutting-edge Interventional Radiology modalities. Interventional radiology may also be used to manage metastatic disease from a variety of cancers including those of the breast, colon, rectum, gallbladder, pancreas, lung, oesophagus and stomach, as well as melanoma and sarcoma. Interventional radiologists are specialists trained in using image-guided technology, such as X-rays, CT and MRI",
-        testList: ["Biopsy", "MRI", "CT", "X-ray", "Clinical Laboratory", "Ultrasound", "Bronchoscopy", "Endoscopic procedures", "Lumbar puncture", "Pap smear", "Physical examination"],
-        conditionList: ["Transarterial chemoembolization", "Radiofrequency ablation (RFA)", "Microwave ablation", "Tumour ablation procedures", "Liver-directed therapies", "Vascular work", "Drainage catheters", "Port and PICC Line Placement", "Pain management", "Lymphatic Interventions"],
-        faqs: [
-            {
-                question: "What is antenatal care, and why is it important?",
-                answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
-            },
-            {
-                question: "When should I start antenatal visits at Euracare?",
-                answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
-            },
-            {
-                question: "What services are included in Euracare's antenatal care package?",
-                answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
-            },
-            {
-                question: "Do you offer childbirth education or antenatal classes?",
-                answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
-            },
-            {
-                question: "What should I expect during a postnatal check-up?",
-                answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
-            },
-            {
-                question: "How soon after delivery should I come for a postnatal visit?",
-                answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
-            }
-        ]
-    },
-    {
-        slug: "orthopaedic-services",
-        title: "Orthopaedic Services",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "paediatric-cardiology",
-        title: "Paediatric Cardiology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "paediatrics",
-        title: "Paediatrics",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        description: "We provide comprehensive women’s health services, from routine screenings to advanced gynecologic procedures. Our team supports every stage of life with sensitivity and expertise.",
+        image: "/home/gyna.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
         slug: "psychiatry-sleep-therapy",
-        title: "Psychiatry – Sleep Therapy",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "pulmonology",
-        title: "Pulmonology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "radiology",
-        title: "Radiology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
-        heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
-    },
-    {
-        slug: "reconstructive-plastic-surgery",
-        title: "Reconstructive & Plastic Surgery",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        title: "Psychiatry & Sleep Therapy",
+        description: "We address mental health and sleep disorders with evidence-based care. From anxiety and depression to insomnia, our specialists create personalized treatment plans that restore balance and well-being",
+        image: "/home/sleep.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
     {
         slug: "rheumatology",
         title: "Rheumatology",
-        description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
-        image: "/services/dermatology.png",
+        description: "Our rheumatologists specialize in diagnosing and treating autoimmune and inflammatory joint diseases, including arthritis and lupus. We focus on reducing pain, improving mobility, and preserving long-term health.",
+        image: "/home/rheuma.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
+    // {
+    //     slug: "ear-nose-throat",
+    //     title: "Ear, Nose and Throat (ENT)",
+    //     description: "We offer a comprehensive range of ENT services, including diagnosis and treatment of conditions affecting the ear, nose, and throat.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "endocrinology-and-diabetology",
+    //     title: "Endocrinology and Diabetology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "fertility-services",
+    //     title: "Fertility Services",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "gastroenterology",
+    //     title: "Gastroenterology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "general-medicine",
+    //     title: "General Medicine",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "general-surgery",
+    //     title: "General Surgery",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "Haematology",
+    //     title: "Haematology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "international-patients",
+    //     title: "International Patients",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "interventinal-cardiology",
+    //     title: "Interventional Cardiology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "neurology-neurosurgery",
+    //     title: "Neurology & Neurosurgery",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "nutritionist",
+    //     title: "Nutritionist",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "oncology",
+    //     title: "Oncology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "Oncology is a branch of medical science dealing with tumours, including the origin, development, diagnosis, and treatment of malignant neoplasms. Different types of doctors often work together to create a patient’s overall treatment plan that combines different types of treatments. Euracare provides Surgical Oncology services and cancer treatment using cutting-edge Interventional Radiology modalities. Interventional radiology may also be used to manage metastatic disease from a variety of cancers including those of the breast, colon, rectum, gallbladder, pancreas, lung, oesophagus and stomach, as well as melanoma and sarcoma. Interventional radiologists are specialists trained in using image-guided technology, such as X-rays, CT and MRI",
+    //     testList: ["Biopsy", "MRI", "CT", "X-ray", "Clinical Laboratory", "Ultrasound", "Bronchoscopy", "Endoscopic procedures", "Lumbar puncture", "Pap smear", "Physical examination"],
+    //     conditionList: ["Transarterial chemoembolization", "Radiofrequency ablation (RFA)", "Microwave ablation", "Tumour ablation procedures", "Liver-directed therapies", "Vascular work", "Drainage catheters", "Port and PICC Line Placement", "Pain management", "Lymphatic Interventions"],
+    //     faqs: [
+    //         {
+    //             question: "What is antenatal care, and why is it important?",
+    //             answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
+    //         },
+    //         {
+    //             question: "When should I start antenatal visits at Euracare?",
+    //             answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
+    //         },
+    //         {
+    //             question: "What services are included in Euracare's antenatal care package?",
+    //             answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
+    //         },
+    //         {
+    //             question: "Do you offer childbirth education or antenatal classes?",
+    //             answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
+    //         },
+    //         {
+    //             question: "What should I expect during a postnatal check-up?",
+    //             answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
+    //         },
+    //         {
+    //             question: "How soon after delivery should I come for a postnatal visit?",
+    //             answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
+    //         }
+    //     ]
+    // },
+    // {
+    //     slug: "orthopaedic-services",
+    //     title: "Orthopaedic Services",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "paediatric-cardiology",
+    //     title: "Paediatric Cardiology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "paediatrics",
+    //     title: "Paediatrics",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "psychiatry-sleep-therapy",
+    //     title: "Psychiatry – Sleep Therapy",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "pulmonology",
+    //     title: "Pulmonology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "radiology",
+    //     title: "Radiology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "reconstructive-plastic-surgery",
+    //     title: "Reconstructive & Plastic Surgery",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
+    // {
+    //     slug: "rheumatology",
+    //     title: "Rheumatology",
+    //     description: "We offer a comprehensive range of dermatological services, including medical, surgical, and cosmetic treatments, to help you achieve and maintain healthy skin.",
+    //     image: "/services/dermatology.png",
+    //     heroImage: "/service-d/hero-img.png",
+    //     overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+    // },
 ];
