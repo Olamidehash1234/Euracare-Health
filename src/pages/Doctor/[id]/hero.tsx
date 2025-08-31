@@ -45,39 +45,89 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
 
                         {/* Bio */}
                         <div className="mt-[30px] lg:mt-[49px] border-y border-[#ADB4BF] py-[30px] lg:py-[40px]">
-                            <p className="text-[#02070D] text-[16px] leading-[1.7] lg:leading-[26px]">
+                            <p className="text-[#02070D] text-[16px] leading-[1.7] lg:leading-[26px] mb-[10px]">
                                 {doctor.bio}
+                            </p>
+                            <p className="text-[#02070D] text-[16px] leading-[1.7] lg:leading-[26px] mb-[10px]">
+                                {doctor.bio2}
+                            </p>
+                            <p className="text-[#02070D] text-[16px] leading-[1.7] lg:leading-[26px] mb-[10px]">
+                                {doctor.bio3}
+                            </p>
+                            <p className="text-[#02070D] text-[16px] leading-[1.7] lg:leading-[26px]">
+                                {doctor.bio4}
                             </p>
                         </div>
                         {/* Info Table */}
                         <div className="mt-[30px] lg:mt-[40px] space-y-[30px] lg:space-y-[40px]">
-                            <div className="flex flex-col sm:flex-row sm:items-center">
-                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">PROGRAMS + SPECIALTIES:</div>
-                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px] lg:tracking-[-0.54px]">{doctor.title}</div>
+                            {/* Programs + Specialties */}
+                            <div className="flex flex-col sm:flex-row sm:items-start">
+                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">
+                                    PROGRAMS + SPECIALTIES:
+                                </div>
+                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        {Array.isArray(doctor.program)
+                                            ? doctor.program.map((item, idx) => <li key={idx}>{item}</li>)
+                                            : <li>{doctor.program}</li>}
+                                    </ul>
+                                </div>
                             </div>
                             <hr className="my-1 border-[#ADB4BF]" />
-                            <div className="flex flex-col sm:flex-row sm:items-center">
-                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">RESEARCH INTERESTS:</div>
-                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px] lg:tracking-[-0.54px]">{doctor.researchInterests}</div>
+
+                            {/* Research Interests */}
+                            <div className="flex flex-col sm:flex-row sm:items-start">
+                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">
+                                    RESEARCH INTERESTS:
+                                </div>
+                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        {Array.isArray(doctor.researchInterests)
+                                            ? doctor.researchInterests.map((item, idx) => <li key={idx}>{item}</li>)
+                                            : <li>{doctor.researchInterests}</li>}
+                                    </ul>
+                                </div>
                             </div>
                             <hr className="my-1 border-[#ADB4BF]" />
-                            <div className="flex flex-col sm:flex-row sm:items-center">
-                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">DEGREE:</div>
-                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px] lg:tracking-[-0.54px]">{doctor.degree}</div>
+
+                            {/* Qualifications */}
+                            <div className="flex flex-col sm:flex-row sm:items-start">
+                                <div className="w-[304px] min-w-[304px] uppercase text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">
+                                    Qualifications:
+                                </div>
+                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        {Array.isArray(doctor.degree)
+                                            ? doctor.degree.map((item, idx) => <li key={idx}>{item}</li>)
+                                            : <li>{doctor.degree}</li>}
+                                    </ul>
+                                </div>
                             </div>
                             <hr className="my-1 border-[#ADB4BF]" />
+
+                            {/* Training + Education */}
                             <div className="flex flex-col sm:flex-row sm:items-start">
                                 <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[16px] lg:text-[18px] leading-[28px] mb-[10px] sm:mb-0">
                                     TRAINING + EDUCATION:
                                 </div>
-                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px] lg:tracking-[-0.54px]">
-                                    {doctor.education}
+                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                    <ul className="list-disc pl-5 space-y-1">
+                                        {Array.isArray(doctor.education)
+                                            ? doctor.education.map((item, idx) => <li key={idx}>{item}</li>)
+                                            : <li>{doctor.education}</li>}
+                                    </ul>
                                 </div>
                             </div>
                             <hr className="my-1 border-[#ADB4BF]" />
+
+                            {/* Languages */}
                             <div className="flex flex-col sm:flex-row sm:items-center">
-                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">LANGUAGE(S):</div>
-                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px] lg:tracking-[-0.54px]">{doctor.languages ? doctor.languages.join(", ") : "English"}</div>
+                                <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
+                                    LANGUAGE(S):
+                                </div>
+                                <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                    {doctor.languages ? doctor.languages.join(", ") : "English"}
+                                </div>
                             </div>
                         </div>
                     </div>
