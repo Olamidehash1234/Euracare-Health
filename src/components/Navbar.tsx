@@ -39,7 +39,7 @@ export default function Navbar() {
             <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               Patient & Visitor Information
             </a>
-            <a href="#" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <a href="/enquiry" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
               Book Appointment
             </a>
           </div>
@@ -107,7 +107,7 @@ export default function Navbar() {
           <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             Patient & Visitor Information
           </a>
-          <a href="#" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <a href="/enquiry" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             Book Appointment
           </a>
         </div>
