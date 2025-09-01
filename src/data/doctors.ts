@@ -22,7 +22,7 @@ export const doctors: Doctor[] = [
     {
         id: "Dr. Tosin Majekodunmi",
         name: "Dr. Tosin Majekodunmi",
-        specialty: ["Cardiology", "Interventional Cardiology", "Adult Congenital Heart Disease"],
+        specialty: ["Cardiology", "Interventional Cardiology"],
         image: "",
         title: "Medical Director & Chief of Cardiology",
         education: ["Internship and residency in Internal Medicine, London UK", "Cardiology residency in West Midlands, UK", "Adult Congenital Heart Disease Fellowship at Royal Brompton, Guy’s & St. Thomas’ and Great Ormond Street Hospitals (UK)", "Interventional/Structural Heart Disease Fellowship, Toronto General Hospital (Canada)"],
