@@ -41,12 +41,6 @@ export default function ServicesGrid() {
         setFilteredServices(sorted);
     };
 
-    const handleReset = () => {
-        setQuery("");
-        setCurrentPage(1);
-        setFilteredServices(services);
-    };
-
     const renderPaginationButtons = () => {
         const buttons = [];
         const maxVisibleButtons = 2;
