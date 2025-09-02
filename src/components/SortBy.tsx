@@ -2,9 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 
 interface SortByProps {
   onSort: (option: string) => void;
+  rightPosition?: string;
 }
 
-export default function SortBy({ onSort }: SortByProps) {
+export default function SortBy({ onSort, rightPosition = "right-0 lg:right-[-72%]" }: SortByProps) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -35,7 +36,7 @@ export default function SortBy({ onSort }: SortByProps) {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-[-60px] lg:left-0 lg:rounded-[48px] right-0 lg:right-[-72%] mt-[10px] lg:mt-2 px-4 py-3 lg:px-[30px] lg:py-[30px] bg-[#F8F8F8] border-[1px] border-[#0C2141] rounded-lg z-50">
+        <div className={`absolute top-full left-[-60px] lg:left-0 lg:rounded-[48px] ${rightPosition} mt-[10px] lg:mt-2 px-4 py-3 lg:px-[30px] lg:py-[30px] bg-[#F8F8F8] border-[1px] border-[#0C2141] rounded-lg z-50`}>
           {sortOptions.map((option, index) => (
             <div key={option}>
               <button

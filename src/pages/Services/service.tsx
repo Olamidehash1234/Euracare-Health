@@ -102,7 +102,7 @@ export default function ServicesGrid() {
         <section className="px-4 py-10 lg:px-[80px] lg:pt-[40px]">
             {/* Search & Sort Row */}
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-8 lg:mb-[40px]">
-                <div className="flex items-center w-full lg:w-[85%] gap-[7px] lg:gap-[16px] bg-white border border-[#5D6B80] lg:border-[#ADB4BF] rounded-full py-[18px] lg:px-[20px] px-[24px] lg:px-[33px]">
+                <div className="flex items-center w-full lg:w-[83%] gap-[7px] lg:gap-[16px] bg-white border border-[#5D6B80] lg:border-[#ADB4BF] rounded-full py-[18px] lg:px-[20px] px-[24px] lg:px-[33px]">
                     <img src="/home/search.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto"/>
                     <input
                         type="text"
@@ -113,8 +113,8 @@ export default function ServicesGrid() {
                     />
                 </div>
 
-                <div className="lg:w-[15%] w-full">
-                    <SortBy onSort={handleSort} />
+                <div className="lg:w-[17%] w-full">
+                    <SortBy onSort={handleSort} rightPosition="right-0 lg:right-[-35px]" />
                 </div>
             </div>
 
