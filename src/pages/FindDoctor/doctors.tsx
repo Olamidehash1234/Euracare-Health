@@ -4,6 +4,7 @@ import { doctors } from "../../data/doctors";
 import SearchSuggestions from "../../components/SearchSuggestions";
 import { Link } from 'react-router-dom';
 import SortBy from "../../components/SortBy";
+import FilterBy from "../../components/FilterBy";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
@@ -67,6 +68,21 @@ export default function ServicesGrid() {
             sorted.sort((a, b) => b.name.localeCompare(a.name));
         }
         setFilteredDoctors(sorted);
+    };
+
+    const handleFilter = (option: string) => {
+        const filtered = doctors.filter(doctor =>
+            doctor.specialty.includes(option)
+        );
+        setFilteredDoctors(filtered);
+    };
+
+    const handleReset = () => {
+        setQuery("");
+        setConfirmedSearch("");
+        setCurrentPage(1);
+        setFilteredDoctors(doctors);
+        setShowSuggestions(false);
     };
 
     const renderPaginationButtons = () => {
@@ -165,10 +181,9 @@ export default function ServicesGrid() {
                 </div>
 
                 <div className="flex w-full justify-between lg:w-[30%] gap-[20px] lg:gap-[10px]">
-                    <button className="flex items-center justify-center gap-2 lg:gap-[9px] py-[17px] border border-[#5D6B80] lg:border-[#010101] w-full rounded-full px-5 py-2 bg-white shadow-sm hover:bg-gray-50 transition">
-                        <img src="/download.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto" />
-                        <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px] ">Filter by</span>
-                    </button>
+                    <div className="w-full">
+                        <FilterBy onFilter={handleFilter} />
+                    </div>
 
                     <div className="w-full">
                         <SortBy onSort={handleSort} />
@@ -176,8 +191,11 @@ export default function ServicesGrid() {
                 </div>
 
                 <div className="lg:w-[8%]">
-                    <button className="flex items-center justify-center gap-2 lg:gap-[9px] border-b border-[#000000] lg:border-[#010101] w-full lg:w-auto ml-auto py-2 transition">
-                        <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px] ">Reset all</span>
+                    <button
+                        onClick={handleReset}
+                        className="flex items-center justify-center gap-2 lg:gap-[9px] border-b border-[#000000] lg:border-[#010101] w-full lg:w-auto ml-auto py-2 transition"
+                    >
+                        <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px]">Reset all</span>
                         <img src="/rotate.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto" />
                     </button>
                 </div>
@@ -204,7 +222,7 @@ export default function ServicesGrid() {
                                     {doc.specialty.join(", ")}
                                 </p>
                             </div>
-                            <Link 
+                            <Link
                                 to={`/Doctors-Profile/${doc.id}`}  // Changed from /Doctors-Profile/ to /doctor/
                                 className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
                             >
