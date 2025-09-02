@@ -63,13 +63,13 @@ export default function ServiceLines() {
                       Interventional Cardiology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.</p>
 
-                      <Link to="/services/dynamic/interventional-cardiology" className="inline-block">
-                        <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
-                          Learn More
-                        </button>
-                      </Link>
+                    <Link to="/services/dynamic/interventional-cardiology" className="inline-block mt-auto">
+                      <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function ServiceLines() {
                       Interventional Radiology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.</p>
 
                     <Link to="/services/dynamic/interventional-radiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -135,7 +135,7 @@ export default function ServiceLines() {
                       Adult & Pediatric Cardiology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.</p>
 
                     <Link to="/services/dynamic/adult-pediatric-cardiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -171,7 +171,7 @@ export default function ServiceLines() {
                       Bariatric & Weight Loss Surgery
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being.</p>
 
                     <Link to="/services/dynamic/bariatric-weight-loss-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -206,7 +206,7 @@ export default function ServiceLines() {
                       General Surgery
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results</p>
 
                     <Link to="/services/dynamic/general-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -244,7 +244,7 @@ export default function ServiceLines() {
                       Gastroenterology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.</p>
 
                     <Link to="/services/dynamic/gastroenterology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -280,7 +280,7 @@ export default function ServiceLines() {
                       Orthopedic Surgery
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.</p>
 
                     <Link to="/services/dynamic/orthopedic-surgery" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -316,7 +316,7 @@ export default function ServiceLines() {
                       Urology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.</p>
 
                     <Link to="/services/dynamic/urology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -352,7 +352,7 @@ export default function ServiceLines() {
                       Family & Geriatric Medicine
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.</p>
 
                     <Link to="/services/dynamic/family-geriatric-medicine" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -389,7 +389,7 @@ export default function ServiceLines() {
 
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.</p>
 
                     <Link to="/services/dynamic/general-medicine" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
@@ -425,7 +425,7 @@ export default function ServiceLines() {
                       Radiology
                     </h3>
 
-                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow">With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans</p>
+                    <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans</p>
 
                     <Link to="/services/dynamic/radiology" className="inline-block">
                       <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">

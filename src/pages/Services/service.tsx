@@ -1,15 +1,23 @@
 import { useState } from "react";
 import { services } from "../../data/services";
+import SortBy from "../../components/SortBy";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const servicesPerPage = 8;
+    const [filteredServices, setFilteredServices] = useState(services);
 
     // Filter services based on search query
-    const filteredServices = services.filter((service) =>
-        service.title.toLowerCase().includes(query.toLowerCase())
-    );
+    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setQuery(e.target.value);
+        setCurrentPage(1);
+        const value = e.target.value.toLowerCase();
+        const filtered = services.filter((service) =>
+            service.title.toLowerCase().includes(value)
+        );
+        setFilteredServices(filtered);
+    };
 
     // Calculate pagination
     const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
@@ -17,16 +25,20 @@ export default function ServicesGrid() {
     const endIndex = startIndex + servicesPerPage;
     const currentServices = filteredServices.slice(startIndex, endIndex);
 
-    // Reset to first page when search query changes
-    const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setQuery(e.target.value);
-        setCurrentPage(1);
-    };
-
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
         // Scroll to top of services section
         window.scrollTo({ top: 420, behavior: 'smooth' });
+    };
+
+    const handleSort = (option: string) => {
+        const sorted = [...filteredServices];
+        if (option === "Alphabetically (A to Z)") {
+            sorted.sort((a, b) => a.title.localeCompare(b.title));
+        } else if (option === "Alphabetically (Z to A)") {
+            sorted.sort((a, b) => b.title.localeCompare(a.title));
+        }
+        setFilteredServices(sorted);
     };
 
     const renderPaginationButtons = () => {
@@ -101,10 +113,9 @@ export default function ServicesGrid() {
                     />
                 </div>
 
-                <button className="flex items-center lg:w-[15%] justify-center gap-2 lg:gap-[9px] py-[18px] border border-[#5D6B80] lg:border-[#010101] w-full rounded-full px-5 py-2 bg-white shadow-sm hover:bg-gray-50 transition">
-                    <img src="/download.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto"/>
-                    <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px] ">Sort by</span>
-                </button>
+                <div className="lg:w-[15%] w-full">
+                    <SortBy onSort={handleSort} />
+                </div>
             </div>
 
             {/* Results info */}

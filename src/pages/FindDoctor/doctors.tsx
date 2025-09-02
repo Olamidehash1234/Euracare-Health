@@ -3,16 +3,18 @@ import type { KeyboardEvent } from "react"
 import { doctors } from "../../data/doctors";
 import SearchSuggestions from "../../components/SearchSuggestions";
 import { Link } from 'react-router-dom';
+import SortBy from "../../components/SortBy";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
     const [confirmedSearch, setConfirmedSearch] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
     const [showSuggestions, setShowSuggestions] = useState(false);
+    const [filteredDoctors, setFilteredDoctors] = useState(doctors);
     const doctorsPerPage = 8;
 
     // Filter doctors based on search query
-    const filteredDoctors = doctors.filter((doc) =>
+    const initialFilteredDoctors = doctors.filter((doc) =>
         doc.name.toLowerCase().includes(confirmedSearch.toLowerCase()) ||
         doc.specialty.some(s => s.toLowerCase().includes(confirmedSearch.toLowerCase()))
     );
@@ -55,6 +57,16 @@ export default function ServicesGrid() {
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
         window.scrollTo({ top: 420, behavior: 'smooth' });
+    };
+
+    const handleSort = (option: string) => {
+        const sorted = [...initialFilteredDoctors];
+        if (option === "Alphabetically (A to Z)") {
+            sorted.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (option === "Alphabetically (Z to A)") {
+            sorted.sort((a, b) => b.name.localeCompare(a.name));
+        }
+        setFilteredDoctors(sorted);
     };
 
     const renderPaginationButtons = () => {
@@ -117,7 +129,7 @@ export default function ServicesGrid() {
         <section className="px-4 py-10 lg:px-[80px] lg:pt-[40px] lg:pb-[80px]">
             {/* Search & Sort Row */}
             <div className="flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-[10px] mb-8 lg:mb-[40px]">
-                <div className="flex items-center w-full lg:w-[65%] gap-[7px] lg:gap-[16px] bg-white border border-[#5D6B80] lg:border-[#ADB4BF] rounded-full py-[17px] lg:px-[20px] px-[24px] lg:px-[33px] relative">
+                <div className="flex items-center w-full lg:w-[62%] gap-[7px] lg:gap-[16px] bg-white border border-[#5D6B80] lg:border-[#ADB4BF] rounded-full py-[17px] lg:px-[20px] px-[24px] lg:px-[33px] relative">
                     <img src="/home/search.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto" />
                     <input
                         type="text"
@@ -152,16 +164,15 @@ export default function ServicesGrid() {
                     )}
                 </div>
 
-                <div className="flex w-full justify-between lg:w-[27%] gap-[20px] lg:gap-[10px]">
+                <div className="flex w-full justify-between lg:w-[30%] gap-[20px] lg:gap-[10px]">
                     <button className="flex items-center justify-center gap-2 lg:gap-[9px] py-[17px] border border-[#5D6B80] lg:border-[#010101] w-full rounded-full px-5 py-2 bg-white shadow-sm hover:bg-gray-50 transition">
                         <img src="/download.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto" />
                         <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px] ">Filter by</span>
                     </button>
 
-                    <button className="flex items-center  justify-center gap-2 lg:gap-[9px] py-[17px] border border-[#5D6B80] lg:border-[#010101] w-full rounded-full px-5 py-2 bg-white shadow-sm hover:bg-gray-50 transition">
-                        <img src="/download.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto" />
-                        <span className="text-sm font-normal lg:tracking-[-0.54px] lg:leading-[27px] lg:text-[16px] ">Sort by</span>
-                    </button>
+                    <div className="w-full">
+                        <SortBy onSort={handleSort} />
+                    </div>
                 </div>
 
                 <div className="lg:w-[8%]">
