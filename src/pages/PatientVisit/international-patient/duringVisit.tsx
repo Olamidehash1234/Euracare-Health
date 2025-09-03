@@ -55,7 +55,7 @@ export default function DuringYourVisit({
                                 src={imageSrc}
                                 alt={imageAlt}
                                 loading="lazy"
-                                className="w-full object-cover h-[300px] sm:h-80 lg:h-[443px]"
+                                className="w-full object-cover h-64 sm:h-80 lg:h-[443px]"
                             />
                         </div>
                     </div>

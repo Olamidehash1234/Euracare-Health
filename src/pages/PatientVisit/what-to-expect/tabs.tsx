@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, type JSX, } from "react";
+import React, { useEffect, useRef, useState, type JSX, type RefCallback } from "react";
 
 type Tab = {
     id: string;
@@ -100,7 +100,15 @@ function ContentBlock({ children }: { children: React.ReactNode }) {
 /* -------------------- Main component -------------------- */
 export default function SupportServicesTabs() {
     const [activeIndex, setActiveIndex] = useState(0);
-    const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
+    const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+    const setRef: RefCallback<HTMLButtonElement> = (element: HTMLButtonElement | null) => {
+        if (element) {
+            const idx = Number(element.dataset.idx);
+            tabRefs.current[idx] = element;
+        }
+    };
+
     const active = TABS[activeIndex];
 
     // Keyboard navigation for tabs (Left/Right/Home/End)
@@ -161,7 +169,8 @@ export default function SupportServicesTabs() {
                             return (
                                 <button
                                     key={tab.id}
-                                    ref={(el) => (tabRefs.current[idx] = el)}
+                                    ref={setRef}
+                                    data-idx={idx}
                                     role="tab"
                                     aria-selected={isActive}
                                     aria-controls={`panel-${tab.id}`}

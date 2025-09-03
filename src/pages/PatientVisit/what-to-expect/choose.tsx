@@ -76,7 +76,7 @@ export default function WhyChoose() {
     return (
         <section
             aria-labelledby="why-choose-title"
-            className="px-[16px] py-[60px] lg:py-20"
+            className="px-[16px] lg:px-0 py-[60px] lg:py-20"
         >
             <div className="">
                 {/* Heading */}

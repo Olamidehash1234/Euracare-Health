@@ -15,27 +15,39 @@ type Props = {
 const DEFAULT_CARDS: InfoCard[] = [
     {
         id: "c1",
-        title: "Registration & Check-In",
+        title: "Dedicated Coordinator",
         body:
-            "Our front desk will assist with registration, update your medical history, and direct you to the right clinic or specialist.",
+            "A personal liaison for appointments, treatment schedules, and communication with your doctors.",
     },
     {
         id: "c2",
-        title: "Visitor Guidelines",
+        title: "Medical Records Review",
         body:
-            "For the comfort and safety of all patients, we limit visiting hours and ask that all visitors observe hospital protocols.",
+            "Send your reports in advance for assessment before you travel.",
     },
     {
         id: "c3",
-        title: "Patient Rights & Responsibilities",
+        title: "Visa & Travel Support",
         body:
-            "You have the right to safe, respectful, and confidential care. We ask that you share accurate health information and follow medical advice for best outcomes.",
+            "Assistance with medical visa letters, airport transfers, and transport arrangements.",
+    },
+    {
+        id: "c4",
+        title: "Accommodation",
+        body:
+            "Preferred rates at partner hotels and serviced apartments near the hospital.",
+    },
+    {
+        id: "c3",
+        title: "Financial Guidance",
+        body:
+            "Transparent estimates for procedures, billing assistance, and insurance coordination.",
     },
 ];
 
 export default function DuringYourVisit({
-    heading = "During Your Visit",
-    imageSrc = "/patient-visit/man2man.png",
+    heading = "International Patient Services",
+    imageSrc = "/patient-visit/blonde-nurse.png",
     imageAlt = "Smiling clinician ready to help",
     cards = DEFAULT_CARDS,
 }: Props) {
@@ -55,7 +67,7 @@ export default function DuringYourVisit({
                                 src={imageSrc}
                                 alt={imageAlt}
                                 loading="lazy"
-                                className="w-full object-cover h-[300px] sm:h-80 lg:h-[443px]"
+                                className="w-full object-cover h-[350px] sm:h-80 lg:h-[712px]"
                             />
                         </div>
                     </div>
@@ -66,7 +78,7 @@ export default function DuringYourVisit({
                         <div className="">
                             <h2
                                 id="before-visit-title"
-                                className="text-[32px] lg:text-[60px] font-medium tracking-tight lg:leading-[72px] lg:tracking-[-1.8px] text-[#0D2644]"
+                                className="text-[32px] lg:text-[60px] font-medium tracking-tight leading-[40px] lg:leading-[72px] lg:tracking-[-1.8px] text-[#0D2644]"
                             >
                                 {heading}
                             </h2>

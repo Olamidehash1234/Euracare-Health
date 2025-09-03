@@ -22,7 +22,7 @@ export default function InternationalPatientsHero({
                 <div className="relative z-[1] w-full px-4 py-6">
                     <div className="flex items-center gap-3">
 
-                        <h1 className="text-white font-medium leading-[1.1] text-[22px]">
+                        <h1 className="text-white font-medium leading-[1.1] text-[32px]">
                             International Patients
                         </h1>
 

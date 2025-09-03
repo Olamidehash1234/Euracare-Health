@@ -1,6 +1,5 @@
 import React, { type JSX } from "react";
 
-/** ---------- Icons (inline SVG, lightweight, brand-friendly) ---------- */
 const HomeMedicalIcon = () => (
     <img src="/patient-visit/care.svg" alt="" />
 );
@@ -9,23 +8,8 @@ const StethoscopeIcon = () => (
     <img src="/patient-visit/tech.svg" alt="" />
 );
 
-const ChatCheckIcon = (props: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-        <path
-            d="M20 14a6 6 0 01-6 6H7l-3 3v-5a6 6 0 01-6-6V7a6 6 0 016-6h10a6 6 0 016 6v7z"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-        />
-        <path
-            d="M8 9l2.2 2.2L16 5.5"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.8"
-            strokeLinecap="round"
-        />
-    </svg>
+const ChatCheckIcon = () => (
+    <img src="/patient-visit/times.svg" alt="" />
 );
 
 const PeoplePlusIcon = () => (
@@ -43,30 +27,30 @@ type Benefit = {
 const BENEFITS: Benefit[] = [
     {
         id: "b1",
-        title: "Personalized Care",
+        title: "Specialist Care",
         description:
-            "Our doctors and nurses take time to understand your needs, creating a tailored care plan for the best possible outcomes.",
+            "Access to highly trained consultants across cardiology, surgery, internal medicine, oncology, orthopedics, and more.",
         Icon: HomeMedicalIcon,
     },
     {
         id: "b2",
         title: "Advanced Technology",
         description:
-            "We combine international expertise with world-class facilities and innovative medical solutions.",
+            "State-of-the-art imaging, minimally invasive procedures, and modern operating theaters.",
         Icon: StethoscopeIcon,
     },
     {
         id: "b3",
-        title: "Clear Communication",
+        title: "Shorter Waiting Times",
         description:
-            "We explain every step of your treatment plan so you feel confident and informed.",
+            "Quick scheduling for consultations, tests, and procedures.",
         Icon: ChatCheckIcon,
     },
     {
         id: "b4",
-        title: "Compassionate Support",
+        title: "Coordinated Care",
         description:
-            "Beyond medical care, our team is here to support your overall wellbeing.",
+            "Multidisciplinary teams offering comprehensive evaluations and personalized treatment plans.",
         Icon: PeoplePlusIcon,
     },
 ];
@@ -76,19 +60,19 @@ export default function WhyChoose() {
     return (
         <section
             aria-labelledby="why-choose-title"
-            className="py-[60px] lg:py-20"
+            className="px-[16px] lg:px-0 py-[60px] lg:py-20"
         >
             <div className="">
                 {/* Heading */}
                 <div className="mx-auto max-w-[712px]">
                     <h2
                         id="why-choose-title"
-                        className="text-[24px] sm:text-[28px] font-medium tracking-tight lg:tracking-[-0.84px] text-[#0C2141]"
+                        className="text-[32px] sm:text-[28px] font-medium tracking-tight lg:tracking-[-0.84px] text-[#0C2141]"
                     >
                         Why choose Euracare?
                     </h2>
 
-                    <p className=" mt-5 lg:mt-[26px] text-[15px] lg:text-[18px] font-medium leading-7 lg:leading-[27px] lg:tracking-[-0.54px] text-[#0C2141]">
+                    <p className=" mt-5 lg:mt-[26px] text-[15px] lg:text-[18px] font-medium leading-[24px] lg:leading-[27px] lg:tracking-[-0.54px] text-[#0C2141]">
                         At Euracare, we want every patient and visitor to feel supported,
                         informed, and cared for.
                         Whether you are coming for a consultation, diagnostic test, or
@@ -98,7 +82,7 @@ export default function WhyChoose() {
                 </div>
 
                 {/* Benefits panel */}
-                <div className="px-4 lg:pt-[40px] lg:px-20">
+                <div className="px-0 pt-[30px] lg:pt-[40px] lg:px-20">
                     <div className="rounded-[20px] bg-[#EFF8F8] border-[1px] border-[#0000001A]">
                         <div className="px-5 py-10 lg:p-[60px]">
                             {/* Grid: 1 → 2 → 4 columns */}

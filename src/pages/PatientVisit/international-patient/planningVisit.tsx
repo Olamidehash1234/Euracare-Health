@@ -15,52 +15,63 @@ type Props = {
 const DEFAULT_CARDS: InfoCard[] = [
     {
         id: "c1",
-        title: "Registration & Check-In",
+        title: " Initial Contact",
         body:
-            "Our front desk will assist with registration, update your medical history, and direct you to the right clinic or specialist.",
+            "Reach out via phone, email, or online form.",
     },
     {
         id: "c2",
-        title: "Visitor Guidelines",
+        title: "Medical Review",
         body:
-            "For the comfort and safety of all patients, we limit visiting hours and ask that all visitors observe hospital protocols.",
+            "Share your medical history and reports with our specialists",
     },
     {
         id: "c3",
-        title: "Patient Rights & Responsibilities",
+        title: "Treatment Plan & Cost Estimate",
         body:
-            "You have the right to safe, respectful, and confidential care. We ask that you share accurate health information and follow medical advice for best outcomes.",
+            "Receive a clear plan before travel.",
+    },
+    {
+        id: "c4",
+        title: "Travel & Arrival",
+        body:
+            "Our team helps with logistics from airport pickup to check-in.",
+    },
+    {
+        id: "c5",
+        title: "During Your Stay",
+        body:
+            "Continuous support from admission through discharge.",
+    },
+    {
+        id: "c6",
+        title: "During Your Stay",
+        body:
+            "Continuous support from admission through discharge.",
+    },
+    {
+        id: "c7",
+        title: "Follow-Up Care",
+        body:
+            "Remote consultations and post-treatment monitoring after you return home.",
     },
 ];
 
-export default function DuringYourVisit({
-    heading = "During Your Visit",
-    imageSrc = "/patient-visit/man2man.png",
+export default function BeforeYourVisit({
+    heading = "Planning Your Visit",
+    imageSrc = "/surgery.png",
     imageAlt = "Smiling clinician ready to help",
     cards = DEFAULT_CARDS,
 }: Props) {
     return (
         <section
             aria-labelledby="before-visit-title"
-            className="py-[60px] lg:py-20 bg-white"
+            className="py-0 lg:py-20 bg-white"
         >
             <div className="px-[16px] lg:px-[104px]">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-                    {/* left: image */}
-                    <div className="w-full ">
-                        <div className="w-full overflow-hidden rounded-2xl">
-                            <img
-                                src={imageSrc}
-                                alt={imageAlt}
-                                loading="lazy"
-                                className="w-full object-cover h-[300px] sm:h-80 lg:h-[443px]"
-                            />
-                        </div>
-                    </div>
-
-                    {/* right: heading + stacked cards */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                    {/* Left: heading + stacked cards */}
                     <div className="space-y-8 lg:space-y-[24px]">
                         {/* Heading */}
                         <div className="">
@@ -91,6 +102,18 @@ export default function DuringYourVisit({
                                     </p>
                                 </article>
                             ))}
+                        </div>
+                    </div>
+
+                    {/* Right: image */}
+                    <div className="w-full">
+                        <div className="w-full overflow-hidden rounded-2xl">
+                            <img
+                                src={imageSrc}
+                                alt={imageAlt}
+                                loading="lazy"
+                                className="w-full object-cover h-[350px] sm:h-80 lg:h-[735px]"
+                            />
                         </div>
                     </div>
                 </div>
