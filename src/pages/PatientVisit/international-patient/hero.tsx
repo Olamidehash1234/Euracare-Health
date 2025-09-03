@@ -4,8 +4,8 @@ type Props = {
 };
 
 export default function InternationalPatientsHero({
-    title = "What to Expect as a Patient",
-    imageSrc = "/patient-visit/hero1.png",
+    title = "International Patients",
+    imageSrc = "/patient-visit/hero.png",
 }: Props) {
     return (
         <section aria-label={title} className="w-full">
@@ -23,7 +23,7 @@ export default function InternationalPatientsHero({
                     <div className="flex items-center gap-3">
 
                         <h1 className="text-white font-medium leading-[1.1] text-[32px]">
-                            What to Expect <br /> as a Patient
+                            International Patients
                         </h1>
 
                         {/* heartbeat/ECG icon */}
@@ -59,7 +59,7 @@ export default function InternationalPatientsHero({
                     {/* Content overlay */}
                     <div className="relative z-[2] pl-[80px]">
                         <h1 className="text-white font-medium leading-tight lg:leading-[50px] lg:tracking-[-1.35px] text-4xl lg:text-[45px]">
-                            What to Expect <br />as a Patient
+                            International <br /> Patients
                         </h1>
                     </div>
                 </div>

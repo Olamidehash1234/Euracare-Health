@@ -139,11 +139,11 @@ export default function Navbar() {
               </svg>
             </button>
             {mobileDropdownOpen && (
-              <div className="mt-2 pl-4 space-y-2">
+              <div className="mt-[10px] pl-4 space-y-[10px]">
                 <a href="/patient-information/what-to-expect" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
                   What To Expect
                 </a>
-                <a href="/patient-information/international" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                <a href="/patient-information/international-patients" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
                   International Patient
                 </a>
               </div>
