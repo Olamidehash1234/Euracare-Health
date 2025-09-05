@@ -7,6 +7,7 @@ import Doctor from './doctors'
 import Test from './test';
 import Conditions from './conditions';
 import Faq from './faq'
+import Procedures from './procedures'
 // import Details from "./details"; // Add more sections as needed
 
 export default function ServiceDynamicPage() {
@@ -23,8 +24,9 @@ export default function ServiceDynamicPage() {
             <Button />
             <Overview service={service} />
             <Doctor service={service} />
-            <Test service={service} />
             <Conditions service={service} />
+            <Test service={service} />
+            <Procedures service={service} />
             <Faq service={service} />
             {/* <Details service={service} /> */}
             {/* Add more sections here */}

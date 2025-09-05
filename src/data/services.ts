@@ -10,9 +10,18 @@ export type ServiceData = {
     image: string;
     heroImage: string;
     overviewText: string;
+    additionalOverview?: string;
+    additionalOverview2?: string;
+    conditionSubtitle?: string;
+    additionalconditionSubtitle?: string;
+    additionalconditionList?: string[];
+    testSubtitle?: string;
+    procedureSubtitle?: string;
     testList?: string[];
     conditionList?: string[];
+    procedureList?: string[];
     faqs?: FAQ[];
+    videoUrl?: string;
 };
 
 export const services: ServiceData[] = [
@@ -22,9 +31,44 @@ export const services: ServiceData[] = [
         description: "Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.",
         image: "/services/cardiac.png",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "Interventional Cardiology at Euracare focuses on minimally invasive techniques to diagnose and treat cardiovascular conditions. Our team of specialists utilizes advanced imaging and catheter-based procedures to provide effective solutions for complex heart issues. This approach not only enhances patient comfort but also promotes faster recovery times compared to traditional surgical methods.",
+        overviewText: 
+        "Our Interventional Cardiology service provides advanced, minimally invasive solutions for the diagnosis and treatment of complex heart conditions. Our team of highly skilled cardiologists specializes in catheter-based procedures that reduce recovery time, minimize discomfort, and improve patient outcomes. With access to state-of-the-art technology and evidence-based protocols, we deliver personalized care for both routine and high-risk cardiac cases.",
+        additionalOverview: "Our world class team is led by Euracare’s Medical Director, Dr. Tosin Majekodunmi, a specialist in adult and paediatric congenital and structural heart disease.",
+        conditionSubtitle: "Our interventional cardiologists manage a broad spectrum of heart and vascular conditions, such as:",
+        conditionList: ["Atherosclerosis", "Cardiomyopathy", " Congenital heart disease (both adult and paediatric)", "Heart failure", "Heart valve disease", "Arrhythmias (abnormal heart rhythms)", "Angina (chest pain)"],
+        testSubtitle: "We offer a comprehensive range of diagnostic services to detect and evaluate cardiovascular diseases, including:",
+        testList: ["Electrocardiogram (ECG) – Measures the electrical activity of the heart", "Echocardiogram (Echo) – Uses ultrasound to assess heart structure and function.", "Exercise Stress Test – Monitors heart performance under physical exertion.", "Holter & Event Monitoring – Continuous heart rhythm recording over 24–48 hours or longer.", "Cardiac CT & MRI – High-resolution imaging of the heart and vessels.", "Cardiac Catheterization (Diagnostic Angiography) – Examines coronary arteries for blockages.", "Blood Biomarker Testing – Detects cardiac damage or inflammation.", "Ultrasound, Digital X-ray"],
+        procedureSubtitle: "Using cutting-edge technology and minimally invasive techniques, we perform:",
+        procedureList: ["Coronary angiography, aortography", "Right and left heart catheterisation", "Coronary stenting, including complex interventions", "Temporary pacing", "Single and dual-chamber permanent pacemaker implantation", "Renal artery stenting for resistant hypertension", "Balloon aortic valvuloplasty, Transcatheter Aortic Valve Implantation (TAVI/TAVR)", "Transesophageal echocardiogram (TEE)", "Atrial septal defect (ASD) closure", "Patent foramen ovale (PFO) closure"],
+        faqs: [
+            {
+                question: "What is interventional cardiology and how is it different from general cardiology?",
+                answer: "Interventional cardiology focuses on catheter-based, minimally invasive treatments for heart and vascular conditions, unlike general cardiology which primarily manages conditions through medication and lifestyle changes"
+            },
+            {
+                question: "Is angioplasty safe?",
+                answer: "Yes, when performed by experienced specialists, angioplasty is a safe and effective procedure with low complication rates. Our team follows strict safety protocols to ensure optimal outcomes."
+            },
+            {
+                question: "Will I need to stay overnight after a procedure?",
+                answer: "Many procedures are performed on a same-day basis, but some may require a short hospital stay depending on your condition and treatment plan"
+            },
+            {
+                question: "How long is the recovery period?",
+                answer: "Most patients return to normal activities within a few days, though recovery time may vary based on the complexity of the procedure and overall health"
+            },
+            {
+                question: "Do you treat children with heart conditions?",
+                answer: "Yes, our center has expertise in both adult and pediatric interventional cardiology."
+            },
+            {
+                question: "Does this service reduce the need for medical travel overseas?",
+                answer: "Absolutely—Euracare brings cutting-edge interventional cardiology care to Nigeria, eliminating the need for patients to travel abroad for these life-saving interventions."
+            }
+        ],
+        videoUrl: "vPNyzAA0zCM"
     },
-     {
+    {
         slug: "interventional-radiology",
         title: "Interventional Radiology",
         description: "We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.",
@@ -32,50 +76,57 @@ export const services: ServiceData[] = [
         heroImage: "/service-d/hero-img.png",
         overviewText: "Advanced Cardiac Imaging at Euracare provides comprehensive diagnostic solutions using cutting-edge technology. Our state-of-the-art imaging equipment, combined with the expertise of our specialists, enables precise visualization of heart structures and function. This allows for early detection of cardiovascular conditions, accurate diagnosis, and the development of targeted treatment strategies. Our advanced imaging capabilities include 3D echocardiography, cardiac CT, and MRI, offering detailed insights into heart health while ensuring patient comfort and safety.",
     },
-    
-    // {
-    //     slug: "antenatal-postnatal-care",
-    //     title: "Antenatal & Postnatal Care",
-    //     description: "We provide comprehensive care before and after childbirth, including regular check-ups, diagnostic screenings, nutritional guidance, and emotional support—ensuring the health and well-being of both mother and baby at every stage.",
-    //     image: "/services/postnatal.png",
-    //     heroImage: "/service-d/hero-img.png",
-    //     overviewText: "Our goal is to provide regular check-ups that allow doctors to treat and prevent potential health problems throughout the course of the pregnancy and to promote healthy lifestyles that benefit both mother and child. During check-ups, pregnant women receive medical information over maternal physiological changes in pregnancy, biological changes, and prenatal nutrition including prenatal vitamins. Recommendations on management and healthy lifestyle changes are also made during regular check-ups. Prenatal screening is playing important roll to reduce the frequency of maternal death, miscarriages, birth defects, low birth weight, neonatal infections and other preventable health problems. Euracare’s specialists provide comprehensive range of Antenatal and Postnatal Care services.",
-    //     testList: ["Blood tests during pregnancy", "Checking your blood group", "Rh negative blood and Anti D injections", "Haemoglobin", "Sickle cells", "Rubella", "Syphilis", "Hepatitis B & C", "HIV and AIDS", "Urine test", "Glucose challenge test for gestational diabetes", "Pap smear (smear test)"],
-    //     conditionList: ["Consultations", "An ultrasound dating scan at 6-10 weeks", "An ultrasound anomaly scan at 18-22 weeks", "An ultrasound nuchal translucency scan at 11-14 (for the detection of cardiovascular abnormalities)", "Postpartum health checks", "Family planning"],
-    //     faqs: [
-    //         {
-    //             question: "What is antenatal care, and why is it important?",
-    //             answer: "Antenatal care involves regular medical checkups during pregnancy to monitor the health of both mother and baby. It helps detect and manage potential complications early, ensuring a safe and healthy pregnancy."
-    //         },
-    //         {
-    //             question: "When should I start antenatal visits at Euracare?",
-    //             answer: "We recommend scheduling your first antenatal visit as soon as you suspect or confirm your pregnancy, ideally within the first 8-12 weeks. Early care is crucial for establishing baseline health measurements and identifying any potential risks."
-    //         },
-    //         {
-    //             question: "What services are included in Euracare's antenatal care package?",
-    //             answer: "Our comprehensive package includes regular check-ups, diagnostic screenings, ultrasound scans, blood tests, nutritional guidance, and prenatal education. We also provide personalized care plans based on individual needs."
-    //         },
-    //         {
-    //             question: "Do you offer childbirth education or antenatal classes?",
-    //             answer: "Yes, we offer comprehensive childbirth education classes that cover labor preparation, breathing techniques, pain management options, and newborn care. These classes are designed to help you feel confident and prepared for delivery."
-    //         },
-    //         {
-    //             question: "What should I expect during a postnatal check-up?",
-    //             answer: "Postnatal check-ups include assessment of your recovery, baby's growth and development, breastfeeding support, emotional well-being evaluation, and discussions about contraception and future health planning."
-    //         },
-    //         {
-    //             question: "How soon after delivery should I come for a postnatal visit?",
-    //             answer: "We recommend your first postnatal visit within the first week after delivery, followed by regular check-ups at 2 weeks, 6 weeks, and 3 months postpartum, or as advised by your healthcare provider."
-    //         }
-    //     ]
-    // },
     {
         slug: "adult-pediatric-cardiology",
         title: "Adult & Pediatric Cardiology",
         description: "From newborns to adults, our cardiology specialists offer comprehensive heart care. We diagnose and treat congenital heart defects, rhythm disorders, and complex cardiac conditions, ensuring every patient receives age-appropriate, compassionate care.",
         image: "/home/child.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Adult & Pediatric Cardiology service is dedicated to providing advanced diagnostic and therapeutic options for patients with heart conditions. Our team of experienced cardiologists utilizes state-of-the-art technology to treat a wide range of conditions, including congenital heart defects, arrhythmias, and coronary artery disease. We focus on accurate diagnosis, effective treatment plans, and compassionate care to improve the heart health of our patients."
+        overviewText: "Our Adult & Pediatric Cardiology department offers comprehensive cardiac care for patients of all ages — from newborns to seniors. We provide advanced diagnostics, expert treatment, and preventive strategies for heart and vascular conditions. Our cardiologists work closely with multidisciplinary teams to deliver tailored care, whether managing congenital heart",
+        additionalOverview: "defects in children, controlling cardiovascular risk factors in adults, or performing advanced interventions. With cutting-edge technology and a patient-centered approach, we ensure precise diagnosis and effective management in a safe, compassionate environment.",
+        conditionSubtitle: "Adults:",
+        conditionList: ["Coronary Artery Disease", "Heart Failure", "Arrhythmias (Atrial Fibrillation, Ventricular Tachycardia, etc.)", "Hypertension", "Valvular Heart Disease", "Cardiomyopathies", "Peripheral Arterial Disease", "Pulmonary hypertension", "Heart disease in pregnancy", "Adult congenital heart disease"],
+        additionalconditionSubtitle: "Paediatrics:",
+        additionalconditionList: ["Congenital Heart Defects (ASD, VSD, Tetralogy of Fallot, etc.)", "Pediatric Arrhythmias", "Kawasaki Disease", "Rheumatic Heart Disease", "Pulmonary Hypertension", "Heart Murmurs & Structural Abnormalities"],
+        testList: ["Electrocardiogram (ECG)", "Echocardiography (Transthoracic &amp; Transesophageal)", "Pediatric Echocardiography", "Exercise Stress Testing", "Holter & Event Monitoring", "Cardiac CT & MRI", "Fetal Echocardiography", "Ambulatory Blood Pressure Monitoring", "Lipid Profile &amp; Cardiac Biomarker Testing"],
+        faqs: [
+            {
+                question: "When should my child see a pediatric cardiologist?",
+                answer: "If your child has a heart murmur, rapid breathing, bluish skin tone, poor weight gain, fainting episodes, or a family history of congenital heart disease, a consultation is recommended."
+            },
+            {
+                question: "Can children undergo heart surgery safely?",
+                answer: "Yes, pediatric cardiac surgeries and catheter-based procedures are routinely performed with excellent safety records at specialized centers.",
+            },
+            {
+                question: "Are all heart murmurs in children serious?",
+                answer: "Not necessarily. Many murmurs are “innocent” and harmless, but evaluation is essential to rule out structural heart issues."
+            },
+            {
+                question: "Can children outgrow heart problems?",
+                answer: "Some minor heart conditions can resolve with age, but others require ongoing monitoring or intervention"
+            },
+            {
+                question: "What symptoms in adults warrant a cardiology check-up?",
+                answer: "Chest pain, shortness of breath, palpitations, unexplained fatigue, dizziness, swelling in the legs, or a family history of heart disease should prompt an evaluation.",
+            },
+            {
+                question: "How often should I get my heart checked?",
+                answer: "Adults over 40 or with risk factors should have annual screenings; children with symptoms or family history may require earlier evaluation.",
+            },
+            {
+                question: "How is a heart condition diagnosed?",
+                answer: "Diagnosis typically involves a combination of a physical exam, patient history, blood tests, ECG/EKG, echocardiogram, stress testing, Holter monitoring, and, if needed, advanced imaging like cardiac MRI or CT scans."
+            },
+            {
+                question: "What lifestyle changes help maintain heart health?",
+                answer: "Balanced nutrition, regular exercise, maintaining a healthy weight, avoiding smoking, managing stress, and controlling blood pressure and cholesterol are key for all ages.",
+            },
+            {
+                question: "How often should I follow up with my cardiologist?",
+                answer: "This depends on your diagnosis — from annual check-ups for at-risk patients to more frequent visits for those with active conditions."
+            }
+        ]
     },
     {
         slug: "bariatric-weight-loss-surgery",
@@ -83,7 +134,9 @@ export const services: ServiceData[] = [
         description: "Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being",
         image: "/services/weight.png",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Bariatric & Weight Loss Surgery service is dedicated to providing comprehensive care for individuals seeking weight loss solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include surgical and non-surgical options. We focus on addressing the root causes of obesity, promoting healthy lifestyle changes, and ensuring long-term success for our patients."
+        overviewText: "Our Bariatric & Weight Loss Surgery clinic offers a comprehensive, multidisciplinary approach to obesity management, combining surgical expertise with nutritional, psychological, and lifestyle support. We help patients achieve sustainable weight loss, improve obesity-related health conditions, and enhance quality of life. Our team uses the latest minimally invasive surgical techniques to ensure faster recovery, minimal scarring, and reduced complications. Every patient undergoes a personalized evaluation to select the safest and most effective treatment plan.",
+        conditionList: ["Obesity (BMI ≥ 30)", "Morbid Obesity (BMI ≥ 40, or ≥ 35 with comorbidities)", "Type 2 Diabetes Mellitus (Obesity-related)", "Hypertension", "Dyslipidemia", "Obstructive Sleep Apnea", "Gastroesophageal Reflux Disease (GERD) linked to obesity", "Non-Alcoholic Fatty Liver Disease (NAFLD)"],
+        testList: ["Body Mass Index (BMI) Assessment", "Nutritional Evaluation", "Metabolic & Hormonal Testing"]
     },
     {
         slug: "general-surgery",
@@ -107,7 +160,32 @@ export const services: ServiceData[] = [
         description: "Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.",
         image: "/services/spine.png",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+        overviewText: "Euracare’s Orthopaedic Surgery department is dedicated to diagnosing, preventing, and treating disorders affecting bones, joints, muscles, ligaments, tendons, and nerves. Most procedures are minimally invasive, which means smaller incisions, less pain, minimal scarring, and faster recovery—delivering premium outcomes with patient comfort in mind. Our multidisciplinary team provides expert care for both elective and emergency musculoskeletal conditions.",
+        conditionList: ["Bone fractures & trauma", "Joint problems including hip and knee disorders", "Soft tissue injuries and tendon/ligament tears", "Avascular necrosis", "Degenerative joint conditions (e.g., osteoarthritis)", "Ankle, foot, wrist, elbow, hand injuries and pain", "Spinal deformities and arthritic spine conditions", "Rehabilitation under joint health program", "Bone and joint deformities", "Failed joint replacements and failed fracture treatments", "Bone and soft tissue tumours"],
+        testList: ["X-ray imaging", "CT scans", "MRI and MRI arthrograms (MRA", "Clinical laboratory testing", "Diagnostic injection under image guidance"],
+        procedureList: ["Arthroscopy for joint evaluation and treatment", "Joint replacement and revision surgeries (hip, knee)", "Bone fracture repair", "Debridement and bone fusion procedures", "Osteotomy and spine fusion surgeries", "Soft tissue repairs (muscles, tendons, ligaments)", "Minimally invasive spine surgeries"],
+        faqs: [
+            {
+                question: "When should I see an orthopaedic surgeon?",
+                answer: "If you have persistent joint pain, swelling, stiffness, limited mobility, or an injury that hasn’t improved with rest and medication, it may be time to see an orthopaedic specialist",
+            },
+            {
+                question: "Do all orthopaedic problems require surgery?",
+                answer: "An assessment is required to determine the appropriate treatment for your complaints."
+            },
+            {
+                question: "What advantages do minimally invasive orthopaedic surgeries offer?",
+                answer: "They typically involve smaller incisions, less pain, lower infection risk, and faster recovery than traditional open surgery.",
+            },
+            {
+                question: "How long will recovery take after orthopaedic surgery?",
+                answer: "Recovery depends on procedure type—minor procedures may have quick recovery, while joint replacements or fusion surgeries often require several weeks of rehabilitation.",
+            },
+            {
+                question: "Are joint replacement surgeries suitable for older patients?",
+                answer: "Yes—many older adults benefit greatly from joint replacements, with improved mobility and quality of life, guided by careful surgical and rehabilitative planning."
+            }
+        ]
     },
     {
         slug: "urology",
@@ -123,7 +201,35 @@ export const services: ServiceData[] = [
         description: "We provide ongoing, personalized care for every stage of life. Our physicians manage chronic conditions, preventive health, and complex needs of older adults with a focus on quality of life and independence.",
         image: "/home/geri.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+        overviewText: "At Euracare, our Family & Geriatric Medicine team is here to care for you and your loved ones through every stage of life — from children and young adults to seniors. We focus on keeping you healthy, preventing illness, and managing long-term conditions with compassion and expertise",
+        additionalOverview: "Euracare’s Family & Geriatric Medicine Department provides comprehensive,continuous, and coordinated care for patients of all ages, from children to seniors, with a special emphasis on the unique needs of older adults. Our physicians focus on preventive healthcare, early detection of diseases, health promotion, and the management of chronic conditions. We see an undifferentiated panel of patients with varying disease ailments.",
+        additionalOverview2: "For our senior patients, we deliver holistic and compassionate care aimed at maintaining independence, mobility, and quality of life. We also work closely with families and caregivers to ensure that elderly patients receive personalised support that meets both their medical and social needs. Our primary focus is to provide patient-centred and family-oriented care.",
+        conditionList: ["Lifestyle and chronic diseases: diabetes, hypertension, heart disease", "Respiratory conditions: asthma, COPD, recurrent chest infections", "Common infections: flu, pneumonia, urinary tract infections", "Digestive issues: acid reflux, gastritis, irritable bowel syndrome", "Age-related conditions: dementia, osteoporosis, arthritis", "Mobility and balance problems, recurrent falls, frailty syndromes", "Sleep problems and nutritional deficiencies in older adults", "Men’s health problems: erectile dysfunction, prostate diseases"],
+        testSubtitle: "We use a wide range of diagnostic tools to detect conditions early and monitor progress:",
+        testList: ["Routine blood and urine tests","Blood pressure and cardiovascular risk assessments", "Diabetes screening (HbA1c, fasting blood sugar)", "Cognitive and memory assessments for dementia and Alzheimer’s disease", "Bone density scans for osteoporosis", "Lung function tests", "Cancer screenings (prostate, breast, cervical, colon, etc.)", "Fall risk and mobility assessments"], 
+        procedureList: ["Comprehensive geriatric assessments and personalised care planning", "Vaccinations and immunisations (including travel vaccines)", "Chronic disease management programmes and medication optimisation", "Wound care and minor surgical procedures", "Nutritional counselling and physical rehabilitation referrals", "Palliative and end-of-life care planning, with family support"],
+        faqs: [
+            {
+                question: "Who is a Family Medicine Physician?",
+                answer: "A Family Medicine physician is a medical doctor or primary care specialist trained in the specialty of Family Medicine, which is a discipline that provides comprehensive, continuous, and coordinated healthcare to individuals and families across all ages, genders, and disease categories"
+            },
+            {
+                question: "What is the difference between family medicine and geriatric medicine?",
+                answer: "Family medicine provides care for patients of all ages, while geriatric medicine focuses specifically on the health concerns of the older adult, particularly those with multiple or complex conditions.",
+            },
+            {
+                question: "How often should I have a check-up?",
+                answer: "We recommend an annual health check-up for all adults, and more frequent visits for patients managing chronic conditions or those over 65."
+            },
+            {
+                question: "Can family medicine doctors manage multiple health issues at once?",
+                answer: "Yes. Our physicians are trained to manage complex cases involving multiple health concerns, ensuring treatments are safe, coordinated, and tailored."
+            },
+            {
+                question: "Do you work with other specialists?",
+                answer: "Absolutely. We coordinate with cardiologists, endocrinologists, neurologists, orthopaedic surgeons, and other specialists within Euracare to provide seamless, integrated & multidisciplinary care."
+            }
+        ]
     },
     {
         slug: "general-medicine",
@@ -131,7 +237,29 @@ export const services: ServiceData[] = [
         description: "Our General Medicine department delivers expert diagnosis and management of a broad spectrum of health concerns. We coordinate care across specialties, ensuring patients receive timely, effective, and compassionate treatment.",
         image: "/home/medicine.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+        overviewText: "The General Medicine Department at Euracare provides comprehensive primary care and internal medicine services for adults of all ages. Our physicians are skilled in diagnosing, treating, and preventing a wide spectrum of acute and chronic health conditions, focusing on your overall well-being. Whether you need a routine check-up, long-term management of a medical condition, or urgent care for a sudden illness, our team delivers expert, patient-centred treatment supported by Euracare’s advanced diagnostic and imaging facilities.",
+        conditionList: ["Hypertension (high blood pressure)", "Diabetes and endocrine disorders", "Respiratory tract infections (common colds, bronchitis, asthma)", "Gastrointestinal issues (ulcers, acid reflux, IBS)", "Heart disease and cardiovascular risk management (including cholesterol)", "Allergies and dermatological conditions", "Migraines, headaches, and chronic fatigue", "Infectious diseases (malaria, typhoid, hepatitis, etc.", "Lifestyle-related conditions: obesity, smoking-related illness", "Back pain, musculoskeletal discomfort", "Preventive care and general wellness"],
+        testSubtitle: "Our physicians use detailed clinical evaluations, laboratory testing, and imaging studies to ensure accurate and timely diagnoses. Common tests include:",
+        testList: ["Comprehensive blood and urine tests", "Blood sugar and cholesterol screening", "Blood pressure monitoring", "ECG (electrocardiogram)", "Pulmonary function tests", "X-rays, ultrasounds, and other imaging", "Stool and culture tests for infections"],
+        procedureList: ["Routine and annual medical check-ups", "Vaccinations and immunisations (childhood, adult, travel)", "Wound care and minor surgical procedures", "Intravenous (IV) therapy for hydration or medication", "Chronic disease management programs with lifestyle support", "Preventive health counselling and lifestyle coaching (diet, exercise, smoking cessation)"],
+        faqs: [
+            {
+                question: " When should I see a general medicine doctor instead of a specialist?",
+                answer: "If you have a new or unexplained symptom, need preventive care, or require ongoing management of a chronic condition, a general medicine doctor is your first point of contact. They can treat you directly or refer you to the appropriate specialist"
+            },
+            {
+                question: "How often should I get a medical check-up?",
+                answer: "For healthy adults, at least once a year. More frequent visits are recommended for those with chronic illnesses, risk factors, or ongoing treatment."
+            },
+            {
+                question: "What should I bring for my first visit?",
+                answer: "Please bring any previous medical records, test results, and a list of medications or supplements you are currently taking."
+            },
+            {
+                question: "Do you provide long-term care for chronic illnesses?",
+                answer: "Yes. We offer personalised, long-term management plans that may include medication adjustments, regular monitoring,"
+            }
+        ]
     },
     {
         slug: "radiology",
