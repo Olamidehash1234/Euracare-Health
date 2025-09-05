@@ -136,7 +136,43 @@ export const services: ServiceData[] = [
         heroImage: "/service-d/hero-img.png",
         overviewText: "Our Bariatric & Weight Loss Surgery clinic offers a comprehensive, multidisciplinary approach to obesity management, combining surgical expertise with nutritional, psychological, and lifestyle support. We help patients achieve sustainable weight loss, improve obesity-related health conditions, and enhance quality of life. Our team uses the latest minimally invasive surgical techniques to ensure faster recovery, minimal scarring, and reduced complications. Every patient undergoes a personalized evaluation to select the safest and most effective treatment plan.",
         conditionList: ["Obesity (BMI ≥ 30)", "Morbid Obesity (BMI ≥ 40, or ≥ 35 with comorbidities)", "Type 2 Diabetes Mellitus (Obesity-related)", "Hypertension", "Dyslipidemia", "Obstructive Sleep Apnea", "Gastroesophageal Reflux Disease (GERD) linked to obesity", "Non-Alcoholic Fatty Liver Disease (NAFLD)"],
-        testList: ["Body Mass Index (BMI) Assessment", "Nutritional Evaluation", "Metabolic & Hormonal Testing"]
+        testList: ["Body Mass Index (BMI) Assessment", "Nutritional Evaluation", "Metabolic & Hormonal Testing", "Sleep Study (for sleep apnea)", "Psychological Assessment", "Ultrasound of Abdomen", "Endoscopy (if indicated", "Cardiac Evaluation (ECG, Echocardiogram)", "Comprehensive Blood Panel"],
+        procedureList: ["Gastric Balloon Procedure: A temporary, non-surgical silicone balloon is placed in the stomach to create fullness, helping you eat less and control hunger. It’s removed after 6–12 months.", "Sleeve Gastrectomy: A minimally invasive surgery that removes 75% of the stomach, reducing appetite and calorie intake for significant, sustainable weight loss.", "Single Anastomosis Bypass (Mini Gastric Bypass): An advanced surgery that reduces stomach size and bypasses part of the intestine, lowering calorie absorption for effective weight loss."],
+        faqs: [
+            {
+                question: "Who qualifies for bariatric surgery?",
+                answer: "Candidates usually have a BMI of 40 or higher, or 35+ with serious weight-related health issues such as type 2 diabetes, sleep apnea, or hypertension.",
+            },
+            {
+                question: "How much weight will I lose after bariatric surgery?",
+                answer: "Most patients lose 50–70% of their excess body weight within 12–18 months, depending on the procedure and adherence to lifestyle changes.",
+            },
+            {
+                question: "Most patients lose 50–70% of their excess body weight within 12–18 months, depending on the procedure and adherence to lifestyle changes.",
+                answer: "Some procedures, like gastric banding, are reversible; others, such as sleeve gastrectomy, are permanent"
+            },
+            {
+                question: "Will my medical conditions improve after surgery?",
+                answer: "Many obesity-related conditions, like diabetes and hypertension, improve significantly or resolve completely post-surgery."
+            },
+            {
+                question: "Is bariatric surgery safe?",
+                answer: "While all surgery carries risk, bariatric procedures are generally safe when performed by experienced surgeons, with risks minimized through thorough pre-op evaluation."
+            },
+            {
+                question: "Will I need to follow a special diet after surgery?",
+                answer: "Yes — a structured post-op diet begins with liquids, then progresses to purees, soft foods, and eventually regular healthy meals in smaller portions."
+            },
+            {
+                question: "Will I have excess skin after weight loss?",
+                answer: "Rapid and significant weight loss can lead to loose skin, which may require cosmetic surgery for removal if desired."
+            },
+            {
+                question: "How long is the recovery period?",
+                answer: "Most patients return to normal activities within 2–4 weeks, but full recovery and adaptation to new eating habits take several months."
+            }
+        ],
+        videoUrl: "QyH6StmVmvQ"
     },
     {
         slug: "general-surgery",
