@@ -19,7 +19,7 @@ export default function Test({ service }: { service: ServiceData }) {
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"
                     >
                         <div className="flex flex-col">
-                            <div className="flex gap-[16px] items-start">
+                            <div className="flex gap-[16px] items-center">
                                 <img src="/service-d/test.svg" alt="" className="w-[32px] h-[32px] lg:h-auto lg:w-auto"/>
                                 <h3 className="text-[14px] lg:text-[16px] font-normal tracking-[-0.5px] leading-[20px] lg:leading-[26px] lg:tracking-[-0.5px] text-[#02070D]">
                                     {v}

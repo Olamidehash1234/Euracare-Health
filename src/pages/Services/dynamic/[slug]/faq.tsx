@@ -18,7 +18,7 @@ export default function Faq({ service }: { service: ServiceData }) {
 
             <div className="space-y-[10px]">
                 {service.faqs.map((faq, index) => (
-                    <div 
+                    <div
                         key={index}
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}
                         className="border-b border-[#676767] hover:cursor-pointer bg-[#F5F5F5] rounded-[12px] py-[20px] px-[16px] lg:py-[24px] lg:px-[40px]"
@@ -27,12 +27,11 @@ export default function Faq({ service }: { service: ServiceData }) {
                             <span className="max-w-[260px] lg:max-w-none text-[14px] lg:text-[16px] font-normal text-[#02070D]">
                                 {faq.question}
                             </span>
-                            <img 
-                                src="/service-d/arrow.svg" 
-                                alt="toggle" 
-                                className={`transform transition-transform duration-300 h-[24px] w-[24px] lg:w-auto lg:h-auto ${
-                                    openIndex === index ? 'rotate-180' : 'rotate-0'
-                                }`}
+                            <img
+                                src="/service-d/arrow.svg"
+                                alt="toggle"
+                                className={`transform transition-transform duration-300 h-[24px] w-[24px] lg:w-auto lg:h-auto ${openIndex === index ? 'rotate-180' : 'rotate-0'
+                                    }`}
                             />
                         </button>
                         {openIndex === index && (
@@ -47,6 +46,15 @@ export default function Faq({ service }: { service: ServiceData }) {
                         )}
                     </div>
                 ))}
+
+                {service.buttonText && (
+                    <div className='pt-[20px] lg:pt-[40px]'>
+                        <a href="https://euracarehealth.com/wp-content/uploads/2020/12/A-GUIDE-TO-BARIATRIC-SURGERY.pdf">
+                            <button className='bg-transparent text-white w-full lg:w-auto py-[16px] px-[24px] rounded-[48px] border-[1px] border-white text-[14px]'>{service.buttonText}</button>
+                        </a>
+                    </div>
+                )}
+
                 <div className='lg:pt-[20px]'>
                     <h1 className='text-white text-center text-[20px] lg:text-[52px] tracking-[-1.35px] lg:tracking-[-1.35px] leading-[58.5px] font-medium'>Our Mission is Health, Our Specialty is You!</h1>
                 </div>

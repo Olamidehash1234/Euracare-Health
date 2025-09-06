@@ -22,6 +22,8 @@ export type ServiceData = {
     procedureList?: string[];
     faqs?: FAQ[];
     videoUrl?: string;
+    buttonText?: string;
+    testimonialVideoUrl?: string[];
 };
 
 export const services: ServiceData[] = [
@@ -148,7 +150,7 @@ export const services: ServiceData[] = [
                 answer: "Most patients lose 50–70% of their excess body weight within 12–18 months, depending on the procedure and adherence to lifestyle changes.",
             },
             {
-                question: "Most patients lose 50–70% of their excess body weight within 12–18 months, depending on the procedure and adherence to lifestyle changes.",
+                question: "Is bariatric surgery reversible?",
                 answer: "Some procedures, like gastric banding, are reversible; others, such as sleeve gastrectomy, are permanent"
             },
             {
@@ -172,7 +174,9 @@ export const services: ServiceData[] = [
                 answer: "Most patients return to normal activities within 2–4 weeks, but full recovery and adaptation to new eating habits take several months."
             }
         ],
-        videoUrl: "QyH6StmVmvQ"
+        videoUrl: "QyH6StmVmvQ",
+        buttonText: "Learn more about Bariatric Surgery at Euracare",
+        testimonialVideoUrl: ["https://www.youtube.com/embed/wZP3lPmPMU4?si=8ZqUQN-whOzQ1msm", "https://www.youtube.com/embed/XmbAz4kEcrk?si=vnBVb23-eT1klTzb"]
     },
     {
         slug: "general-surgery",
