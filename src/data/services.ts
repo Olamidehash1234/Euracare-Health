@@ -33,8 +33,8 @@ export const services: ServiceData[] = [
         description: "Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.",
         image: "/services/cardiac.png",
         heroImage: "/service-d/hero-img.png",
-        overviewText: 
-        "Our Interventional Cardiology service provides advanced, minimally invasive solutions for the diagnosis and treatment of complex heart conditions. Our team of highly skilled cardiologists specializes in catheter-based procedures that reduce recovery time, minimize discomfort, and improve patient outcomes. With access to state-of-the-art technology and evidence-based protocols, we deliver personalized care for both routine and high-risk cardiac cases.",
+        overviewText:
+            "Our Interventional Cardiology service provides advanced, minimally invasive solutions for the diagnosis and treatment of complex heart conditions. Our team of highly skilled cardiologists specializes in catheter-based procedures that reduce recovery time, minimize discomfort, and improve patient outcomes. With access to state-of-the-art technology and evidence-based protocols, we deliver personalized care for both routine and high-risk cardiac cases.",
         additionalOverview: "Our world class team is led by Euracare’s Medical Director, Dr. Tosin Majekodunmi, a specialist in adult and paediatric congenital and structural heart disease.",
         conditionSubtitle: "Our interventional cardiologists manage a broad spectrum of heart and vascular conditions, such as:",
         conditionList: ["Atherosclerosis", "Cardiomyopathy", " Congenital heart disease (both adult and paediatric)", "Heart failure", "Heart valve disease", "Arrhythmias (abnormal heart rhythms)", "Angina (chest pain)"],
@@ -76,7 +76,40 @@ export const services: ServiceData[] = [
         description: "We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.",
         image: "/home/inter.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "Advanced Cardiac Imaging at Euracare provides comprehensive diagnostic solutions using cutting-edge technology. Our state-of-the-art imaging equipment, combined with the expertise of our specialists, enables precise visualization of heart structures and function. This allows for early detection of cardiovascular conditions, accurate diagnosis, and the development of targeted treatment strategies. Our advanced imaging capabilities include 3D echocardiography, cardiac CT, and MRI, offering detailed insights into heart health while ensuring patient comfort and safety.",
+        overviewText: "Euracare’s Interventional Radiology clinic provides advanced, minimally invasive diagnostic and therapeutic procedures guided by cutting-edge imaging technologies such as ultrasound, fluoroscopy, CT, and MRI. These techniques allow our specialists to target diseases with exceptional precision—often replacing the need for open surgery, reducing recovery time, and minimizing patient risk.",
+        additionalOverview2: "Our fellowship-trained interventional radiologists work closely with other specialists to provide personalized, multidisciplinary care for a wide range of conditions.",
+        conditionSubtitle: "We provide diagnostic and therapeutic interventions for a broad range of conditions, including:",
+        conditionList: ["Neurovascular disorders: Brain aneurysms and Acute stroke", "Closed blood vessels, vascular blockages", "Peripheral vascular disease", "Venous Insufficiency disease", "Uterine fibroids", "Enlarged Prostate", "Gastrointestinal bleeding", "Tumor embolization and ablation (hepatobiliary, gastrointestinal, genitourinary)", "Pain management, lymphatic issues", "Dialysis access", "Musculoskeletal intervention"],
+        testSubtitle: "Our team uses advanced imaging modalities to guide procedures and ensure accurate diagnoses, including:",
+        testList: [" Image-guided biopsies (various organs)", "Ultrasound-guided imaging for precise targeting of vessels or lesions", "Fluoroscopy for real-time X-ray visualization during procedures", "CT-guided imaging for deep tissue access and intervention", "MRI-guided imaging for certain soft-tissue targeted procedures", "Venography &amp; angiography to assess blood vessel health and blockages"],
+        procedureSubtitle: "Using advanced imaging guidance, our interventional radiologists perform procedures such as:",
+        procedureList: ["Brain aneurysm coiling and Flow diverting stents", "Mechanical thrombectomy for Acute stroke", "Angioplasty & stenting", "Embolization (for fibroids, prostate, tumors, bleeding control)", "Ablation therapies (tumors, liver, lungs)", "TIPS (Transjugular Intrahepatic Portosystemic Shunt)", "Thrombolysis / thrombectomy", "Venous access device placement", "Gastrointestinal, hepatobiliary, gynaecologic, and genitourinary interventions", "Interventional oncology procedures", "Pain management interventions", "Lymphatic treatments"],
+        faqs: [
+            {
+                question: "What is the main advantage of interventional radiology?", 
+                answer: " Most procedures are minimally invasive, requiring only a small incision or needle puncture, leading to faster recovery, less pain, and lower complication risk compared to traditional surgery."
+            },
+            {
+                question: "Do I need to stay overnight after a procedure?",
+                answer: "Many interventional radiology procedures are performed on an outpatient basis, allowing patients to return home the same day. However, some complex interventions may require short hospital stays"
+            },
+            {
+                question: "Are these procedures painful?",
+                answer: "Most are performed under local anesthesia with sedation, ensuring patient comfort throughout the process."
+            },
+            {
+                question: " How do I know if I’m a candidate for an Interventional Radiology procedure?",
+                answer: "Your doctor or specialist will review your condition and may refer you for an Interventional Radiology consultation to determine if a minimally invasive option is appropriate."
+            },
+            {
+                question: "Are Interventional Radiology procedures safe?",
+                answer: "Yes, they are considered very safe when performed by experienced specialists. Risks are generally lower than open surgery, but as with any medical procedure, there are potential complications that will be discussed beforehand."
+            },
+            {
+                question: "Do I need a referral?",
+                answer: "In most cases, a referral from your primary physician or specialist is recommended for targeted treatment planning."
+            }
+        ]
     },
     {
         slug: "adult-pediatric-cardiology",
@@ -184,7 +217,32 @@ export const services: ServiceData[] = [
         description: "Our General Surgery team is skilled in a wide range of procedures, from hernia repairs to complex abdominal surgeries. We prioritize patient safety, careful planning, and post-operative care to promote fast recovery and optimal results.",
         image: "/home/surgery.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our General Surgery service is dedicated to providing comprehensive care for individuals seeking surgical solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include minimally invasive and open surgical options. We focus on ensuring the best possible outcomes through meticulous planning and compassionate care."
+        overviewText: "Our General Surgery department delivers expert care for a broad range of conditions affecting the abdomen, breast, and gastrointestinal system—with a focus on surgical precision and minimally invasive techniques. We are equipped to treat both elective and emergency cases, combining advanced diagnostics with personalized surgical planning.",
+        conditionList: ["Hernias (inguinal, umbilical, incisional, femoral, hiatus, diaphragmatic)", "Gallstones & gallbladder disease", "Hemorrhoids & rectal bleeding", "Bile duct disorders", "Gastrointestinal (GI) cancers – surgical oncology", "Peptic ulcers", "Achalasia & GERD (reflux disease)"],
+        testList: ["MRI", "CT scan", "X-ray imaging", "Ultrasound", "Clinical laboratory testing", "Endoscopy (upper GI, colonoscopy, sigmoidoscopy, proctoscopy as needed)"],
+        procedureList: ["Hernia repair (open and laparoscopic across various types)", "Laparoscopic cholecystectomy (gallbladder removal)", "Hemorrhoidectomy", "Surgical Peptic ulcer repair", "Surgical management of bile duct disease", "Oncology surgeries for GI cancers (e.g., stomach, colorectal)", "Anti-reflux surgery and Heller’s cardiomyotomy for achalasia"],
+        faqs: [
+            {
+                question: "What is the recovery time after laparoscopic surgery compared to open surgery?",
+                answer: "Minimally invasive (laparoscopic) procedures typically have shorter recovery periods, less postoperative pain, and smaller scars."
+            },
+            {
+                question: "Will I always stay overnight in the hospital?",
+                answer: "It depends on the procedure—some are outpatient, while major surgeries may require a one or more night hospital stay."
+            },
+            {
+                question: "How soon can I return to normal activity after surgery?",
+                answer: "Most minimally invasive procedures allow return to light activity within a week, with full recovery varying by the condition."
+            },
+            {
+                question: "Are there risks associated with general surgery?",
+                answer: "As with any surgery, there are risks—but minimally invasive techniques generally reduce complications. Your surgeon will walk you through specific risks"
+            },
+            {
+                question: "Is endoscopy part of general surgery?",
+                answer: "Yes—our team performs endoscopic diagnostics such as colonoscopy and proctoscopy to evaluate GI issues when needed."
+            }
+        ]
     },
     {
         slug: "gastroenterology",
@@ -192,7 +250,41 @@ export const services: ServiceData[] = [
         description: "We provide expert care for digestive health, diagnosing and treating conditions of the stomach, intestines, liver, and pancreas. Our gastroenterologists use advanced endoscopic techniques for accurate diagnosis and effective treatment.",
         image: "/home/gas.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our General Surgery service is dedicated to providing comprehensive care for individuals seeking surgical solutions. Our team of experienced surgeons and specialists work closely with patients to develop personalized treatment plans that may include minimally invasive and open surgical options. We focus on ensuring the best possible outcomes through meticulous planning and compassionate care."
+        overviewText: "Gastroenterology at Euracare focuses on the prevention, diagnosis, and treatment of disorders affecting the pancreas, liver, gallbladder, esophagus, stomach, small intestine, and colon. We leverage minimally invasive techniques—including endoscopy and laparoscopic surgery—to reduce pain, minimize scarring, shorten hospital stays, and accelerate recovery. Whether you're dealing with routine digestive symptoms or complex gastrointestinal conditions, our expert team delivers precise, patient-centered care.",
+        conditionList: ["Acid reflux and gastroesophageal reflux disease (GERD)", "Gastritis and stomach ulcers", "Irritable bowel syndrome (IBS)", "Inflammatory bowel disease (Crohn’s disease, ulcerative colitis)", "Hepatitis and other liver disorders", "Gallstones and gallbladder disease", "Pancreatitis", "Celiac disease", "Esophageal disorders (achalasia, strictures)", "Constipation and chronic diarrhoea", "Gastrointestinal bleeding", "Polyps and precancerous lesions", "Colorectal, stomach, and oesophageal cancers"],
+        procedureList: ["Colonoscopy", "Colonoscopy with polypectomy (Biopsy, Snare, Endoscopic mucosal resection)", "Flexible sigmoidoscopy and diagnostics", "Upper endoscopy", "Small bowel enteroscopy (Push enteroscopy)", "Proctosigmoidoscopy", "Endoscopic mucosal resection (EMR)", "Endoluminal mucosal resection", "Endoluminal stenting", "Endoscopic retrograde cholangiopancreatography (ERCP) – diagnostic & therapeutic", "Variceal hemostasis including banding", "Non-variceal hemostasis (Injection of epinephrine, cautery, hemoclips)", "Percutaneous gastrostomy tube insertion, replacement or removal", "Removal of foreign body in the gastrointestinal tract", "Laparoscopic cholecystectomy (Gallbladder removal)", "Laparoscopic Heller’s cardiomyotomy (Achalasia treatment)", "Laparoscopic hiatus hernia repair & anti-reflux surgery", "Open and laparoscopic hernia repair (incisional, inguinal, femoral, umbilical, hiatus, diaphragmatic)", "Open and laparoscopic stomach & small intestine surgery", "Haemorrhoidectomy", "Cyst removal"],
+        testList: ["Endoscopic imaging (gastroscopy, colonoscopy)", "Abdominal ultrasound", "CT scan of the abdomen and pelvis", "MRI of the liver, biliary tract, and pancreas", "Liver function tests", "Stool analysis (including for occult blood, infections, parasites)", "Helicobacter pylori testing", "Fibroscan (liver elastography)", "Blood tests for gastrointestinal conditions"],
+        faqs: [
+            {
+                question: "What symptoms should prompt me to see a gastroenterologist?",
+                answer: "You should seek medical advice if you experience persistent abdominal pain, unexplained weight loss, difficulty swallowing, prolonged diarrhea or constipation, blood in stool, severe bloating, or chronic heartburn."
+            },
+            {
+                question: "How should I prepare for a gastroenterology appointment?",
+                answer: "Bring a list of your symptoms, any medications or supplements you take, previous test results, and details about your medical history. Some procedures, such as endoscopy or colonoscopy, require fasting or bowel preparation, which will be explained in advance."
+            },
+            {
+                question: "Are endoscopic procedures painful?",
+                answer: "Most are performed under sedation, so you remain comfortable and pain-free throughout the procedure"
+            },
+            {
+                question: "How should I prepare for a colonoscopy?",
+                answer: "You’ll be given specific instructions, which usually include dietary changes and a bowel cleansing preparation the day before the procedure."
+            },
+            {
+                question: "How often should I get a colonoscopy?",
+                answer: "For individuals at average risk, colonoscopy is recommended every 10 years starting at age 45–50. Those with higher risk factors, such as family history or previous findings, may need screening earlier and more frequently."
+            },
+            {
+                question: "Can liver diseases be treated successfully?",
+                answer: "Many liver conditions, if diagnosed early, can be treated or effectively managed to prevent complications."
+            },
+            {
+                question: "Can diet and lifestyle changes improve digestive health?",
+                answer: "Yes. Eating a balanced diet rich in fiber, staying hydrated, exercising regularly, limiting alcohol, avoiding smoking, and managing stress can significantly improve digestive function and reduce symptoms."
+            }
+        ],
+        videoUrl: "uvCIazEPLSM"
     },
     {
         slug: "orthopedic-surgery",
@@ -246,7 +338,7 @@ export const services: ServiceData[] = [
         additionalOverview2: "For our senior patients, we deliver holistic and compassionate care aimed at maintaining independence, mobility, and quality of life. We also work closely with families and caregivers to ensure that elderly patients receive personalised support that meets both their medical and social needs. Our primary focus is to provide patient-centred and family-oriented care.",
         conditionList: ["Lifestyle and chronic diseases: diabetes, hypertension, heart disease", "Respiratory conditions: asthma, COPD, recurrent chest infections", "Common infections: flu, pneumonia, urinary tract infections", "Digestive issues: acid reflux, gastritis, irritable bowel syndrome", "Age-related conditions: dementia, osteoporosis, arthritis", "Mobility and balance problems, recurrent falls, frailty syndromes", "Sleep problems and nutritional deficiencies in older adults", "Men’s health problems: erectile dysfunction, prostate diseases"],
         testSubtitle: "We use a wide range of diagnostic tools to detect conditions early and monitor progress:",
-        testList: ["Routine blood and urine tests","Blood pressure and cardiovascular risk assessments", "Diabetes screening (HbA1c, fasting blood sugar)", "Cognitive and memory assessments for dementia and Alzheimer’s disease", "Bone density scans for osteoporosis", "Lung function tests", "Cancer screenings (prostate, breast, cervical, colon, etc.)", "Fall risk and mobility assessments"], 
+        testList: ["Routine blood and urine tests", "Blood pressure and cardiovascular risk assessments", "Diabetes screening (HbA1c, fasting blood sugar)", "Cognitive and memory assessments for dementia and Alzheimer’s disease", "Bone density scans for osteoporosis", "Lung function tests", "Cancer screenings (prostate, breast, cervical, colon, etc.)", "Fall risk and mobility assessments"],
         procedureList: ["Comprehensive geriatric assessments and personalised care planning", "Vaccinations and immunisations (including travel vaccines)", "Chronic disease management programmes and medication optimisation", "Wound care and minor surgical procedures", "Nutritional counselling and physical rehabilitation referrals", "Palliative and end-of-life care planning, with family support"],
         faqs: [
             {
@@ -307,7 +399,33 @@ export const services: ServiceData[] = [
         description: "With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans.",
         image: "/home/radio.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "The Radiology department at Euracare offers state-of-the-art diagnostic imaging services to support accurate and timely diagnoses. We use a teleradiology system with most of our radiologists based in the UK/USA/Canada who review all our imaging remotely and provide accurate and timely interpretations of radiological studies. Our highly trained radiographers work closely with referring physicians to ensure each patient receives the most suitable imaging study, performed safely and efficiently. With advanced equipment and a focus on patient comfort, we provide clear, precise images that guide effective treatment decisions.",
+        conditionList: ["Fractures and bone injuries", "Tumours and cancer staging", "Heart and lung diseases", "Abdominal pain and digestive tract issues", "Stroke and brain conditions", "Musculoskeletal injuries and joint disorders", "Infections and inflammatory conditions", "Vascular diseases and blockages"],
+        testSubtitle: "We offer a full range of imaging services, including:",
+        testList: ["X-ray – for bones, joints, and chest imaging", "Ultrasound – for abdominal, pelvic, and soft tissue imaging", "CT scan – for detailed cross-sectional images of the body", "MRI – for high-resolution images of soft tissues, brain, and spine", "Mammogram – for breast cancer screening and diagnosis", "Fluoroscopy – for real-time moving images of body systems"],
+        procedureList: ["Image-guided biopsies", "Drainage procedures", "Joint and soft tissue injections under imaging guidance",  "Vascular imaging and angiography", "Pre- and post-operative imaging assessments"],
+        faqs: [
+            {
+                question: "Do I need a doctor’s referral for imaging?",
+                answer: "In most cases, yes. A referral ensures you get the correct type of scan and that it is clinically necessary."
+            },
+            {
+                question: "Are imaging tests painful?",
+                answer: "Most imaging tests are painless. Some procedures may require contrast dye or minimal discomfort from positioning."
+            },
+            {
+                question: "How should I prepare for my scan?",
+                answer: "Preparation depends on the type of imaging. Some scans require fasting, while others need you to avoid certain medications. Your doctor or technician will provide specific instructions."
+            },
+            {
+                question: "How long will it take to get my results?",
+                answer: "Typically, results are available within 24–48 hours, but urgent cases may be prioritised for same-day reporting."
+            },
+            {
+                question: "Is imaging safe?",
+                answer: "Yes. We follow strict safety guidelines to minimise exposure to radiation, and non-radiation options like ultrasound"
+            }
+        ]
     },
     {
         slug: "neurology-and-neurosurgery",
