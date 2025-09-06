@@ -4,18 +4,18 @@ export type Doctor = {
     specialty: string[];
     title: string;
     image: string;
-    yearsOfExperience: string;
+    yearsOfExperience?: string;
     bio: string;
     bio2?: string;
     bio3?: string;
     bio4?: string;
-    degree: string[];
-    researchInterests: string[];
+    degree?: string[];
+    researchInterests?: string[];
     profileImg?: string;
     overview?: string;
-    program: string[];
-    education: string[];
-    languages: string[];
+    program?: string[];
+    education?: string[];
+    languages?: string[];
 };
 
 export const doctors: Doctor[] = [
@@ -54,7 +54,7 @@ export const doctors: Doctor[] = [
     {
         id: "Dr. Owen-Woghiren",
         name: "Dr. Owen Woghiren",
-        specialty: ["Gastroenterology", "General Medicine",],
+        specialty: ["Gastroenterology"],
         image: "/doctors/Dr-owen.jpg",
         title: "Consultant Gastroenterologist",
         education: [ "University of Benin", "FRCP (UK)"],
@@ -70,8 +70,8 @@ export const doctors: Doctor[] = [
     {
         id: "Dr. Abuchi-Okaro",
         name: "Dr. Abuchi Okaro",
-        specialty: ["Bariatric Surgery", "Gastrointestinal Surgery", "General Surgery"],
-        image: "",
+        specialty: ["Bariatric & Weight Loss Surgery", "Gastroenterology", "General Surgery"],
+        image: "/doctors/Dr-abuchi.jpg",
         title: "Consultant General, Lap Upper GI & Bariatric Surgeon",
         bio: "Dr Abuchi Okaro is a consultant General, Laparoscopic Bariatric and UGI surgeon at Euracare, he is well recognised for his expertise in minimally invasive weight-loss and gastrointestinal surgery. He holds advanced surgical qualifications from both the UK and Japan and serves as a consultant at leading UK private healthcare institutions such as the Wellington Hospital in London and the Benenden Hospital in Kent. ",
         bio2: "Dr Okaro blends international medical training with compassionate patient care to lead Euracare’s gastrointestinal and surgical weight loss specialists healthcare services. He is the founder and president of the Bariatric and Metabolic Surgeon Society of Nigeria (BMSSN)",
@@ -81,5 +81,20 @@ export const doctors: Doctor[] = [
         researchInterests: ["Minimally invasive weight-loss surgery", "Gastrointestinal surgery", "Hernia repair techniques"],
         degree: ["MBBS", "MS", "FRCS (England)", "FWACS"],
         languages: ["English (Fluent)"],
+    },
+    {
+        id: "Dr. Kafayah-Ogunsola",
+        name: "Dr. Kafayah Ogunsola",
+        specialty: ["Psychiatry"],
+        image: "",
+        title: "Consultant Psychiatrist",
+        bio: "Dr. Kafayah Ogunsola is a Consultant Psychiatrist and Therapist. She earned her medical degree (MB; BS) and is a Fellow of the West African College of Physicians (FWACP, Psychiatry). Over the years, she has built a reputation as a highly sought-after mental health and wellness expert, offering treatment for a wide range of psychiatric and psychological conditions. Her vision is to make mental health support easily accessible to individuals, families, and organizations both locally and internationally.",
+        bio2: "Dr. Ogunsola is also passionate about workplace mental health. She provides Employee Assistance Programs (EAP), consultancy, and training services to corporate organizations and institutions. She has delivered numerous workplace seminars and webinars on emotional wellness and work-life balance in Nigeria and beyond. To break barriers in mental health advocacy, she has pioneered the use of Nigerian languages (Pidgin, Hausa, Igbo, and Yoruba) and innovative resources such as comic strips to increase awareness and accessibility.",
+        bio3: "She is the Liaison-Director for the Suicide Research and Prevention Initiative in Nigeria (SURPIN), a Fellow of the West African College of Physicians, and a Member of the Association of Psychiatrists in Nigeria.",
+        yearsOfExperience: "15+",
+        degree: ["MB; BS", "FWACP (Psychiatry)"],
+        education: ["Residency in Psychiatry, Nigeria", "Fellowship, West African College of Physicians (Psychiatry)"],
+        researchInterests: ["Suicide prevention", " Mental health literacy and advocacy", "Workplace wellness and emotional health", "Telepsychiatry and digital access to care"],
+        languages: ["English (Fluent)", "Yoruba (Fluent)", "Pidgin English (Fluent)", "Hausa (Conversational)", "Igbo (Conversational)"]
     }
 ];

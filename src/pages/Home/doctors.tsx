@@ -24,7 +24,7 @@ const DoctorsSection: React.FC = () => {
 
       {/* Doctors Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px]">
-        {doctors.map((doc) => (
+        {doctors.slice(0, 4).map((doc) => (
           <div
             key={doc.id}
             className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px]"
