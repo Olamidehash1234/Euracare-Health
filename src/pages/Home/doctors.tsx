@@ -30,18 +30,16 @@ const DoctorsSection: React.FC = () => {
             className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px]"
           >
             {/* Doctor Image */}
-            <img
-              src={doc.image}
-              alt={doc.name}
-              className="object-cover mb-[10px]"
-            />
+            <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 mb-[10px]">
+              <img src={doc.image} alt={doc.name} className="h-full w-full object-cover" />
+            </div>
             <div className="flex flex-col flex-1 justify-between w-full">
               <div>
                 <h3 className="text-[16px] font-medium lg:tracking-[-0.5px] text-[#02070D] lg:leading-[26px]">{doc.name}</h3>
                 <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">{doc.specialty}</p>
               </div>
               {/* Profile Button */}
-              <Link 
+              <Link
                 to={`/Doctors-Profile/${doc.id}`}  // Changed from /Doctors-Profile/ to /doctor/
                 className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
               >
