@@ -9,7 +9,7 @@ export default function MedicalNavigation() {
 
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
-    const offset = 220; // Adjust this value based on your header height
+    const offset = 200; // Adjust this value based on your header height
     if (section) {
       const topPos = section.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: topPos, behavior: 'smooth' });

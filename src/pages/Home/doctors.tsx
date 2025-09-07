@@ -36,7 +36,7 @@ const DoctorsSection: React.FC = () => {
             <div className="flex flex-col flex-1 justify-between w-full">
               <div>
                 <h3 className="text-[16px] font-medium lg:tracking-[-0.5px] text-[#02070D] lg:leading-[26px]">{doc.name}</h3>
-                <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">{doc.specialty}</p>
+                <p className="text-[14px] text-[#02070D] mt-[10px] leading-[20px]">{doc.specialty.join(", ")}</p>
               </div>
               {/* Profile Button */}
               <Link

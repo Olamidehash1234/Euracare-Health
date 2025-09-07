@@ -16,6 +16,8 @@ export type Doctor = {
     program?: string[];
     education?: string[];
     languages?: string[];
+    certifications?: string[];
+    associations?: string[];
 };
 
 export const doctors: Doctor[] = [
@@ -35,9 +37,9 @@ export const doctors: Doctor[] = [
     },
     {
         id: "Dr-Hammed",
-        name: "Dr Hammed Ninalowo",
+        name: "Dr. Hammed Ninalowo",
         specialty: ["Interventional Radiology", "Oncology", "Vascular Surgery"],
-        image: "/home/doctors/doc1.png",
+        image: "/doctors/Dr-hammed.jpg",
         profileImg: "/home/test.png",
         title: "Consulting Vascular & Interventional Radiologist",
         education: ["Residency in Diagnostic Radiology, University of Maryland Medical Centers", "Fellowship in Vascular & Interventional Radiology, University of Pennsylvania" ],
@@ -85,7 +87,7 @@ export const doctors: Doctor[] = [
     {
         id: "Dr. Kafayah-Ogunsola",
         name: "Dr. Kafayah Ogunsola",
-        specialty: ["Psychiatry"],
+        specialty: ["Psychiatry & Sleep therapy"],
         image: "",
         title: "Consultant Psychiatrist",
         bio: "Dr. Kafayah Ogunsola is a Consultant Psychiatrist and Therapist. She earned her medical degree (MB; BS) and is a Fellow of the West African College of Physicians (FWACP, Psychiatry). Over the years, she has built a reputation as a highly sought-after mental health and wellness expert, offering treatment for a wide range of psychiatric and psychological conditions. Her vision is to make mental health support easily accessible to individuals, families, and organizations both locally and internationally.",
@@ -95,6 +97,64 @@ export const doctors: Doctor[] = [
         degree: ["MB; BS", "FWACP (Psychiatry)"],
         education: ["Residency in Psychiatry, Nigeria", "Fellowship, West African College of Physicians (Psychiatry)"],
         researchInterests: ["Suicide prevention", " Mental health literacy and advocacy", "Workplace wellness and emotional health", "Telepsychiatry and digital access to care"],
-        languages: ["English (Fluent)", "Yoruba (Fluent)", "Pidgin English (Fluent)", "Hausa (Conversational)", "Igbo (Conversational)"]
+        languages: ["English (Fluent)", "Yoruba (Fluent)", "Pidgin English (Fluent)", "Hausa (Conversational)", "Igbo (Conversational)"],
+        program: ["Psychiatry"]
+    },
+    {
+        id: "Dr. Roddy-Faddoul",
+        name: "Dr. Roddy Faddoul",
+        program: ["Family Medicine"],
+        specialty: ["Family & Geriatric Medicine", "General Medicine"],
+        image: "/doctors/Dr-roddy.jpg",
+        title: "Family Medicine Practitioner",
+        bio: "Dr. Roddy Faddoul is a dedicated Family Medicine Practitioner at Euracare Nigeria since 2017. After earning his MD at the American University of Beirut, he completed his Family Medicine residency at the American University of Beirut Medical Centre with training at top institutions in the U.S., including St. Luke’s Episcopal Hospital and MD Anderson Cancer Centre. Dr. Faddoul has participated in multiple volunteer initiatives across the U.S., Lebanon, and Nigeria, reinforcing his commitment to compassionate, comprehensive primary care.",
+        degree: ["MD, American University of Beirut",],
+        education: ["Residency at American University of Beirut Medical Centre", "Additional training at St. Luke’s Episcopal Hospital (Texas, USA) and MD Anderson", "Cancer Centre (Texas, USA)"],
+        languages: ["English", "Arabic"]
+    },
+    {
+        id: "Dr. Leye-Ajayi",
+        name: "Dr. Leye Ajayi",
+        title: "Consultant Urological Surgeon",
+        image: "/doctors/Dr-Leye.jpg",
+        bio: "Dr. Leye Ajayi is a leading Consultant Urological Surgeon at Euracare Nigeria and the clinical lead for Urology. With a strong background in minimally invasive urological surgery, he was awarded a Doctorate in Medicine (MD) for his groundbreaking research in prostate cancer. Dr. Ajayi brings world-class expertise to the region and is recognized for his proficiency in endoscopic laser treatments, delivering precision care for stone disease. He performs Percutaneous Nephrolithotomy (PCNL) for complex stone disease and conducts international Masterclasses in this area. He is an Associate Member of the European Association of Urology Section of Endourology (EAU-Endourology), the American Urological Association (AUA), and the British Association of Urological Surgeons (BAUS), and is considered a key opinion leader in his field. He provides best-in-class training and mentorship to healthcare professionals in Nigeria.",
+        program: ["Minimally invasive treatment for urinary tract stone disease using laser and lithotripsy", "Comprehensive care in andrology", "Rapid-access clinics for prostate assessment and hematuria (blood in urine) cases"],
+        degree: ["MBBS (London)", "FRCS (England)", "MD (London)", "FRCS (Urology)"],
+        specialty: ["Urology"],
+        education: ["Training across multiple London teaching hospitals", "Fellowship in Brisbane, Australia"],
+        researchInterests: ["Molecular biology of prostate cancer", "Stone disease management advancements",],
+        languages: ["English"]
+    },
+    {
+        id: "Prof. Adesegun-Abudu",
+        name: "Prof. Adesegun Abudu",
+        image: "/doctors/prof-abudu.jpg",
+        bio: "Professor Segun Abudu graduated from University of Ibadan with distinction in Anatomy in 1987. He became a Fellow of the Royal College of Surgeons and Physicians, Glasgow, United Kingdom in 1992. He trained in Orthopaedic Surgery at the Royal Orthopaedic Hospital, Birmingham, England and underwent an additional specialist training Fellowship programme to specialise in Orthopaedic and Major Joint Reconstructive Surgery in Canada. He obtained a Master of Science Degree in Clinical Research from University of Birmingham, UK in 1998 and United Kingdom Intercollegiate Fellowship of The Royal Colleges of Surgeons in Orthopaedic and Trauma Surgery in 2000. He gained the Certificate of Completion of Specialist Fellowship Training in Orthopaedics and Reconstructive Surgery, University of Toronto, Canada in 2001.",
+        bio2: "He is currently a Professor and Consultant Orthopaedic Surgeon at the Royal Orthopaedic Hospital, Birmingham, United Kingdom where he provides tertiary services as a super-specialist for patients with varying forms of bone and joint conditions and complex arthroplasty. He is one of the few nationally recognised Bone Cancer Specialists in the United Kingdom. He provides care for patients from all over the United Kingdom and overseas. He has been involved in pioneering various techniques for bone and joint reconstructions including replacements with special metallic implants and bone transplantation for several bones in the body. He receives several doctors from all over the world for training; he has trained doctors from over twenty five countries many of whom have subsequently become internationally recognised experts in their own right. ",
+        bio3: "He has been an invited surgeon and lecturer in many countries outside the United Kingdom including the USA, Japan, Canada, Spain, Italy, Belgium, Holland, Denmark, Australia, Portugal, Germany, Norway, Austria, Brazil, India, and Malaysia among others.",
+        bio4: "In the last 15 years, Professor Abudu has devoted a considerable part of his time to providing specialist orthopaedic care in Nigeria while still running a busy specialist orthopaedic practice and clinical research in the United Kingdom.",
+        title: "Consultant Orthopaedic Surgeon",
+        program: ["Orthopaedic and Trauma Surgery"],
+        yearsOfExperience: "35+",
+        degree: ["MBBS (University of Ibadan, 1987)", "MSc in Clinical Research (University of Birmingham, 1998)", "FRCS (Orthopaedics; Royal College of Surgeons & Physicians of Glasgow, 1992)", "Intercollegiate FRCS (Orthopaedic & Trauma Surgery; Royal College of Surgeons, England, 2000"],
+        education: ["Orthopaedic and Trauma Surgery – Birmingham Training Programme (1993–2001)", "Clinical Research Fellowship – University of Birmingham (1998)", "Fellowship in Orthopaedic and Reconstructive Surgery – University of Toronto, Canada (2001)"],
+        researchInterests: ["Orthopaedic and trauma surgery"],
+        specialty: ["Orthopedic Surgery"],
+        languages: ["English"]
+    },
+    {
+        id: "Mrs. Sherese Ijewere",
+        name: "Mrs. Sherese Ijewere",
+        image: "/doctors/mrs-Sherese.jpg",
+        title: "Clinical Nutrition Consultant",
+        bio: "Mrs. Sherese Ijewere is a Clinical Nutrition Consultant at Euracare. She counsels and cares for a wide range of clients, including those with bariatric (weight loss) needs, metabolic diseases (such as hypertension, diabetes, and high cholesterol), cardiac conditions, gut health issues, fatty liver, cancer, and other inflammatory diseases. She is passionate about helping clients understand the role and impact of nutrition on their health and well-being, guiding them back to wellness.",
+        program: ["Lifestyle Medicine", "Plant based Nutrition", "Bariatric Care", "Gut Health Practitioner", "Integrative Nutritional Cancer Care"],
+        degree: ["BSc (Hons), United States"],
+        education: ["Certified and Clinical Nutrition training for 18+ years, University of South Florida, St. Patrick Medical Center, Tampa, Florida, USA."],
+        researchInterests: ["Lifestyle diseases"],
+        languages: ["English"],
+        specialty: ["Bariatric Care", "Nutrition and Wellness"],
+        certifications: ["International Board Certification and Diploma for Lifestyle Medicine", "Nutrition Consultant, Gersons Cancer Therapy, Colin Campbell Center for Nutrition Studies", "Bariatric Nutrition", "Gut Health", "Psychological Counselling"],
+        associations: ["American College of Lifestyle Medicine", "American Society for Nutrition", "Bariatric and Metabolic Surgeons Society of Nigeria", "Society of Lifestyle Medicine in Nigeria."]
     }
 ];

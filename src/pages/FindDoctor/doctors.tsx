@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { KeyboardEvent } from "react"
 import { doctors } from "../../data/doctors";
 import SearchSuggestions from "../../components/SearchSuggestions";
@@ -14,11 +14,14 @@ export default function ServicesGrid() {
     const [filteredDoctors, setFilteredDoctors] = useState(doctors);
     const doctorsPerPage = 8;
 
-    // Filter doctors based on search query
-    const initialFilteredDoctors = doctors.filter((doc) =>
-        doc.name.toLowerCase().includes(confirmedSearch.toLowerCase()) ||
-        doc.specialty.some(s => s.toLowerCase().includes(confirmedSearch.toLowerCase()))
-    );
+    // Move this inside useEffect to properly handle search updates
+    useEffect(() => {
+        const filtered = doctors.filter((doc) =>
+            doc.name.toLowerCase().includes(confirmedSearch.toLowerCase()) ||
+            doc.specialty.some(s => s.toLowerCase().includes(confirmedSearch.toLowerCase()))
+        );
+        setFilteredDoctors(filtered);
+    }, [confirmedSearch]);
 
     // Prepare suggestions from doctors data
     const suggestionList = [
@@ -41,6 +44,7 @@ export default function ServicesGrid() {
         if (e.key === 'Enter') {
             setConfirmedSearch(query);
             setShowSuggestions(false);
+            setCurrentPage(1); // Reset to first page when searching
         }
     };
 
@@ -60,8 +64,9 @@ export default function ServicesGrid() {
         window.scrollTo({ top: 420, behavior: 'smooth' });
     };
 
+    // Modify handleSort to use filteredDoctors instead of initialFilteredDoctors
     const handleSort = (option: string) => {
-        const sorted = [...initialFilteredDoctors];
+        const sorted = [...filteredDoctors];
         if (option === "Alphabetically (A to Z)") {
             sorted.sort((a, b) => a.name.localeCompare(b.name));
         } else if (option === "Alphabetically (Z to A)") {
