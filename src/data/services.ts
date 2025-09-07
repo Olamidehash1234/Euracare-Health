@@ -31,7 +31,7 @@ export const services: ServiceData[] = [
         slug: "interventional-cardiology",
         title: "Interventional Cardiology",
         description: "Our expert cardiologists provide advanced heart care, from diagnostics to complex interventions. Using the latest technology and evidence-based treatments, we help you protect and restore your heart health with precision and compassion.",
-        image: "/services/cardiac.png",
+        image: "/home/cardiac.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText:
             "Our Interventional Cardiology service provides advanced, minimally invasive solutions for the diagnosis and treatment of complex heart conditions. Our team of highly skilled cardiologists specializes in catheter-based procedures that reduce recovery time, minimize discomfort, and improve patient outcomes. With access to state-of-the-art technology and evidence-based protocols, we deliver personalized care for both routine and high-risk cardiac cases.",
@@ -397,7 +397,7 @@ export const services: ServiceData[] = [
         slug: "radiology",
         title: "Radiology",
         description: "With advanced imaging technology, our Radiology department offers precise diagnostic services including MRI, CT scans, mammography, and X-rays. We support fast, accurate diagnoses to guide effective treatment plans.",
-        image: "/home/radio.jpg",
+        image: "/home/radio2.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "The Radiology department at Euracare offers state-of-the-art diagnostic imaging services to support accurate and timely diagnoses. We use a teleradiology system with most of our radiologists based in the UK/USA/Canada who review all our imaging remotely and provide accurate and timely interpretations of radiological studies. Our highly trained radiographers work closely with referring physicians to ensure each patient receives the most suitable imaging study, performed safely and efficiently. With advanced equipment and a focus on patient comfort, we provide clear, precise images that guide effective treatment decisions.",
         conditionList: ["Fractures and bone injuries", "Tumours and cancer staging", "Heart and lung diseases", "Abdominal pain and digestive tract issues", "Stroke and brain conditions", "Musculoskeletal injuries and joint disorders", "Infections and inflammatory conditions", "Vascular diseases and blockages"],

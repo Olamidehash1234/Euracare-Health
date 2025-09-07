@@ -128,7 +128,7 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                                 <div>
                                     <hr className="my-1 border-[#ADB4BF]" />
 
-                                    {/* Languages */}
+                                    {/* certifications */}
                                     <div className="flex flex-col sm:flex-row sm:items-center">
                                         <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
                                             CERTIFICATION(S):
