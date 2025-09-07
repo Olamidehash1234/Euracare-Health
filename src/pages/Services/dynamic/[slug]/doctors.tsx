@@ -41,7 +41,8 @@ export default function ServiceDoctors({ service }: { service: ServiceData }) {
                                 </p>
                             </div>
                             <Link
-                                to={`/Doctors-Profile/${doc.id}`}  // Changed from /Doctors-Profile/ to /doctor/
+                                to={`/Doctors-Profile/${doc.id}`}
+                                state={{ from: 'service', serviceName: service.title }}  // Add serviceName to state
                                 className="mt-6 w-[241px] mx-auto align-center lg:w-full text-[14px] leading-[27px] border border-[#02070D] text-[#02070D] font-medium rounded-[48px] py-[8px] hover:bg-gray-900 hover:text-white transition"
                             >
                                 View Profile

@@ -37,7 +37,7 @@ export const doctors: Doctor[] = [
     },
     {
         id: "Dr-Hammed",
-        name: "Dr Hammed Ninalowo",
+        name: "Dr. Hammed Ninalowo",
         specialty: ["Interventional Radiology", "Oncology", "Vascular Surgery"],
         image: "/doctors/Dr-hammed.jpg",
         profileImg: "/home/test.png",
@@ -104,7 +104,7 @@ export const doctors: Doctor[] = [
         id: "Dr. Roddy-Faddoul",
         name: "Dr. Roddy Faddoul",
         program: ["Family Medicine"],
-        specialty: ["Family & Geriatric Medicine"],
+        specialty: ["Family & Geriatric Medicine", "General Medicine"],
         image: "/doctors/Dr-roddy.jpg",
         title: "Family Medicine Practitioner",
         bio: "Dr. Roddy Faddoul is a dedicated Family Medicine Practitioner at Euracare Nigeria since 2017. After earning his MD at the American University of Beirut, he completed his Family Medicine residency at the American University of Beirut Medical Centre with training at top institutions in the U.S., including St. Luke’s Episcopal Hospital and MD Anderson Cancer Centre. Dr. Faddoul has participated in multiple volunteer initiatives across the U.S., Lebanon, and Nigeria, reinforcing his commitment to compassionate, comprehensive primary care.",
