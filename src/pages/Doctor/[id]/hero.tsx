@@ -129,6 +129,45 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                                     {doctor.languages ? doctor.languages.join(", ") : "English"}
                                 </div>
                             </div>
+
+                            {doctor.certifications && (
+                                <div>
+                                    <hr className="my-1 border-[#ADB4BF]" />
+
+                                    {/* Languages */}
+                                    <div className="flex flex-col sm:flex-row sm:items-center">
+                                        <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
+                                            CERTIFICATION(S):
+                                        </div>
+                                        <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                            <ul className="list-disc pl-5 space-y-1">
+                                                {Array.isArray(doctor.certifications)
+                                                    ? doctor.certifications.map((item, idx) => <li key={idx}>{item}</li>)
+                                                    : <li>{doctor.certifications}</li>}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+
+                            {doctor.associations && (
+                                <div>
+                                    <hr className="my-1 border-[#ADB4BF]" />
+
+                                    <div className="flex flex-col sm:flex-row sm:items-center">
+                                        <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
+                                            PROFESSIONAL ASSOCIATION(S):
+                                        </div>
+                                        <div className="flex-1 text-[#0C2141] text-[16px] lg:leading-[27px]">
+                                            <ul className="list-disc pl-5 space-y-1">
+                                                {Array.isArray(doctor.associations)
+                                                    ? doctor.associations.map((item, idx) => <li key={idx}>{item}</li>)
+                                                    : <li>{doctor.associations}</li>}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
 
