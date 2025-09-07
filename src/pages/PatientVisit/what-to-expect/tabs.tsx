@@ -41,7 +41,7 @@ const PharmacyIcon = () => (
     </svg>
 );
 
-/* -------------------- Sample tab data -------------------- */
+
 const TABS: Tab[] = [
     {
         id: "care",
@@ -50,7 +50,7 @@ const TABS: Tab[] = [
         paragraphs: [
             "We are happy to provide assistance with transportation needs, including helping patients and their families arrange pick-up or drop-off services to and from the hospital. If you have any special requests — such as mobility support, accessibility requirements, or any other personal needs to make your visit more comfortable — please let us know in advance. Our team is committed to ensuring that every patient receives the necessary care, attention, and support from the moment they begin their journey to our hospital.",
         ],
-        imageSrc: "/patient-visit/youth.png",
+        imageSrc: "/patient-visit/youth.jpg",
         imageAlt: "Smiling care team leaning on railing",
         icon: <CareIcon />,
     },
@@ -61,7 +61,7 @@ const TABS: Tab[] = [
         paragraphs: [
             "We offer onsite advanced diagnostic services, equipped with modern technology and skilled specialists, to provide faster and more accurate results. This ensures that patients receive timely evaluations, enabling doctors to make quicker treatment decisions and improving overall care outcomes."
         ],
-        imageSrc: "/patient-visit/lab.png",
+        imageSrc: "/patient-visit/lab.jpg",
         imageAlt: "Lab technician examining a sample",
         icon: <LabIcon />,
     },
@@ -72,7 +72,7 @@ const TABS: Tab[] = [
         paragraphs: [
             "Our pharmacy is fully stocked with genuine, high-quality medications to ensure patients have easy access to the prescriptions and treatments they need. With a wide range of trusted medicines, professional guidance from qualified pharmacists, and a commitment to safety, we provide reliable support for your health and recovery, all in one convenient location."
         ],
-        imageSrc: "/patient-visit/pharmacy.png",
+        imageSrc: "/patient-visit/pharmacy.jpg",
         imageAlt: "Pharmacist preparing medication",
         icon: <PharmacyIcon />,
     },

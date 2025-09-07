@@ -42,7 +42,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/cardiac.png"
+                    src="/home/cardiac.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -78,7 +78,7 @@ export default function ServiceLines() {
                 {/* Antenatal care */}
                 <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/inter.jpg"
+                    src="/home/radio.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -404,7 +404,7 @@ export default function ServiceLines() {
                 {/* Advanced Cardiac Imaging Card */}
                 <div className="hidden lg:flex relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] h-[399px] flex flex-col justify-end group">
                   <img
-                    src="/home/radio.jpg"
+                    src="/home/radio2.jpg"
                     alt="Advanced Cardiac Imaging"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
