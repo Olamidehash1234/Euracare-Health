@@ -471,7 +471,7 @@ export const services: ServiceData[] = [
         slug: "gynaecology",
         title: "Gynaecology",
         description: "We provide comprehensive women’s health services, from routine screenings to advanced gynecologic procedures. Our team supports every stage of life with sensitivity and expertise.",
-        image: "/home/gyna.jpg",
+        image: "/home/gynacology.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },
