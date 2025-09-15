@@ -1,6 +1,6 @@
 export default function ValuesSection() {
   return (
-    <section className="px-[16px] py-[60px] lg:px-[80px] lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[95px] ">
+    <section className="px-[16px] py-[60px] lg:px-[80px] items-center lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[95px] ">
       {/* Left Image */}
       <div>
         <img
@@ -13,20 +13,18 @@ export default function ValuesSection() {
       {/* Right Content */}
       <div>
         <h2 className="text-[20px] lg:text-[50px] font-medium text-[#0C2141] leading-snug lg:leading-[50px] lg:tracking-[-1.8px] mb-6 lg:mb-[20px]">
-          Actions speak louder <br className="hidden lg:block"/> than words
+          World Class Healthcare, Right Here at Home.
         </h2>
 
         <div className="space-y-5 lg:space-y-[20px] text-[#02070D] text-[14px] lg:text-[16px] leading-[20px] lg:leading-[24px] lg:tracking-[-0.54px] text-justify">
           <p>
-            At Euracare Hospital, our unwavering commitment is to the health, dignity, and overall well-being of every individual we have the privilege to serve. We believe that every patient is more than a case or condition — they are a unique individual with their own story, needs, and aspirations. That is why we place our patients at the very heart of everything we do, ensuring that their voices are heard, their concerns are addressed, and their care is personalised to suit their specific circumstances
+            At Euracare, we believe you shouldn’t have to travel abroad to access world-class healthcare. We bring international standards of medicine to Nigeria, combining advanced technology, globally trained specialists, and personalised care under one roof. For patients who expect the very best, Euracare offers the expertise, precision, and compassion found in the world’s leading medical centers, delivered with the comfort and convenience of being close to home.
           </p>
-
           <p>
-            We recognise and celebrate the intrinsic value of each person, and we approach healthcare with a dedication to inclusion, compassion, and respect. These values shape the way we interact not only with our patients, but also with their families and our colleagues. By fostering an environment where empathy meets medical excellence, we ensure that every patient experiences care that is not only clinically advanced but also deeply human
+            Our commitment goes beyond clinical excellence. From the moment you arrive, our dedicated patient liaisons, cutting-edge facilities, and multidisciplinary teams ensure that your journey is smooth, discreet, and tailored to your unique needs.
           </p>
-
           <p>
-            Our goal is to create a supportive space where trust is built, healing is prioritised, and lives are improved — one patient at a time
+            At Euracare, we are redefining private healthcare in Nigeria, setting a new benchmark where innovation meets empathy, and where every patient receives care that is both globally advanced, yet personalized.
           </p>
         </div>
       </div>
