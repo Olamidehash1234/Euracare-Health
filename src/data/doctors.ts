@@ -110,7 +110,8 @@ export const doctors: Doctor[] = [
         bio: "Dr. Roddy Faddoul is a dedicated Family Medicine Practitioner at Euracare Nigeria since 2017. After earning his MD at the American University of Beirut, he completed his Family Medicine residency at the American University of Beirut Medical Centre with training at top institutions in the U.S., including St. Luke’s Episcopal Hospital and MD Anderson Cancer Centre. Dr. Faddoul has participated in multiple volunteer initiatives across the U.S., Lebanon, and Nigeria, reinforcing his commitment to compassionate, comprehensive primary care.",
         degree: ["MD, American University of Beirut",],
         education: ["Residency at American University of Beirut Medical Centre", "Additional training at St. Luke’s Episcopal Hospital (Texas, USA) and MD Anderson", "Cancer Centre (Texas, USA)"],
-        languages: ["English", "Arabic"]
+        languages: ["English", "Arabic"],
+        researchInterests: ["Molecular biology of prostate cancer", "Stone disease management advancements"]
     },
     {
         id: "Dr. Leye-Ajayi",
