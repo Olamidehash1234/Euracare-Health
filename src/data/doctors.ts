@@ -60,7 +60,7 @@ export const doctors: Doctor[] = [
         image: "/doctors/Dr-owen.jpg",
         title: "Consultant Gastroenterologist",
         education: [ "University of Benin", "FRCP (UK)"],
-        yearsOfExperience: "25",
+        yearsOfExperience: "25+",
         program: ["Gastroenterology", "General Internal Medicine"],
         bio: "Dr. Owen Woghiren is a UK-trained Consultant Gastroenterologist and Hepatologist, currently practicing at Euracare Nigeria and serving as Clinical Service Lead for Gastroenterology &amp; Endoscopy at Barnet & Chase Farm Hospitals, Royal Free London NHS Foundation Trust.",
         bio2: "A graduate of the University of Benin (1993), he completed specialist training in Gastroenterology and General Internal Medicine at leading London hospitals, including Hammersmith, Chelsea, Westminster, and St Mary’s.",
