@@ -9,10 +9,8 @@ import FilterBy from "../../components/FilterBy";
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
     const [confirmedSearch, setConfirmedSearch] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredDoctors, setFilteredDoctors] = useState(doctors);
-    const doctorsPerPage = 8;
 
     // Move this inside useEffect to properly handle search updates
     useEffect(() => {
@@ -33,18 +31,11 @@ export default function ServicesGrid() {
         ),
     ];
 
-    // Calculate pagination
-    const totalPages = Math.ceil(filteredDoctors.length / doctorsPerPage);
-    const startIndex = (currentPage - 1) * doctorsPerPage;
-    const endIndex = startIndex + doctorsPerPage;
-    const currentDoctors = filteredDoctors.slice(startIndex, endIndex);
-
     // Handle enter key press
     const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             setConfirmedSearch(query);
             setShowSuggestions(false);
-            setCurrentPage(1); // Reset to first page when searching
         }
     };
 
@@ -57,11 +48,6 @@ export default function ServicesGrid() {
         setQuery("");
         setConfirmedSearch("");
         setShowSuggestions(false);
-    };
-
-    const handlePageChange = (page: number) => {
-        setCurrentPage(page);
-        window.scrollTo({ top: 420, behavior: 'smooth' });
     };
 
     // Modify handleSort to use filteredDoctors instead of initialFilteredDoctors
@@ -85,65 +71,8 @@ export default function ServicesGrid() {
     const handleReset = () => {
         setQuery("");
         setConfirmedSearch("");
-        setCurrentPage(1);
         setFilteredDoctors(doctors);
         setShowSuggestions(false);
-    };
-
-    const renderPaginationButtons = () => {
-        const buttons = [];
-        const maxVisibleButtons = 2;
-
-        let startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
-        let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
-
-        if (endPage - startPage < maxVisibleButtons - 1) {
-            startPage = Math.max(1, endPage - maxVisibleButtons + 1);
-        }
-
-        // Previous button
-        if (currentPage > 1) {
-            buttons.push(
-                <button
-                    key="prev"
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    className="px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-                >
-                    Prev
-                </button>
-            );
-        }
-
-        // Page numbers
-        for (let i = startPage; i <= endPage; i++) {
-            buttons.push(
-                <button
-                    key={i}
-                    onClick={() => handlePageChange(i)}
-                    className={`px-3 py-2 text-sm border rounded-md transition-colors ${i === currentPage
-                        ? 'bg-[#0C2141] text-white border-none'
-                        : 'border-gray-300 hover:bg-gray-50'
-                        }`}
-                >
-                    {i}
-                </button>
-            );
-        }
-
-        // Next button
-        if (currentPage < totalPages) {
-            buttons.push(
-                <button
-                    key="next"
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    className="px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-                >
-                    Next
-                </button>
-            );
-        }
-
-        return buttons;
     };
 
     return (
@@ -215,7 +144,7 @@ export default function ServicesGrid() {
 
             {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px] lg:gap-y-[20px]">
-                {currentDoctors.map((doc) => (
+                {filteredDoctors.map((doc) => (
                     <div key={doc.id} className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px] flex-grow">
                         <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 mb-[10px]">
                             <img src={doc.image} alt={doc.name} className="h-full w-full object-cover" />
@@ -239,13 +168,6 @@ export default function ServicesGrid() {
                     </div>
                 ))}
             </div>
-
-            {/* Pagination */}
-            {totalPages > 1 && (
-                <div className="flex items-center gap-2 mt-8">
-                    {renderPaginationButtons()}
-                </div>
-            )}
 
             {/* No results message */}
             {filteredDoctors.length === 0 && (

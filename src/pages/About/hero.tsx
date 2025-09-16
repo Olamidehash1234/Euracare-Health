@@ -1,9 +1,9 @@
 export default function Hero() {
 
     return (
-        <section className=" bg-[#0C2141] relative w-full lg:pt-[0px]" style={{ backgroundImage: "url('/about/hero.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+        <section className=" bg-[#0C2141] relative w-full lg:pt-[0px] lg:h-[550px]" style={{ backgroundImage: "url('/about/hero.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
 
-            <div className="absolute inset-0 bg-[#00000099]"></div>
+            <div className="absolute inset-0 bg-[#000]/50"></div>
 
 
             {/* Background Illustration (desktop only) */}

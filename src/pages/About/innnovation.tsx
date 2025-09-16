@@ -73,7 +73,7 @@ interface InnovationAccordionProps {
 }
 
 export default function InnovationAccordion({
-  imageSrc = "./about/nurse.png",
+  imageSrc = "./about/tech.jpg",
 }: InnovationAccordionProps) {
   const sections = [
     {

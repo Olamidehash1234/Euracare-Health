@@ -35,7 +35,7 @@ const DEFAULT_CARDS: InfoCard[] = [
 
 export default function DuringYourVisit({
     heading = "During Your Visit",
-    imageSrc = "/patient-visit/man2man.png",
+    imageSrc = "/patient-visit/during.jpg",
     imageAlt = "Smiling clinician ready to help",
     cards = DEFAULT_CARDS,
 }: Props) {
