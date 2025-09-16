@@ -7,7 +7,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky w-full z-40 bg-white border-b border-[#0101011A] top-[37px] lg:top-[56px]">
-      <div className="px-[16px] lg:px-[80px] md:px-[40px] lg:border-none border-b border-[#0101011A]">
+      <div className="px-[16px] sm:px-[80px] md:px-[40px] lg:border-none border-b border-[#0101011A]">
         <div className="flex justify-between lg:h-[85px] h-[58px] items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
@@ -110,7 +110,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:flex lg:hidden px-4 py-[40px] space-y-[30px]">
+        <div className="md:flex flex-col lg:hidden px-4 py-[40px] space-y-[30px]">
           <a href="/about" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
             About Euracare
           </a>

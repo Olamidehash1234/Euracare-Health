@@ -1,7 +1,10 @@
 export default function Hero() {
 
     return (
-        <section className=" bg-[#0C2141] relative w-full lg:pt-[0px]">
+        <section className=" bg-[#0C2141] relative w-full lg:pt-[0px]" style={{ backgroundImage: "url('/about/hero.jpg')", backgroundSize: "cover", backgroundRepeat: "no-repeat" }}>
+
+            <div className="absolute inset-0 bg-[#00000099]"></div>
+
 
             {/* Background Illustration (desktop only) */}
             <img

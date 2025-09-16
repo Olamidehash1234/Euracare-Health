@@ -9,7 +9,7 @@ export default function TestimonialWithCTA() {
                     </h4>
 
                     <h2 className="mt-4 text-[22px] lg:mt-[40px] lg:text-[40px] font-medium leading-tight lg:leading-[60px] tracking-tight lg:tracking-[-1.8px] max-w-[1002px]">
-                       We follow global safety protocols and rigorous infection control measures. Every procedure is supported by a dedicated safety team—because your health deserves complete confidence.
+                        We follow global safety protocols and rigorous infection control measures. Every procedure is supported by a dedicated safety team—because your health deserves complete confidence.
                     </h2>
                 </div>
 
@@ -17,11 +17,11 @@ export default function TestimonialWithCTA() {
                 <div className="mt-[60px] lg:mt-[80px] flex flex-col lg:flex-row lg:gap-[127px] gap-[20px] items-start">
                     {/* Image */}
                     <div className="lg:w-[50%]">
-                        <div className="relative overflow-hidden rounded-2xl shadow-[0_1px_0_rgba(0,0,0,0.03)]">
+                        <div className="relative overflow-hidden rounded-2xl lg:h-[480px] shadow-[0_1px_0_rgba(0,0,0,0.03)]">
                             <img
                                 src="/about/male.png" // replace with your image path
                                 alt="Smiling patient during consultation"
-                                className="h-full w-full lg:h-[391px] object-cover"
+                                className="h-full w-full object-cover"
                             />
                         </div>
                     </div>
@@ -37,12 +37,16 @@ export default function TestimonialWithCTA() {
                             </h4>
 
                             <ul className="mt-[10px] space-y-[0px] list-disc list-inside text-[14px] lg:text-[18px] leading-[27px] lg:leading-[30px] text-[#02070D] ">
-                                <li>Cardiology</li>
-                                <li>Bariatric Surgery</li>
-                                <li>Orthopedics</li>
+                                <li>Interventional Cardiology</li>
+                                <li>Interventional Radiology</li>
+                                <li>Adult & Pediatric Cardiology</li>
+                                <li>General Surgery</li>
+                                <li>Gastroenterology</li>
+                                <li>Orthopedic Surgery</li>
                                 <li>Urology</li>
-                                <li>Neurosciences</li>
-                                <li>Advanced Diagnostics</li>
+                                <li>Family & Geriatric Medicine</li>
+                                <li>General Medicine</li>
+                                <li>Radiology</li>
                             </ul>
 
                             <p className="mt-[20px] text-[15px] lg:text-[18px] leading-relaxed lg:leading-[27px] text-[#0C2141]">Each led by internationally trained experts dedicated to delivering the best possible outcomes.</p>
