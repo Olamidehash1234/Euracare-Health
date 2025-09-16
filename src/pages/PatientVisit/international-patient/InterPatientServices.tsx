@@ -47,7 +47,7 @@ const DEFAULT_CARDS: InfoCard[] = [
 
 export default function DuringYourVisit({
     heading = "International Patient Services",
-    imageSrc = "/patient-visit/blonde-nurse.png",
+    imageSrc = "/patient-visit/international.jpg",
     imageAlt = "Smiling clinician ready to help",
     cards = DEFAULT_CARDS,
 }: Props) {
@@ -62,12 +62,12 @@ export default function DuringYourVisit({
 
                     {/* left: image */}
                     <div className="w-full ">
-                        <div className="w-full overflow-hidden rounded-2xl">
+                        <div className="w-full overflow-hidden rounded-2xl lg:h-[712px]">
                             <img
                                 src={imageSrc}
                                 alt={imageAlt}
                                 loading="lazy"
-                                className="w-full object-cover h-[350px] sm:h-80 lg:h-[712px]"
+                                className="w-full object-cover h-[350px] sm:h-80 lg:h-full"
                             />
                         </div>
                     </div>

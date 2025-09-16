@@ -4,31 +4,16 @@ import SortBy from "../../components/SortBy";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
-    const servicesPerPage = 8;
     const [filteredServices, setFilteredServices] = useState(services);
 
     // Filter services based on search query
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setQuery(e.target.value);
-        setCurrentPage(1);
         const value = e.target.value.toLowerCase();
         const filtered = services.filter((service) =>
             service.title.toLowerCase().includes(value)
         );
         setFilteredServices(filtered);
-    };
-
-    // Calculate pagination
-    const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
-    const startIndex = (currentPage - 1) * servicesPerPage;
-    const endIndex = startIndex + servicesPerPage;
-    const currentServices = filteredServices.slice(startIndex, endIndex);
-
-    const handlePageChange = (page: number) => {
-        setCurrentPage(page);
-        // Scroll to top of services section
-        window.scrollTo({ top: 420, behavior: 'smooth' });
     };
 
     const handleSort = (option: string) => {
@@ -39,63 +24,6 @@ export default function ServicesGrid() {
             sorted.sort((a, b) => b.title.localeCompare(a.title));
         }
         setFilteredServices(sorted);
-    };
-
-    const renderPaginationButtons = () => {
-        const buttons = [];
-        const maxVisibleButtons = 2;
-        
-        let startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
-        let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
-        
-        if (endPage - startPage < maxVisibleButtons - 1) {
-            startPage = Math.max(1, endPage - maxVisibleButtons + 1);
-        }
-
-        // Previous button
-        if (currentPage > 1) {
-            buttons.push(
-                <button
-                    key="prev"
-                    onClick={() => handlePageChange(currentPage - 1)}
-                    className="px-3 py-2 text-sm border border-[gray-300] rounded-md hover:bg-gray-50 transition-colors"
-                >
-                    Prev
-                </button>
-            );
-        }
-
-        // Page numbers
-        for (let i = startPage; i <= endPage; i++) {
-            buttons.push(
-                <button
-                    key={i}
-                    onClick={() => handlePageChange(i)}
-                    className={`px-3 py-2 text-sm border rounded-md transition-colors ${
-                        i === currentPage
-                            ? 'bg-[#0C2141] text-white border-none'
-                            : 'border-gray-300 hover:bg-gray-50'
-                    }`}
-                >
-                    {i}
-                </button>
-            );
-        }
-
-        // Next button
-        if (currentPage < totalPages) {
-            buttons.push(
-                <button
-                    key="next"
-                    onClick={() => handlePageChange(currentPage + 1)}
-                    className="px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
-                >
-                    Next
-                </button>
-            );
-        }
-
-        return buttons;
     };
 
     return (
@@ -118,17 +46,13 @@ export default function ServicesGrid() {
                 </div>
             </div>
 
-            {/* Results info */}
-            <div className="mb-6 text-sm text-[#02070D]">
-                Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services
-                {query && ` for "${query}"`}
-            </div>
+            
 
             {/* Cards Grid */}
             <div className="grid gap-6 lg:gap-[13px] lg:gap-y-[40px] sm:grid-cols-2 lg:grid-cols-4 mb-8">
-                {currentServices.map((service, idx) => (
+                {filteredServices.map((service, idx) => (
                     <div
-                        key={startIndex + idx}
+                        key={idx}
                         className="bg-[#FEF8F5] rounded-2xl transition overflow-hidden flex flex-col"
                     >
                         <img
@@ -153,13 +77,6 @@ export default function ServicesGrid() {
                     </div>
                 ))}
             </div>
-
-            {/* Pagination */}
-            {totalPages > 1 && (
-                <div className="flex items-center gap-2 mt-8">
-                    {renderPaginationButtons()}
-                </div>
-            )}
 
             {/* No results message */}
             {filteredServices.length === 0 && (

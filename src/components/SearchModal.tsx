@@ -8,8 +8,6 @@ interface SearchModalProps {
 }
 
 const suggestions = [
-  { title: 'Shell H', description: 'Test for diagnosing arthritis' },
-  { title: 'Shell Hull', description: 'Test for a range of diseases' },
   {
     title: 'Balloon valvuloplasty',
     description: 'Minimally invasive heart procedure',

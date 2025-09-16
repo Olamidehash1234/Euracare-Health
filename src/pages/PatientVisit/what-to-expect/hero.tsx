@@ -5,7 +5,7 @@ type Props = {
 
 export default function InternationalPatientsHero({
     title = "What to Expect as a Patient",
-    imageSrc = "/patient-visit/hero1.png",
+    imageSrc = "/patient-visit/hero1.jpg",
 }: Props) {
     return (
         <section aria-label={title} className="w-full">

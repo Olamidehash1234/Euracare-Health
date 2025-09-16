@@ -167,7 +167,7 @@ export const services: ServiceData[] = [
         slug: "bariatric-weight-loss-surgery",
         title: "Bariatric & Weight Loss Surgery",
         description: "Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being",
-        image: "/services/weight.png",
+        image: "/services/weight.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Our Bariatric & Weight Loss Surgery clinic offers a comprehensive, multidisciplinary approach to obesity management, combining surgical expertise with nutritional, psychological, and lifestyle support. We help patients achieve sustainable weight loss, improve obesity-related health conditions, and enhance quality of life. Our team uses the latest minimally invasive surgical techniques to ensure faster recovery, minimal scarring, and reduced complications. Every patient undergoes a personalized evaluation to select the safest and most effective treatment plan.",
         conditionList: ["Obesity (BMI ≥ 30)", "Morbid Obesity (BMI ≥ 40, or ≥ 35 with comorbidities)", "Type 2 Diabetes Mellitus (Obesity-related)", "Hypertension", "Dyslipidemia", "Obstructive Sleep Apnea", "Gastroesophageal Reflux Disease (GERD) linked to obesity", "Non-Alcoholic Fatty Liver Disease (NAFLD)"],
@@ -455,7 +455,7 @@ export const services: ServiceData[] = [
         slug: "breast-surgery",
         title: "Breast Surgery",
         description: "We offer advanced surgical care for benign and malignant breast conditions. Our approach is compassionate, precise, and tailored to each patient’s needs, with a focus on both health and aesthetics.",
-        image: "/home/neuro.jpg",
+        image: "/home/breast.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
     },

@@ -46,7 +46,7 @@ const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({
       ) : (
         <div className="py-[0px] lg:pl-[60px] lg:py-[20px]">
           <p className="text-[24px] lg:text-[40px] text-[#02070D] font-medium lg:leading-[44px]">
-            No results found for {searchTerm}
+            No results found for "{searchTerm}"
           </p>
         </div>
       )}

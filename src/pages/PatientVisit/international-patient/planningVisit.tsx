@@ -59,7 +59,7 @@ const DEFAULT_CARDS: InfoCard[] = [
 
 export default function BeforeYourVisit({
     heading = "Planning Your Visit",
-    imageSrc = "/surgery.png",
+    imageSrc = "/patient-visit/planning.jpg",
     imageAlt = "Smiling clinician ready to help",
     cards = DEFAULT_CARDS,
 }: Props) {
