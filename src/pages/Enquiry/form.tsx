@@ -220,13 +220,7 @@ export default function ContactForm() {
         {/* Privacy Notice */}
         <div className="text-[14px] lg:text-[16px] text-[#010101]">
           <p>
-            We won't share your contact information with anyone outside of the HCA Group.{' '}
-            <button
-              type="button"
-              className="text-[#0C2141] font-semibold underline focus:outline-none underline-offset-[2px]"
-            >
-              Read our privacy policy.
-            </button>
+            We won't share your contact information with anyone outside of the Euracare Group
           </p>
         </div>
 
