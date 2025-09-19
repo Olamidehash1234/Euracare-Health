@@ -12,6 +12,7 @@ export type ServiceData = {
     overviewText: string;
     additionalOverview?: string;
     additionalOverview2?: string;
+    additionalOverview3?: string;
     conditionSubtitle?: string;
     additionalconditionSubtitle?: string;
     additionalconditionList?: string[];
@@ -21,9 +22,9 @@ export type ServiceData = {
     conditionList?: string[];
     procedureList?: string[];
     faqs?: FAQ[];
-    videoUrl?: string;
     buttonText?: string;
     testimonialVideoUrl?: string[];
+    videoUrls?: string[];
 };
 
 export const services: ServiceData[] = [
@@ -39,7 +40,7 @@ export const services: ServiceData[] = [
         conditionSubtitle: "Our interventional cardiologists manage a broad spectrum of heart and vascular conditions, such as:",
         conditionList: ["Atherosclerosis", "Cardiomyopathy", " Congenital heart disease (both adult and paediatric)", "Heart failure", "Heart valve disease", "Arrhythmias (abnormal heart rhythms)", "Angina (chest pain)"],
         testSubtitle: "We offer a comprehensive range of diagnostic services to detect and evaluate cardiovascular diseases, including:",
-        testList: ["Electrocardiogram (ECG) – Measures the electrical activity of the heart", "Echocardiogram (Echo) – Uses ultrasound to assess heart structure and function.", "Exercise Stress Test – Monitors heart performance under physical exertion.", "Holter & Event Monitoring – Continuous heart rhythm recording over 24–48 hours or longer.", "Cardiac CT & MRI – High-resolution imaging of the heart and vessels.", "Cardiac Catheterization (Diagnostic Angiography) – Examines coronary arteries for blockages.", "Blood Biomarker Testing – Detects cardiac damage or inflammation.", "Ultrasound, Digital X-ray"],
+        testList: ["Electrocardiogram (ECG) – Measures the electrical activity of the heart", "Echocardiogram (Echo) – Uses ultrasound to assess heart structure and function.", "Exercise Stress Test – Monitors heart performance under physical exertion.", "Holter & Event Monitoring – Continuous heart rhythm recording over 24–48 hours or longer.", "Cardiac CT & MRI – High-resolution imaging of the heart and vessels.", "Cardiac Catheterization (Diagnostic Angiography) – Examines coronary arteries for blockages.", "Blood Biomarker Testing – Detects cardiac damage or inflammation."],
         procedureSubtitle: "Using cutting-edge technology and minimally invasive techniques, we perform:",
         procedureList: ["Coronary angiography, aortography", "Right and left heart catheterisation", "Coronary stenting, including complex interventions", "Temporary pacing", "Single and dual-chamber permanent pacemaker implantation", "Renal artery stenting for resistant hypertension", "Balloon aortic valvuloplasty, Transcatheter Aortic Valve Implantation (TAVI/TAVR)", "Transesophageal echocardiogram (TEE)", "Atrial septal defect (ASD) closure", "Patent foramen ovale (PFO) closure"],
         faqs: [
@@ -68,13 +69,13 @@ export const services: ServiceData[] = [
                 answer: "Absolutely—Euracare brings cutting-edge interventional cardiology care to Nigeria, eliminating the need for patients to travel abroad for these life-saving interventions."
             }
         ],
-        videoUrl: "vPNyzAA0zCM"
+        videoUrls: ["vPNyzAA0zCM"]
     },
     {
         slug: "interventional-radiology",
         title: "Interventional Radiology",
         description: "We provide cutting-edge, image-guided procedures that diagnose and treat conditions with less discomfort and faster recovery. From targeted therapies to vascular interventions, our Interventional Radiology specialists combine technology and expertise to deliver outstanding outcomes.",
-        image: "/home/inter.jpg",
+        image: "/home/inter.png",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Euracare’s Interventional Radiology clinic provides advanced, minimally invasive diagnostic and therapeutic procedures guided by cutting-edge imaging technologies such as ultrasound, fluoroscopy, CT, and MRI. These techniques allow our specialists to target diseases with exceptional precision—often replacing the need for open surgery, reducing recovery time, and minimizing patient risk.",
         additionalOverview2: "Our fellowship-trained interventional radiologists work closely with other specialists to provide personalized, multidisciplinary care for a wide range of conditions.",
@@ -167,7 +168,7 @@ export const services: ServiceData[] = [
         slug: "bariatric-weight-loss-surgery",
         title: "Bariatric & Weight Loss Surgery",
         description: "Our Bariatric Surgery program supports patients on their weight-loss journey with tailored surgical and non-surgical options. We focus on long-term health improvements, helping reduce obesity-related risks and enhancing overall well-being",
-        image: "/services/weight.jpg",
+        image: "/home/weight.png",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Our Bariatric & Weight Loss Surgery clinic offers a comprehensive, multidisciplinary approach to obesity management, combining surgical expertise with nutritional, psychological, and lifestyle support. We help patients achieve sustainable weight loss, improve obesity-related health conditions, and enhance quality of life. Our team uses the latest minimally invasive surgical techniques to ensure faster recovery, minimal scarring, and reduced complications. Every patient undergoes a personalized evaluation to select the safest and most effective treatment plan.",
         conditionList: ["Obesity (BMI ≥ 30)", "Morbid Obesity (BMI ≥ 40, or ≥ 35 with comorbidities)", "Type 2 Diabetes Mellitus (Obesity-related)", "Hypertension", "Dyslipidemia", "Obstructive Sleep Apnea", "Gastroesophageal Reflux Disease (GERD) linked to obesity", "Non-Alcoholic Fatty Liver Disease (NAFLD)"],
@@ -207,7 +208,7 @@ export const services: ServiceData[] = [
                 answer: "Most patients return to normal activities within 2–4 weeks, but full recovery and adaptation to new eating habits take several months."
             }
         ],
-        videoUrl: "QyH6StmVmvQ",
+        videoUrls: ["QyH6StmVmvQ"],
         buttonText: "Learn more about Bariatric Surgery at Euracare",
         testimonialVideoUrl: ["https://www.youtube.com/embed/wZP3lPmPMU4?si=8ZqUQN-whOzQ1msm", "https://www.youtube.com/embed/XmbAz4kEcrk?si=vnBVb23-eT1klTzb"]
     },
@@ -284,7 +285,7 @@ export const services: ServiceData[] = [
                 answer: "Yes. Eating a balanced diet rich in fiber, staying hydrated, exercising regularly, limiting alcohol, avoiding smoking, and managing stress can significantly improve digestive function and reduce symptoms."
             }
         ],
-        videoUrl: "uvCIazEPLSM"
+        videoUrls: ["uvCIazEPLSM"]
     },
     {
         slug: "orthopedic-surgery",
@@ -325,7 +326,37 @@ export const services: ServiceData[] = [
         description: "We offer comprehensive care for urinary tract and reproductive health issues. From kidney stones to prostate conditions, our urologists use advanced diagnostics and tailored treatments for the best possible outcomes.",
         image: "/home/urology.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Back & Spine Surgery service is dedicated to providing advanced diagnostic and therapeutic options for patients with spinal disorders. Our team of experienced surgeons and specialists utilize minimally invasive techniques and state-of-the-art technology to treat a wide range of conditions, including herniated discs, spinal stenosis, and chronic back pain. We focus on accurate diagnosis, effective pain management, and personalized treatment plans to restore mobility and enhance the quality of life for our patients."
+        overviewText: "Euracare’s Urology Department provides expert diagnosis and treatment for a wide range of urinary tract and male reproductive health conditions. Our services include advanced diagnostics such as uroflowmetry, prostate biopsy, and endoscopy, as well as minimally invasive treatments for prostate issues, kidney stones, and bladder disorders. We use the latest Olympus Exera III video system with high-definition flexible ureteroscopes and cystoscopes for precise, incision-free procedures. All examinations are recorded for accuracy and patient reference.",
+        additionalOverview: "We offer contemporary Holmium laser technology with the LithoEvo by Quanta systems with proprietary features such as Vapor tunnel technology ensuring for individualized kidney stone treatment.",
+        additionalOverview2: "Percutaneous nephrolithotomy (PCNL) is performed in the supine position offering patients a comfortable intra-operative position with excellent stone free rate and rapid return to normal activity.",
+        additionalOverview3: "Our dedicated team of surgeons, nurses, and support staff work alongside radiology and laboratory services to ensure seamless care. The endoscopy suite meets international infection-control standards, featuring a state-of-the-art TD-20 disinfector and single-use instruments for maximum safety and comfort.",
+        conditionList: ["Benign prostatic hyperplasia (BPH) and prostate cancer", "Kidney stones and urinary tract stone disease", "Bladder cancer and tumours", "Hematuria (blood in urine) investigations", "Penoscrotal conditions: hydrocele, varicocele, cysts, erectile dysfunction, infertility", "General urological conditions in men and women"],
+        testList: ["Urine collection and laboratory analysis", "Imaging: CT scan, MRI, X-ray", "Blood tests and PSA (prostate-specific antigen) levels", "Endoscopic diagnostics: cystoscopy and ureteroscopy", "Prostate biopsy using advanced imaging systems"],
+        procedureList: ["Transurethral resection of prostate (TURP) and bladder tumour (TURBT)", "Ureteroscopy and laser lithotripsy for kidney stones", "Percutaneous nephrolithotomy (PCNL) for complex stone cases", "Penoscrotal surgeries: hydrocelectomy, varicocele repair, orchiectomy, vasectomy", "Diagnostic and therapeutic cystoscopies—both rigid and flexible"],
+        faqs: [
+            {
+                question: "Are these urological procedures minimally invasive?",
+                answer: "Yes—most procedures are performed endoscopically with no or very small incisions, ensuring quicker recovery and less discomfort."
+            },
+            {
+                question: "How are kidney stones treated?",
+                answer: "Treatment options include ureteroscopy with laser, PCNL for large stones, and non-invasive medical therapies based on stone size and location."
+            },
+            {
+                question: "Will I stay overnight for stone surgery?",
+                answer: "Some treatments may require short postoperative observation; many ureteroscopic or transurethral procedures are done as day cases"
+            },
+            {
+                question: "Why would I need a prostate biopsy?",
+                answer: "A prostate biopsy is performed when elevated PSA levels or imaging suggest potential prostate cancer, ensuring accurate diagnosis and treatment."
+            },
+            {
+                question: "Can urology treat infertility?",
+                answer: "Yes—Dr. Ajayi offers diagnostic assessments and surgical treatments related to male infertility, in addition to general men’s health services."
+            }
+        ],
+        videoUrls: ["nmmZrB3af_Y", "4qrTU5kMF60"],
+        testimonialVideoUrl: ["https://www.youtube.com/embed/UNIfzQPsWbk?si=WxwRDP2FAucbhgsN"]
     },
     {
         slug: "family-geriatric-medicine",
