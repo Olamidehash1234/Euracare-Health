@@ -10,6 +10,8 @@ import ServiceDynamicPage from './pages/Services/dynamic/[slug]';
 import DoctorProfilePage from './pages/Doctor/[id]';
 import Expect from './pages/PatientVisit/what-to-expect'
 import International from './pages/PatientVisit/international-patient'
+import NewsFullPage from './pages/Home/news-full';
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
           <Route path="/doctors" element={<FindDoctor />} />
           <Route path="/Doctors-Profile/:id" element={<DoctorProfilePage />} />
           <Route path="/services/dynamic/:slug" element={<ServiceDynamicPage />} />
+          <Route path="/home/news" element={<NewsFullPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
