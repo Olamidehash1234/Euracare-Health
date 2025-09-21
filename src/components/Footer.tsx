@@ -112,10 +112,10 @@ const EuracareFooter = () => {
               </span>
             </h3>
             <ul className={`space-y-[10px] lg:space-y-[16px] mt-[20px] lg:mt-0 ${!openSections.media ? 'hidden lg:block' : ''}`}>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Blogs and articles</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">News & Press</Link></li>
+              <li><Link to="/home/news" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Blogs and articles</Link></li>
+              {/* <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">News & Press</Link></li> */}
               <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Patient stories</Link></li>
-              <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Careers</Link></li>
+              {/* <li><Link to="/" className="text-[#010101] hover:text-[#0C2141] leading-[27px] text-[16px] lg:tracking-[-0.54px] transition-colors">Careers</Link></li> */}
             </ul>
           </div>
 
