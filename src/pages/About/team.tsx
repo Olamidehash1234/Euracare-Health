@@ -1,59 +1,63 @@
 import { useState } from 'react';
 
+const boardMembers = [
+    {
+        id: 1,
+        name: "Dr. Jane Doe",
+        position: "Chairperson",
+        image: "/about/board1.png"
+    },
+    // {
+    //     id: 2,
+    //     name: "Mr. Michael Lee",
+    //     position: "Director",
+    //     image: "/about/board2.png"
+    // },
+    // {
+    //     id: 3,
+    //     name: "Ms. Fatima Bello",
+    //     position: "Director",
+    //     image: "/about/board3.png"
+    // },
+    // {
+    //     id: 4,
+    //     name: "Prof. Samuel Okafor",
+    //     position: "Director",
+    //     image: "/about/board4.png"
+    // }
+];
+
+const teamMembers = [
+    {
+        id: 1,
+        name: "Ijeoma Okoro",
+        position: "HR Manager",
+        image: "/about/team/ijeoma.jpg"
+    },
+    // {
+    //     id: 2,
+    //     name: "Dr. Mary Johnson",
+    //     position: "Chief Medical Officer",
+    //     image: "/about/team2.png"
+    // },
+    // {
+    //     id: 3,
+    //     name: "Ms. Linda Chukwu",
+    //     position: "Head of Nursing",
+    //     image: "/about/team3.png"
+    // },
+    // {
+    //     id: 4,
+    //     name: "Mr. Peter Mensah",
+    //     position: "Operations Manager",
+    //     image: "/about/team4.png"
+    // }
+];
+
 const LeadershipTeam = () => {
     const [activeTab, setActiveTab] = useState('Board of Directors');
 
-    // Sample team data - using the same person as shown in the image
-    const teamMembers = [
-        {
-            id: 1,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 2,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 3,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 4,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 5,
-            name: "Dr. John Doe",
-            position: "managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 6,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 7,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        },
-        {
-            id: 8,
-            name: "Dr. John Doe",
-            position: "Managing Director",
-            image: "/about/team.png"
-        }
-    ];
+    const membersToShow = activeTab === 'Board of Directors' ? boardMembers : teamMembers;
 
     return (
         <div className="bg-[#FEF8F5] py-[40px] px-4 lg:py-20 lg:px-20">
@@ -94,7 +98,7 @@ const LeadershipTeam = () => {
 
                 {/* Team Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-[40px]">
-                    {teamMembers.map((member) => (
+                    {membersToShow.map((member) => (
                         <div key={member.id} className="group">
                             {/* Image Container */}
                             <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[200px]">
