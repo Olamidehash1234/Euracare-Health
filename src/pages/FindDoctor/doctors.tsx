@@ -146,7 +146,7 @@ export default function ServicesGrid() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px] lg:gap-y-[20px]">
                 {filteredDoctors.map((doc) => (
                     <div key={doc.id} className="bg-[#FEF8F5] rounded-[12px] p-[30px] flex flex-col items-center text-center transition h-[291px] flex-grow">
-                        <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 mb-[10px]">
+                        <div className="size-[80px] rounded-full overflow-hidden flex-shrink-0 mb-[10px]">
                             <img src={doc.image} alt={doc.name} className="h-full w-full object-cover" />
                         </div>
                         <div className="flex flex-col flex-1 justify-between w-full">

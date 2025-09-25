@@ -17,7 +17,7 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                             <img
                                 src={doctor.image}
                                 alt={doctor.name}
-                                className="w-[68px] h-[68px] lg:w-[180px] lg:h-[180px] rounded-full object-cover"
+                                className="w-[68px] h-[68px] lg:size-[220px] rounded-full object-cover"
                             />
                             <div className="flex-1 ">
                                 <h1 className="text-[20px] leading-[30px] lg:text-[34px] lg:leading-[40px] font-medium mb-0 lg:mb-[20px]">{doctor.name}</h1>
