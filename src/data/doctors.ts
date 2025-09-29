@@ -157,5 +157,19 @@ export const doctors: Doctor[] = [
         specialty: ["Bariatric Care", "Nutrition and Wellness"],
         certifications: ["International Board Certification and Diploma for Lifestyle Medicine", "Nutrition Consultant, Gersons Cancer Therapy, Colin Campbell Center for Nutrition Studies", "Bariatric Nutrition", "Gut Health", "Psychological Counselling"],
         associations: ["American College of Lifestyle Medicine", "American Society for Nutrition", "Bariatric and Metabolic Surgeons Society of Nigeria", "Society of Lifestyle Medicine in Nigeria."]
+    },
+    {
+        id: "Dr. Oladapo O. Fafemi",
+        name: "Dr. Oladapo O. Fafemi",
+        image: "/doctors/Dr-oladapo.jpg",
+        title: "Consultant Breast Surgeon & Clinical Director, Surgical Specialities",
+        bio: "Dr. Oladapo O. Fafemi is a distinguished Consulting Breast Surgeon and former Clinical Director for Surgical Specialities at North Middlesex University Hospital NHS Trust, London, bringing years of experience and advanced training across continents. After graduating from the University of Ibadan Medical School, he attained elite surgical qualifications (FRCS—Edinburgh and UK) and completed post-fellowship in general and oncoplastic breast surgery.",
+        bio2: "A former member of the London Breast Cancer Pathway Board, Dr. Fafemi provides expert consultations and surgeries each month in Nigeria, enhancing breast health care with global surgical standards.",
+        program: ["Breast Surgery","General Surgery"],
+        degree: ["MBBS, University of Ibadan", "FRCS (Edinburgh, UK)", "FRCS (General Surgery, UK)"],
+        education: ["University of Ibadan Medical School", "Fellowship of the Royal College of Surgeons of Edinburgh (UK)", "Fellowship of the Royal College of Surgeons (UK)"],
+        researchInterests: ["Oncoplasty"],
+        languages: ["English"],
+        specialty: ["Breast Surgery","General Surgery"],
     }
 ];
