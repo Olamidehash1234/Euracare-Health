@@ -488,7 +488,31 @@ export const services: ServiceData[] = [
         description: "We offer advanced surgical care for benign and malignant breast conditions. Our approach is compassionate, precise, and tailored to each patient’s needs, with a focus on both health and aesthetics.",
         image: "/home/breast.jpg",
         heroImage: "/service-d/hero-img.png",
-        overviewText: "At Euracare, our Dentistry service is dedicated to providing comprehensive care for individuals seeking dental solutions. Our team of experienced dentists and specialists work closely with patients to develop personalized treatment plans that may include preventive, restorative, and cosmetic options. We focus on promoting oral health, enhancing smiles, and ensuring long-term success for our patients."
+        overviewText: "Euracare’s Breast Surgery service uses expertly trained, minimally invasive surgical techniques to enhance appearance, treat disease, and restore confidence. Whether you need reconstructive, reduction, or diagnostic breast surgery, our surgeons prioritize safety, fast recovery, and natural-looking results.",
+        testList: ["Clinical examination and history", "Ultrasound", "X-ray (mammography/digital mammography)", "CT scan when indicated", "Clinical laboratory testing"],
+        procedureList: ["Breast reduction surgery", "Augmentation mammoplasty", "Mastectomy and lumpectomy", "Breast-conserving surgery", "Mastopexy (breast lift)", "Treatment of breast abscesses, including incision, drainage, and lactiferous duct excision", "Surgical breast biopsies (including microdochectomy)"],
+        faqs: [
+            {
+                question: "What is the recovery from breast surgery like?",
+                answer: "Minimally invasive techniques allow for shorter hospital stays, less pain, and faster return to routine activity"
+            },
+            {
+                question: "Can I have a breast lift and reduction together?",
+                answer: "Yes — mastopexy and reduction can be performed together, and your surgeon will recommend the best option for your needs."
+            },
+            {
+                question: "Will I still feel normal after surgery?",
+                answer: "Sensation preservation depends on technique, but efforts are made for both functional and cosmetic outcomes."
+            },
+            {
+                question: "Do you perform surgery for benign versus cancerous breast conditions?",
+                answer: "Yes — treatment ranges from cosmetic surgery to cancer-focused interventions such as mastectomy or lumpectomy."
+            },
+            {
+                question: "Is scarring visible after surgery?",
+                answer: "Surgeons use precise techniques"
+            }
+        ]
     },
     {
         slug: "dermatology",

@@ -33,7 +33,7 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                         <div className="block lg:hidden flex items-center gap-2 mb-2 mt-[20px]">
                             <span className="flex w-full mx-auto justify-center items-center bg-[#FFF1E0] gap-[8px] px-[16px] py-[8px] rounded-[8px] text-[14px] font-medium text-[#0C2141] lg:leading-[21px]">
                                 <img src="/experience-icon.svg" alt="" className="w-auto h-auto" />
-                                {doctor.yearsOfExperience} years of experience
+                                {`${doctor.yearsOfExperience ?? 15} years of experience`}
                             </span>
                         </div>
 
