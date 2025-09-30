@@ -2,17 +2,11 @@ import { useState } from 'react';
 
 const boardMembers = [
     {
-        id: 1,
-        name: "Dr. Jane Doe",
-        position: "Chairperson",
-        image: "/about/board1.png"
+        id: 2,
+        name: "Mr. Michael Lee",
+        position: "Director",
+        image: "/about/board2.png"
     },
-    // {
-    //     id: 2,
-    //     name: "Mr. Michael Lee",
-    //     position: "Director",
-    //     image: "/about/board2.png"
-    // },
     // {
     //     id: 3,
     //     name: "Ms. Fatima Bello",
@@ -30,28 +24,58 @@ const boardMembers = [
 const teamMembers = [
     {
         id: 1,
+        name: "Dr Tosin Majekodunmi",
+        position: "Managing Director & Medical Director & Chief of Cardiology ",
+        image: "/doctors/Dr-tosin.jpg"
+    },
+    {
+        id: 2,
         name: "Ijeoma Okoro",
         position: "HR Manager",
         image: "/about/team/ijeoma.jpg"
     },
-    // {
-    //     id: 2,
-    //     name: "Dr. Mary Johnson",
-    //     position: "Chief Medical Officer",
-    //     image: "/about/team2.png"
-    // },
-    // {
-    //     id: 3,
-    //     name: "Ms. Linda Chukwu",
-    //     position: "Head of Nursing",
-    //     image: "/about/team3.png"
-    // },
-    // {
-    //     id: 4,
-    //     name: "Mr. Peter Mensah",
-    //     position: "Operations Manager",
-    //     image: "/about/team4.png"
-    // }
+    {
+        id: 3,
+        name: "Olukemi Fasuan",
+        position: "Financial Controller ",
+        image: "/about/team/Mrs-Kemi.jpeg"
+    },
+    {
+        id: 4,
+        name: "Evans Esezobor",
+        position: "IT Manager",
+        image: "/about/team/evans.jpg"
+    },
+    {
+        id: 5,
+        name: "Sylvester Shih",
+        position: "Chief Operating Officer",
+        image: "/about/team/sylvester.jpg"
+    },
+    {
+        id: 6,
+        name: " Kelvin Ajieh",
+        position: "Marketing and Communications Manager",
+        image: "/about/team/kelvin.jpg"
+    },
+    {
+        id: 7,
+        name: "Godwin Ikehi",
+        position: "Laboratory Manager",
+        image: "/about/team/godwin.jpg"
+    },
+    {
+        id: 8,
+        name: "Abimbola Aransiola",
+        position: "Pharmacy Manager",
+        image: "/about/team/abimbola.jpg"
+    },
+    {
+        id: 9,
+        name: "",
+        position: "Nursing Manager",
+        image: "/about/team/nm.jpeg"
+    }
 ];
 
 const LeadershipTeam = () => {
@@ -101,11 +125,11 @@ const LeadershipTeam = () => {
                     {membersToShow.map((member) => (
                         <div key={member.id} className="group">
                             {/* Image Container */}
-                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[200px]">
+                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[280px] lg:h-[370px]">
                                 <img
                                     src={member.image}
                                     alt={member.name}
-                                    className="w-full h-full object-cover transition-transform duration-300"
+                                    className="h-full w-full object-cover transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             </div>
