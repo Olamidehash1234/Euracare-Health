@@ -265,6 +265,7 @@ export const services: ServiceData[] = [
                 answer: "Bring a list of your symptoms, any medications or supplements you take, previous test results, and details about your medical history. Some procedures, such as endoscopy or colonoscopy, require fasting or bowel preparation, which will be explained in advance."
             },
             {
+                
                 question: "Are endoscopic procedures painful?",
                 answer: "Most are performed under sedation, so you remain comfortable and pain-free throughout the procedure"
             },
@@ -291,7 +292,7 @@ export const services: ServiceData[] = [
         slug: "orthopedic-surgery",
         title: "Orthopedic Surgery",
         description: "Whether it’s a sports injury, joint pain, or complex surgery, our orthopedic specialists and surgeons deliver solutions to restore movement and quality of life. We focus on minimally invasive techniques to help patients regain mobility, reduce pain, and return to active lifestyles with personalized treatment plans.",
-        image: "/services/spine.png",
+        image: "/services/spine.jpg",
         heroImage: "/service-d/hero-img.png",
         overviewText: "Euracare’s Orthopaedic Surgery department is dedicated to diagnosing, preventing, and treating disorders affecting bones, joints, muscles, ligaments, tendons, and nerves. Most procedures are minimally invasive, which means smaller incisions, less pain, minimal scarring, and faster recovery—delivering premium outcomes with patient comfort in mind. Our multidisciplinary team provides expert care for both elective and emergency musculoskeletal conditions.",
         conditionList: ["Bone fractures & trauma", "Joint problems including hip and knee disorders", "Soft tissue injuries and tendon/ligament tears", "Avascular necrosis", "Degenerative joint conditions (e.g., osteoarthritis)", "Ankle, foot, wrist, elbow, hand injuries and pain", "Spinal deformities and arthritic spine conditions", "Rehabilitation under joint health program", "Bone and joint deformities", "Failed joint replacements and failed fracture treatments", "Bone and soft tissue tumours"],
