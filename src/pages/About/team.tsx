@@ -125,7 +125,7 @@ const LeadershipTeam = () => {
                     {membersToShow.map((member) => (
                         <div key={member.id} className="group">
                             {/* Image Container */}
-                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[280px] lg:h-[370px]">
+                            <div className="relative mb-[10px] overflow-hidden rounded-t-[12px] bg-gray-200 h-[390px] lg:h-[370px]">
                                 <img
                                     src={member.image}
                                     alt={member.name}
