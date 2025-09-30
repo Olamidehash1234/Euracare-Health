@@ -1,4 +1,3 @@
-import { id } from 'date-fns/locale';
 import { useState } from 'react';
 
 const boardMembers = [
