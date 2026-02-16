@@ -4,6 +4,7 @@ import SEO from "../../components/SEO";
 import { getPublishedArticles } from "../../services/articleService";
 import type { ArticleResponse } from "../../types/api-responses";
 import { NewsGridSkeleton } from "../../components/Skeletons/NewsCardSkeleton";
+import NotFound from "../../components/NotFound";
 
 // Transform API articles to displayable format
 const transformArticle = (article: ArticleResponse) => {
@@ -28,38 +29,39 @@ export default function NewsFullPage() {
 	const [selectedId, setSelectedId] = useState<string | null>(null);
 
 	// Fetch articles from API
-	useEffect(() => {
-		const fetchArticles = async () => {
-			try {
-				setLoading(true);
-				setError(null);
-				// console.log('Fetching published articles...');
-				const data = await getPublishedArticles();
-				// console.log('Raw API response:', data);
-				// console.log('Number of articles received:', data?.length || 0);
-				
-				const transformed = data.map(transformArticle);
-				// console.log('Transformed articles:', transformed);
-				setTransformedArticles(transformed);
-				
-				// Get initial ID from hash or use first article
-				const hashId = window.location.hash.replace("#", "");
-				if (hashId && transformed.some((a) => a.id === hashId)) {
-					setSelectedId(hashId);
-				} else if (transformed.length > 0) {
-					setSelectedId(transformed[0].id);
-				}
-				// console.log('Selected ID:', hashId || transformed[0]?.id || 'none');
-			} catch (err) {
-				const errorMsg = err instanceof Error ? err.message : 'Failed to load articles';
-				setError(errorMsg);
-				// console.error('Error fetching articles:', err);
-				// console.error('Error details:', { message: errorMsg, stack: err instanceof Error ? err.stack : 'N/A' });
-			} finally {
-				setLoading(false);
+	const fetchArticles = async () => {
+		try {
+			setLoading(true);
+			setError(null);
+			setTransformedArticles([]);
+			// console.log('Fetching published articles...');
+			const data = await getPublishedArticles();
+			// console.log('Raw API response:', data);
+			// console.log('Number of articles received:', data?.length || 0);
+			
+			const transformed = data.map(transformArticle);
+			// console.log('Transformed articles:', transformed);
+			setTransformedArticles(transformed);
+			
+			// Get initial ID from hash or use first article
+			const hashId = window.location.hash.replace("#", "");
+			if (hashId && transformed.some((a) => a.id === hashId)) {
+				setSelectedId(hashId);
+			} else if (transformed.length > 0) {
+				setSelectedId(transformed[0].id);
 			}
-		};
+			// console.log('Selected ID:', hashId || transformed[0]?.id || 'none');
+		} catch (err) {
+			const errorMsg = err instanceof Error ? err.message : 'Failed to load articles';
+			setError(errorMsg);
+			// console.error('Error fetching articles:', err);
+			// console.error('Error details:', { message: errorMsg, stack: err instanceof Error ? err.stack : 'N/A' });
+		} finally {
+			setLoading(false);
+	}
+	};
 
+	useEffect(() => {
 		fetchArticles();
 	}, []);
 
@@ -114,26 +116,32 @@ export default function NewsFullPage() {
 				</div>
 			)}
 
-			{/* Empty State */}
-			{!loading && !error && transformedArticles.length === 0 && (
+		{/* Empty State */}
+		{!loading && !error && transformedArticles.length === 0 && (
+			<div className="bg-[#EFF8F8] px-[16px] py-[60px] lg:py-[80px] lg:px-[80px]">
+				<NotFound
+					title="No Articles Available...Yet"
+					description="We're currently preparing our latest health insights and medical updates. Check back soon for expert articles from our healthcare professionals."
+					imageSrc="/not-found.png"
+					ctaText="Refresh"
+					onCta={fetchArticles}
+				/>
+			</div>
+		)}
+
+		{/* Content State */}
+		{!loading && !error && transformedArticles.length > 0 && (
+			<>
+				<section className="relative w-full h-[250px] lg:h-[500px] overflow-hidden">
+					<img
+						src={selectedArticle.heroImage}
+						alt={selectedArticle.title}
+						className="w-full h-full object-cover"
+					/>
+					<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
+				</section>
+
 				<div className="bg-[#EFF8F8] px-[16px] py-[60px] lg:py-[80px] lg:px-[80px]">
-					<p className="text-center text-gray-600 text-lg">No articles available.</p>
-				</div>
-			)}
-
-			{/* Hero Section with Article Image */}
-			{!loading && selectedArticle && (
-				<>
-					<section className="relative w-full h-[250px] lg:h-[500px] overflow-hidden">
-						<img
-							src={selectedArticle.heroImage}
-							alt={selectedArticle.title}
-							className="w-full h-full object-cover"
-						/>
-						<div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50"></div>
-					</section>
-
-					<div className="bg-[#EFF8F8] px-[16px] py-[60px] lg:py-[80px] lg:px-[80px]">
 						<ScrollToTop />
 						<div className="">
 							<div className="lg:max-w-6xl lg:mx-auto">
@@ -207,6 +215,6 @@ export default function NewsFullPage() {
 					</div>
 				</>
 			)}
-		</>
+	</>
 	);
 }

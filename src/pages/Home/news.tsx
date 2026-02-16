@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getPublishedArticles } from "../../services/articleService";
 import type { ArticleResponse } from "../../types/api-responses";
 import { NewsGridSkeleton } from "../../components/Skeletons/NewsCardSkeleton";
+import NotFound from "../../components/NotFound";
 
 const EuracareNews = () => {
   const [articles, setArticles] = useState<ArticleResponse[]>([]);
@@ -14,6 +15,7 @@ const EuracareNews = () => {
     try {
       setLoading(true);
       setError(null);
+      setArticles([]);
       const data = await getPublishedArticles();
       // Normalize the data to ensure createdAt field exists
       const normalized = data.map(article => ({
@@ -89,9 +91,14 @@ const EuracareNews = () => {
         {loading ? (
           <NewsGridSkeleton />
         ) : articles.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-600 text-lg">No articles available.</p>
-          </div>
+          <NotFound
+            title="No Articles Available...Yet"
+            description="We're currently preparing our latest health insights and medical updates. Check back soon for expert articles from our healthcare professionals."
+            imageSrc="/not-found.png"
+            ctaText="Refresh Articles"
+            onCta={fetchArticles}
+            className="border-none"
+          />
         ) : (
           <>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-[16px]">

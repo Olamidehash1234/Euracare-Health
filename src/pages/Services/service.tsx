@@ -4,6 +4,7 @@ import type { ServiceResponse } from "../../types/api-responses";
 import SortBy from "../../components/SortBy";
 import { Link } from 'react-router-dom';
 import { ServiceCardSkeletonGrid } from "../../components/Skeletons/ServiceCardSkeleton";
+import NotFound from "../../components/NotFound";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
@@ -17,6 +18,8 @@ export default function ServicesGrid() {
         try {
             setLoading(true);
             setError(null);
+            setServices([]);
+            setFilteredServices([]);
             const data = await getServices();
             setServices(data);
             setFilteredServices(data);
@@ -65,6 +68,11 @@ export default function ServicesGrid() {
         setFilteredServices(sorted);
     };
 
+    const handleReload = async () => {
+        setQuery("");
+        await fetchServices();
+    };
+
     return (
         <section className="px-4 py-10 lg:px-[80px] lg:pt-[40px]">
             {/* Error State */}
@@ -104,10 +112,14 @@ export default function ServicesGrid() {
                             <ServiceCardSkeletonGrid />
                         </div>
                     ) : filteredServices.length === 0 ? (
-                        <div className="text-center py-12">
-                            <p className="text-[#02070D] text-lg">No services found {query ? `for "${query}"` : ''}</p>
-                            <p className="text-[#02070D] text-sm mt-2">Try adjusting your search terms</p>
-                        </div>
+                        <NotFound
+                            title="No Services Found"
+                            description={query ? `We couldn't find any services matching "${query}". Try adjusting your search terms or browse all our services.` : 'No medical services are currently available. Please check back soon.'}
+                            imageSrc="/not-found.png"
+                            ctaText="Browse All"
+                            onCta={handleReload}
+                            className="mt-[60px] border-none"
+                        />
                     ) : (
                         <div className="grid gap-6 lg:gap-[13px] lg:gap-y-[40px] sm:grid-cols-2 lg:grid-cols-4 mb-8 mt-[60px]">
                             {filteredServices.map((service) => (

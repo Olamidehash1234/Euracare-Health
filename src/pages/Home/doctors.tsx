@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getDoctors } from "../../services/doctorService";
 import type { DoctorResponse } from "../../types/api-responses";
 import { DoctorCardSkeleton } from "../../components/Skeletons/DoctorCardSkeleton";
+import NotFound from "../../components/NotFound";
 
 const DoctorsSection: React.FC = () => {
   const [doctors, setDoctors] = useState<DoctorResponse[]>([]);
@@ -13,6 +14,7 @@ const DoctorsSection: React.FC = () => {
     try {
       setLoading(true);
       setError(null);
+      setDoctors([]);
       const data = await getDoctors();
       setDoctors(data.slice(0, 4));
     } catch (err) {
@@ -47,7 +49,7 @@ const DoctorsSection: React.FC = () => {
       </div>
 
       {/* Error State */}
-      {error && (
+      {error && !loading && (
         <div className="mb-6 p-4 bg-white border border-red-200 rounded-lg">
           <p className="text-red-600 text-sm">{error}</p>
           <button
@@ -59,6 +61,18 @@ const DoctorsSection: React.FC = () => {
         </div>
       )}
 
+      {/* Empty State */}
+      {!loading && !error && doctors.length === 0 && (
+        <NotFound
+          title="No Doctors Available...Yet"
+          description="Our team of experienced doctors will be available soon. Please check back later to learn more about our medical professionals."
+          imageSrc="/not-found.png"
+          ctaText="Refresh"
+          onCta={fetchDoctors}
+          className="border-none"
+        />
+      )}
+
       {/* Doctors Grid or Skeleton Loaders */}
       {loading ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px]">
@@ -66,7 +80,7 @@ const DoctorsSection: React.FC = () => {
             <DoctorCardSkeleton key={i} />
           ))}
         </div>
-      ) : (
+      ) : !error && doctors.length > 0 && (
         <>
           {/* Doctors Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[13px]">

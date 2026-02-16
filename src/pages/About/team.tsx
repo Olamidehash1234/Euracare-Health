@@ -3,6 +3,7 @@ import { getTeamMembers } from '../../services/teamService';
 import type { TeamMemberResponse } from '../../types/api-responses';
 import TeamMemberModal from '../../components/TeamMemberModal';
 import { TeamMemberGridSkeleton } from '../../components/Skeletons/TeamMemberCardSkeleton';
+import NotFound from '../../components/NotFound';
 
 const LeadershipTeam = () => {
     const [teamMembers, setTeamMembers] = useState<TeamMemberResponse[]>([]);
@@ -62,6 +63,15 @@ const LeadershipTeam = () => {
             {/* Team Grid or Skeleton Loaders */}
             {loading ? (
                 <TeamMemberGridSkeleton />
+            ) : teamMembers.length === 0 ? (
+                <NotFound
+                    title="No Team Members Available"
+                    description="Our leadership team information is not currently available. Please check back soon to meet our dedicated healthcare professionals."
+                    imageSrc="/not-found.png"
+                    ctaText="Retry"
+                    onCta={fetchTeamMembers}
+                    className="mt-[60px] border-none"
+                />
             ) : (
                 <>
                     {/* Team Grid */}

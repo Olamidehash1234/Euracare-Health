@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import SortBy from "../../components/SortBy";
 import FilterBy from "../../components/FilterBy";
 import { DoctorCardSkeletonGrid } from "../../components/Skeletons/DoctorCardSkeleton";
+import NotFound from "../../components/NotFound";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
@@ -18,22 +19,25 @@ export default function ServicesGrid() {
     const [error, setError] = useState<string | null>(null);
 
     // Fetch doctors from API
+    const fetchDoctors = async () => {
+        try {
+            setLoading(true);
+            setError(null);
+            setDoctors([]);
+            setFilteredDoctors([]);
+            const data = await getDoctors();
+            setDoctors(data);
+            setFilteredDoctors(data);
+        } catch (err) {
+            const errorMsg = err instanceof Error ? err.message : 'Failed to load doctors';
+            setError(errorMsg);
+            // console.error('Error fetching doctors:', err);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     useEffect(() => {
-        const fetchDoctors = async () => {
-            try {
-                setLoading(true);
-                setError(null);
-                const data = await getDoctors();
-                setDoctors(data);
-                setFilteredDoctors(data);
-            } catch (err) {
-                const errorMsg = err instanceof Error ? err.message : 'Failed to load doctors';
-                setError(errorMsg);
-                // console.error('Error fetching doctors:', err);
-            } finally {
-                setLoading(false);
-            }
-        };
         fetchDoctors();
     }, []);
 
@@ -97,6 +101,12 @@ export default function ServicesGrid() {
         setConfirmedSearch("");
         setFilteredDoctors(doctors);
         setShowSuggestions(false);
+    };
+
+    const handleReload = async () => {
+        setQuery("");
+        setConfirmedSearch("");
+        await fetchDoctors();
     };
 
     const handleRetry = async () => {
@@ -196,10 +206,14 @@ export default function ServicesGrid() {
 
             {/* Cards Grid or Skeleton Loaders */}
             {filteredDoctors.length === 0 && !loading ? (
-                <div className="text-center py-12">
-                    <p className="text-[#02070D] text-lg">No doctors found {confirmedSearch ? `for "${confirmedSearch}"` : ''}</p>
-                    <p className="text-[#02070D] text-sm mt-2">Try adjusting your search terms</p>
-                </div>
+                <NotFound
+                    title="No Doctors Found"
+                    description={confirmedSearch ? `We couldn't find any doctors matching "${confirmedSearch}". Try searching with different keywords or browse our full doctor directory.` : 'No doctors are currently available in our directory. Please check back soon.'}
+                    imageSrc="/not-found.png"
+                    ctaText="Reload Doctors"
+                    onCta={handleReload}
+                    className="mt-[60px] border-none"
+                />
             ) : loading ? (
                 <DoctorCardSkeletonGrid />
             ) : (
