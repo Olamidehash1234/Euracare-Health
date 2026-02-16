@@ -29,7 +29,7 @@ export default function ServiceDynamicPage() {
                     setApiService(service);
                 }
             } catch (error) {
-                console.error('Error fetching service:', error);
+                // console.error('Error fetching service:', error);
                 setApiService(null);
             } finally {
                 setLoading(false);

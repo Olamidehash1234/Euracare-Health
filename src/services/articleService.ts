@@ -12,7 +12,7 @@ import type { ArticleResponse } from '../types/api-responses';
  */
 export const getArticles = async (): Promise<ArticleResponse[]> => {
   try {
-    console.log('articleService: Making API request to', API_ENDPOINTS.ARTICLES);
+    // console.log('articleService: Making API request to', API_ENDPOINTS.ARTICLES);
     const response = await makeRequest<{
       articles: { articles: ArticleResponse[] };
     }>(
@@ -20,14 +20,14 @@ export const getArticles = async (): Promise<ArticleResponse[]> => {
       { cacheDuration: API_CONFIG.CACHE_DURATION.MEDIUM }
     );
 
-    console.log('articleService: Raw API response:', response);
-    console.log('articleService: Response success:', response.success);
-    console.log('articleService: Response data structure:', {
-      hasData: !!response.data,
-      hasArticles: !!response.data?.articles,
-      hasArticlesArray: !!response.data?.articles?.articles,
-      articlesLength: response.data?.articles?.articles?.length || 0
-    });
+    // console.log('articleService: Raw API response:', response);
+    // console.log('articleService: Response success:', response.success);
+    // console.log('articleService: Response data structure:', {
+    //   hasData: !!response.data,
+    //   hasArticles: !!response.data?.articles,
+    //   hasArticlesArray: !!response.data?.articles?.articles,
+    //   articlesLength: response.data?.articles?.articles?.length || 0
+    // });
 
     if (response.success && response.data?.articles?.articles) {
       return response.data.articles.articles;
@@ -66,20 +66,20 @@ export const getArticleById = async (id: string): Promise<ArticleResponse> => {
  */
 export const getPublishedArticles = async (): Promise<ArticleResponse[]> => {
   try {
-    console.log('articleService: Fetching all articles...');
+    // console.log('articleService: Fetching all articles...');
     const allArticles = await getArticles();
-    console.log('articleService: All articles received:', allArticles);
+    // console.log('articleService: All articles received:', allArticles);
     
     // Filter articles - treat articles without status field as published
     const published = allArticles.filter(article => 
       article.status === 'published' || !article.status
     );
-    console.log('articleService: Published articles after filtering:', published);
-    console.log('articleService: Filter details - Total articles:', allArticles.length, 'Published:', published.length);
+    // console.log('articleService: Published articles after filtering:', published);
+    // console.log('articleService: Filter details - Total articles:', allArticles.length, 'Published:', published.length);
     
     return published;
   } catch (error) {
-    console.error('articleService: Error fetching published articles:', error);
+    // console.error('articleService: Error fetching published articles:', error);
     throw error;
   }
 };

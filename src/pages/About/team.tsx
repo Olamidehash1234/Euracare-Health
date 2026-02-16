@@ -20,7 +20,7 @@ const LeadershipTeam = () => {
         } catch (err) {
             const errorMsg = err instanceof Error ? err.message : 'Failed to load team members';
             setError(errorMsg);
-            console.error('Error fetching team members:', err);
+            // console.error('Error fetching team members:', err);
         } finally {
             setLoading(false);
         }

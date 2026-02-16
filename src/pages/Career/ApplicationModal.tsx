@@ -65,7 +65,7 @@ export default function ApplicationModal({ isOpen, jobTitle, onClose }: Applicat
         hideToast();
       }, 2000);
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error);
       const errorMessage = error instanceof Error ? error.message : 'Failed to submit application';
       showToast(errorMessage, 'error');
     } finally {

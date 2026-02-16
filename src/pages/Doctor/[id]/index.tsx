@@ -26,7 +26,7 @@ export default function DoctorProfilePage() {
             } catch (err) {
                 const errorMsg = err instanceof Error ? err.message : 'Failed to load doctor';
                 setError(errorMsg);
-                console.error('Error fetching doctor:', err);
+                // console.error('Error fetching doctor:', err);
             } finally {
                 setLoading(false);
             }

@@ -23,7 +23,7 @@ export default function ServicesGrid() {
         } catch (err) {
             const errorMsg = err instanceof Error ? err.message : 'Failed to load services';
             setError(errorMsg);
-            console.error('Error fetching services:', err);
+            // console.error('Error fetching services:', err);
         } finally {
             setLoading(false);
         }
@@ -47,7 +47,7 @@ export default function ServicesGrid() {
             const results = await searchServices(value);
             setFilteredServices(results);
         } catch (error) {
-            console.error('Error searching services:', error);
+            // console.error('Error searching services:', error);
         }
     };
 

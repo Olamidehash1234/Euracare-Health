@@ -23,7 +23,7 @@ const PatientTestimonials = () => {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Failed to load testimonials';
       setError(errorMsg);
-      console.error('Error fetching testimonials:', err);
+      // console.error('Error fetching testimonials:', err);
     } finally {
       setLoading(false);
     }

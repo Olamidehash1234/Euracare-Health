@@ -72,7 +72,7 @@ export const makeRequest = async <T>(
     if (method === 'GET') {
       const cachedData = getCachedData(url, cacheDuration);
       if (cachedData) {
-        console.log(`api.service: Returning cached data for ${endpoint}`);
+        // console.log(`api.service: Returning cached data for ${endpoint}`);
         return cachedData;
       }
     }
@@ -83,7 +83,7 @@ export const makeRequest = async <T>(
       ...requestOptions.headers,
     };
 
-    console.log(`api.service: Making ${method} request to ${url}`);
+    // console.log(`api.service: Making ${method} request to ${url}`);
     
     // Make request with timeout
     const controller = new AbortController();
@@ -97,7 +97,7 @@ export const makeRequest = async <T>(
 
     clearTimeout(timeout);
 
-    console.log(`api.service: Response status for ${endpoint}:`, response.status);
+    // console.log(`api.service: Response status for ${endpoint}:`, response.status);
 
     // Handle error responses
     if (!response.ok) {
@@ -105,7 +105,7 @@ export const makeRequest = async <T>(
         message: `HTTP ${response.status}: ${response.statusText}`,
       }));
 
-      console.error(`api.service: Error response for ${endpoint}:`, errorData);
+      // console.error(`api.service: Error response for ${endpoint}:`, errorData);
 
       throw {
         status: response.status,
@@ -115,11 +115,11 @@ export const makeRequest = async <T>(
 
     const responseData: ApiResponse<T> = await response.json();
     
-    console.log(`api.service: Success response for ${endpoint}:`, {
-      success: responseData.success,
-      dataKeys: responseData.data ? Object.keys(responseData.data) : 'no data',
-      fullResponse: responseData
-    });
+    // console.log(`api.service: Success response for ${endpoint}:`, {
+    //   success: responseData.success,
+    //   dataKeys: responseData.data ? Object.keys(responseData.data) : 'no data',
+    //   fullResponse: responseData
+    // });
 
     // Cache successful GET responses
     if (method === 'GET' && responseData.success) {
@@ -128,11 +128,11 @@ export const makeRequest = async <T>(
 
     return responseData;
   } catch (error: any) {
-    console.error(`api.service: Caught error for ${endpoint}:`, error);
+    // console.error(`api.service: Caught error for ${endpoint}:`, error);
     
     // Retry logic for network errors
     if (retryCount < API_CONFIG.RETRY_ATTEMPTS && isRetryableError(error)) {
-      console.log(`api.service: Retrying ${endpoint} (attempt ${retryCount + 1}/${API_CONFIG.RETRY_ATTEMPTS})`);
+      // console.log(`api.service: Retrying ${endpoint} (attempt ${retryCount + 1}/${API_CONFIG.RETRY_ATTEMPTS})`);
       await new Promise(resolve => setTimeout(resolve, API_CONFIG.RETRY_DELAY * (retryCount + 1)));
       return makeRequest<T>(endpoint, options, retryCount + 1);
     }
@@ -144,7 +144,7 @@ export const makeRequest = async <T>(
 
     // Return formatted error response
     const errorMessage = error.message || 'An error occurred while fetching data';
-    console.error(`api.service: Final error for ${endpoint}:`, errorMessage);
+    // console.error(`api.service: Final error for ${endpoint}:`, errorMessage);
     return {
       success: false,
       data: null as any,
@@ -184,6 +184,6 @@ export const prefetchData = async <T>(endpoint: string): Promise<void> => {
   try {
     await makeRequest<T>(endpoint);
   } catch (error) {
-    console.warn(`Failed to prefetch ${endpoint}:`, error);
+    // console.warn(`Failed to prefetch ${endpoint}:`, error);
   }
 };

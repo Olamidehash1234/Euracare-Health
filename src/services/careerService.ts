@@ -69,11 +69,11 @@ export const submitCareerApplication = async (formData: FormData, role?: string)
 
   // Upload CV to Cloudinary
   const cvUrl = await uploadToCloudinary(formData.cvFile);
-  console.log('CV uploaded successfully:', cvUrl);
+  // console.log('CV uploaded successfully:', cvUrl);
 
   // Prepare payload
   const payload = preparePayload(formData, cvUrl, role);
-  console.log('Sending payload to API:', payload);
+  // console.log('Sending payload to API:', payload);
 
   // Make API call
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
@@ -90,14 +90,14 @@ export const submitCareerApplication = async (formData: FormData, role?: string)
     let errorMessage = `Server error: ${response.status}`;
     try {
       const errorData: ApiErrorResponse = await response.json();
-      console.error('Backend error response:', errorData);
+      // console.error('Backend error response:', errorData);
       errorMessage = parseErrorResponse(errorData);
     } catch (parseError) {
-      console.error('Could not parse error response:', parseError);
+      // console.error('Could not parse error response:', parseError);
     }
     throw new Error(errorMessage);
   }
 
-  const result = await response.json();
-  console.log('Application submitted successfully:', result);
+  await response.json();
+  // console.log('Application submitted successfully:', result);
 };

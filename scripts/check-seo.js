@@ -8,6 +8,6 @@ const puppeteer = require('puppeteer');
   const title = await page.title();
   const description = await page.$eval('meta[name="description"]', el => el.getAttribute('content'));
   const keywords = await page.$eval('meta[name="keywords"]', el => el.getAttribute('content'));
-  console.log({ title, description, keywords });
+  // console.log({ title, description, keywords });
   await browser.close();
 })();

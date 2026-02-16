@@ -31,7 +31,7 @@ export default function Jobs() {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Failed to load jobs';
       setError(errorMsg);
-      console.error('Error fetching jobs:', err);
+      // console.error('Error fetching jobs:', err);
     } finally {
       setLoading(false);
     }

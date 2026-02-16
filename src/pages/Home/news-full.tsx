@@ -9,7 +9,7 @@ import { NewsGridSkeleton } from "../../components/Skeletons/NewsCardSkeleton";
 const transformArticle = (article: ArticleResponse) => {
   const heroImage = article.snippet?.cover_image_url || 'https://via.placeholder.com/1200x600';
   const dateTime = article.createdAt || (article as any).created_at;
-  console.log('Transform: heroImage =', heroImage, 'date =', dateTime);
+//   console.log('Transform: heroImage =', heroImage, 'date =', dateTime);
   
   return {
     id: article.id,
@@ -33,13 +33,13 @@ export default function NewsFullPage() {
 			try {
 				setLoading(true);
 				setError(null);
-				console.log('Fetching published articles...');
+				// console.log('Fetching published articles...');
 				const data = await getPublishedArticles();
-				console.log('Raw API response:', data);
-				console.log('Number of articles received:', data?.length || 0);
+				// console.log('Raw API response:', data);
+				// console.log('Number of articles received:', data?.length || 0);
 				
 				const transformed = data.map(transformArticle);
-				console.log('Transformed articles:', transformed);
+				// console.log('Transformed articles:', transformed);
 				setTransformedArticles(transformed);
 				
 				// Get initial ID from hash or use first article
@@ -49,12 +49,12 @@ export default function NewsFullPage() {
 				} else if (transformed.length > 0) {
 					setSelectedId(transformed[0].id);
 				}
-				console.log('Selected ID:', hashId || transformed[0]?.id || 'none');
+				// console.log('Selected ID:', hashId || transformed[0]?.id || 'none');
 			} catch (err) {
 				const errorMsg = err instanceof Error ? err.message : 'Failed to load articles';
 				setError(errorMsg);
-				console.error('Error fetching articles:', err);
-				console.error('Error details:', { message: errorMsg, stack: err instanceof Error ? err.stack : 'N/A' });
+				// console.error('Error fetching articles:', err);
+				// console.error('Error details:', { message: errorMsg, stack: err instanceof Error ? err.stack : 'N/A' });
 			} finally {
 				setLoading(false);
 			}

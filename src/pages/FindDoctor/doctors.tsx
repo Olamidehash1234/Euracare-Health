@@ -29,7 +29,7 @@ export default function ServicesGrid() {
             } catch (err) {
                 const errorMsg = err instanceof Error ? err.message : 'Failed to load doctors';
                 setError(errorMsg);
-                console.error('Error fetching doctors:', err);
+                // console.error('Error fetching doctors:', err);
             } finally {
                 setLoading(false);
             }

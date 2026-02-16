@@ -24,7 +24,7 @@ const EuracareNews = () => {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Failed to load articles';
       setError(errorMsg);
-      console.error('Error fetching articles:', err);
+      // console.error('Error fetching articles:', err);
     } finally {
       setLoading(false);
     }
