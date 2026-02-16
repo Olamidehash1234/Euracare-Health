@@ -9,27 +9,27 @@ export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 // API endpoints
 export const API_ENDPOINTS = {
   // Doctors
-  DOCTORS: '/doctors/',
-  DOCTOR_BY_ID: (id: string) => `/doctors/${id}/`,
+  DOCTORS: '/doctors',
+  DOCTOR_BY_ID: (id: string) => `/doctors/${id}`,
 
   // Services
-  SERVICES: '/services/',
-  SERVICE_BY_ID: (id: string) => `/services/${id}/`,
+  SERVICES: '/services',
+  SERVICE_BY_ID: (id: string) => `/services/${id}`,
 
   // Articles/Blogs
-  ARTICLES: '/articles/',
+  ARTICLES: '/articles',
   ARTICLE_BY_ID: (id: string) => `/articles/${id}/`,
 
   // Team Members
-  TEAMS: '/teams/',
+  TEAMS: '/teams',
   TEAM_BY_ID: (id: string) => `/teams/${id}/`,
 
   // Testimonials
-  TESTIMONIALS: '/testimonials/',
+  TESTIMONIALS: '/testimonials',
   TESTIMONIAL_BY_ID: (id: string) => `/testimonials/${id}/`,
 
   // Jobs/Careers
-  JOBS: '/jobs/',
+  JOBS: '/jobs',
   JOB_BY_ID: (id: string) => `/jobs/${id}/`,
 } as const;
 

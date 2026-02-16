@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import type { ServiceData } from "../../../../data/services";
-
-export default function Faq({ service }: { service: ServiceData }) {
+export default function Faq({ service }: { service: any }) {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const title = (service as any).title || (service as any).snippet?.service_name || 'Service';
+    const faqs = (service as any).faqs || [];
 
-    if (!service.faqs || service.faqs.length === 0) {
+    if (!faqs || faqs.length === 0) {
         return null;
     }
 
@@ -12,12 +12,12 @@ export default function Faq({ service }: { service: ServiceData }) {
         <div className="px-[10px] py-[60px] my-[40px] lg:my-[80px] lg:mb-[80px] lg:mx-[80px] rounded-[0px] lg:rounded-[20px] lg:px-[80px] lg:py-[80px] bg-[#0C2141]">
             <div className="mb-[43px] lg:mb-[40px]">
                 <p className="text-[20px] pl-[8px] lg-pl-0 lg:text-[40px] lg:leading-[40px] lg:tracking-[-0.8px] leading-[20px] font-medium text-white">
-                    FAQs – {service.title}
+                    FAQs – {title}
                 </p>
             </div>
 
             <div className="space-y-[10px]">
-                {service.faqs.map((faq, index) => (
+                {faqs.map((faq, index) => (
                     <div
                         key={index}
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}

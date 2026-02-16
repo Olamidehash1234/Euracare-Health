@@ -1,6 +1,9 @@
-import type { ServiceData } from "../../../../data/services";
-
-export default function Conditions({ service }: { service: ServiceData }) {
+export default function Conditions({ service }: { service: any }) {
+    // Handle both local data and API data
+    const conditionSubtitle = (service as any).conditionSubtitle || 'Conditions We Treat';
+    const conditionList = (service as any).conditionList || (service as any).page?.conditions_we_treat || [];
+    const additionalconditionSubtitle = (service as any).additionalconditionSubtitle || '';
+    const additionalconditionList = (service as any).additionalconditionList || [];
     return (
         <div id="conditions" className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[120px] lg:pb-[80px]">
             <div className="mb-[30px] lg:mb-[60px]">
@@ -8,12 +11,12 @@ export default function Conditions({ service }: { service: ServiceData }) {
                     Conditions We Treat
                 </p>
                 <h2 className="text-[24px] lg:max-w-[700px] tracking-[-0.5px] lg:text-[24px] leading-[28px] lg:tracking-[-0.54px] font-medium text-[#02070D]">
-                    {service.conditionSubtitle}
+                    {conditionSubtitle}
                 </h2>
             </div>
 
             <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                {service.conditionList?.map((v) => (
+                {conditionList?.map((v) => (
                     <article
                         key={v}
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"
@@ -30,12 +33,12 @@ export default function Conditions({ service }: { service: ServiceData }) {
                 ))}
             </div>
 
-            <h2 className="mt-[40px] text-[24px] lg:max-w-[700px] tracking-[-0.5px] lg:text-[24px] leading-[28px] lg:tracking-[-0.54px] font-medium text-[#02070D]">
-                {service.additionalconditionSubtitle}
-            </h2>
+            {additionalconditionSubtitle && <h2 className="mt-[40px] text-[24px] lg:max-w-[700px] tracking-[-0.5px] lg:text-[24px] leading-[28px] lg:tracking-[-0.54px] font-medium text-[#02070D]">
+                {additionalconditionSubtitle}
+            </h2>}
 
-            <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                {service.additionalconditionList?.map((v) => (
+            {additionalconditionList?.length > 0 && <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
+                {additionalconditionList?.map((v) => (
                     <article
                         key={v}
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"
@@ -50,7 +53,7 @@ export default function Conditions({ service }: { service: ServiceData }) {
                         </div>
                     </article>
                 ))}
-            </div>
+            </div>}
         </div>
     );
 }

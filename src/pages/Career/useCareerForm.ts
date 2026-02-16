@@ -12,7 +12,7 @@ interface UseCareerFormReturn {
   handleSelectOption: (field: string, value: string) => void;
   handleFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
   setIsDegreeOpen: (value: boolean) => void;
-  validateForm: () => boolean;
+  validateForm: () => { isValid: boolean; missingField?: string };
   resetForm: () => void;
 }
 
@@ -134,41 +134,55 @@ export const useCareerForm = (): UseCareerFormReturn => {
   /**
    * Validate entire form
    */
-  const validateForm = (): boolean => {
+  const validateForm = (): { isValid: boolean; missingField?: string } => {
     const newErrors: Record<string, string> = {};
+    let firstMissingField: string | undefined;
 
     if (!formData.firstName.trim()) {
       newErrors.firstName = 'First name is required';
+      if (!firstMissingField) firstMissingField = 'First Name';
     }
     if (!formData.lastName.trim()) {
       newErrors.lastName = 'Last name is required';
+      if (!firstMissingField) firstMissingField = 'Last Name';
     }
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
+      if (!firstMissingField) firstMissingField = 'Email';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Invalid email format';
+      if (!firstMissingField) firstMissingField = 'Email (invalid format)';
     }
     if (!formData.dateOfBirth) {
       newErrors.dateOfBirth = 'Date of birth is required';
+      if (!firstMissingField) firstMissingField = 'Date of Birth';
     }
     if (!formData.highestDegree) {
       newErrors.highestDegree = 'Highest degree is required';
+      if (!firstMissingField) firstMissingField = 'Highest Degree';
     }
     if (!formData.currentEmployer.trim()) {
       newErrors.currentEmployer = 'Current employer is required';
+      if (!firstMissingField) firstMissingField = 'Current Employer';
     }
     if (!formData.yearsOfExperience) {
       newErrors.yearsOfExperience = 'Years of experience is required';
+      if (!firstMissingField) firstMissingField = 'Years of Experience';
     }
     if (!formData.expectedSalary) {
       newErrors.expectedSalary = 'Expected salary is required';
+      if (!firstMissingField) firstMissingField = 'Expected Salary';
     }
     if (!formData.cvFile) {
       newErrors.cvFile = 'CV file is required';
+      if (!firstMissingField) firstMissingField = 'CV file';
     }
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return {
+      isValid: Object.keys(newErrors).length === 0,
+      missingField: firstMissingField
+    };
   };
 
   /**

@@ -2,13 +2,15 @@ import { uploadToCloudinary } from '../utils/cloudinary';
 import type { FormData, ApiPayload, ApiErrorResponse } from '../types/types';
 
 
-export const preparePayload = (formData: FormData, cvUrl: string): ApiPayload => {
+// Accepts an optional role argument
+export const preparePayload = (formData: FormData, cvUrl: string, role?: string): ApiPayload => {
   return {
     first_name: formData.firstName,
     last_name: formData.lastName,
     email: formData.email,
     dob: formData.dateOfBirth,
-    job: formData.highestDegree,
+    role: role || '',
+    job: formData.highestDegree, // keep for backward compatibility if needed
     degree: formData.highestDegree,
     current_employer: formData.currentEmployer,
     yoe: formData.yearsOfExperience,
@@ -59,7 +61,7 @@ const parseErrorResponse = (errorData: ApiErrorResponse): string => {
  * @param formData - Form data containing applicant information
  * @returns Success message
  */
-export const submitCareerApplication = async (formData: FormData): Promise<void> => {
+export const submitCareerApplication = async (formData: FormData, role?: string): Promise<void> => {
   // Validate that CV file exists
   if (!formData.cvFile) {
     throw new Error('No CV file selected');
@@ -70,12 +72,12 @@ export const submitCareerApplication = async (formData: FormData): Promise<void>
   console.log('CV uploaded successfully:', cvUrl);
 
   // Prepare payload
-  const payload = preparePayload(formData, cvUrl);
+  const payload = preparePayload(formData, cvUrl, role);
   console.log('Sending payload to API:', payload);
 
   // Make API call
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
-  const response = await fetch(`${apiBaseUrl}/careers/`, {
+  const response = await fetch(`${apiBaseUrl}/jobs/applications/submit`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

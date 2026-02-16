@@ -43,7 +43,8 @@ const PatientTestimonials = () => {
 
   const getVisibleSlides = () => {
     const slides: TestimonialResponse[] = [];
-    for (let i = 0; i < 3; i++) {
+    const visibleCount = Math.min(3, testimonials.length);
+    for (let i = 0; i < visibleCount; i++) {
       const index = (currentSlide + i) % testimonials.length;
       slides.push(testimonials[index]);
     }

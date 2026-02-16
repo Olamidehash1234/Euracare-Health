@@ -1,8 +1,17 @@
-import type { ServiceData } from "../../../../data/services";
-
-export default function MedicalContentVideo({ service }: { service: ServiceData }) {
+export default function MedicalContentVideo({ service }: { service: any }) {
+    // Handle both local data and API data
+    const overviewText = (service as any).overviewText || (service as any).page?.service_overview || '';
+    const additionalOverview = (service as any).additionalOverview || '';
+    const additionalOverview2 = (service as any).additionalOverview2 || '';
+    const additionalOverview3 = (service as any).additionalOverview3 || '';
+    
     // Accept multiple video URLs (array)
-    const videoUrls = service.videoUrls ?? (service.videoUrls ? [service.videoUrls] : []);
+    let videoUrls: string[] = [];
+    if ((service as any).videoUrls) {
+        videoUrls = Array.isArray((service as any).videoUrls) ? (service as any).videoUrls : [(service as any).videoUrls];
+    } else if ((service as any).page?.video_url) {
+        videoUrls = [(service as any).page.video_url];
+    }
     const videoCount = videoUrls.length;
 
     return (
@@ -10,20 +19,20 @@ export default function MedicalContentVideo({ service }: { service: ServiceData 
             {/* Text Content */}
             <div className="mb-[40px]">
                 <p className="text-[#02070D]  leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
-                    {service.overviewText}
+                    {overviewText}
                 </p>
 
-                <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
-                    {service.additionalOverview}
-                </p>
+                {additionalOverview && <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
+                    {additionalOverview}
+                </p>}
 
-                <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
-                    {service.additionalOverview2}
-                </p>
+                {additionalOverview2 && <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
+                    {additionalOverview2}
+                </p>}
 
-                <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
-                    {service.additionalOverview3}
-                </p>
+                {additionalOverview3 && <p className="text-[#02070D] mt-[16px] leading-[20px] text-justify text-[14px] lg:text-[18px] lg:leading-[32px]">
+                    {additionalOverview3}
+                </p>}
             </div>
 
             {/* Video Container - Only show if there are videos */}

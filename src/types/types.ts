@@ -20,6 +20,7 @@ export interface ApiPayload {
   last_name: string;
   email: string;
   dob: string;
+  role: string;
   job: string;
   degree: string;
   current_employer: string;

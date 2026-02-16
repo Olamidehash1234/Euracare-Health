@@ -56,7 +56,7 @@ const Toast: React.FC<ToastProps> = ({ message, type, show, onHide }) => {
   };
 
   return (
-    <div className="fixed top-[80px] right-6 z-50">
+    <div className="fixed top-[80px] right-6 z-[999]">
       <div className={`${getBgColor()} text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 min-w-[300px] justify-center transition-all duration-300 ease-in-out`}>
         <span className="flex-shrink-0">{getIcon()}</span>
         <p className="text-[16px] font-medium">{message}</p>

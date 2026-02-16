@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { getServices, searchServices } from "../../services/serviceService";
 import type { ServiceResponse } from "../../types/api-responses";
 import SortBy from "../../components/SortBy";
+import { Link } from 'react-router-dom';
+import { ServiceCardSkeletonGrid } from "../../components/Skeletons/ServiceCardSkeleton";
 
 export default function ServicesGrid() {
     const [query, setQuery] = useState("");
     const [filteredServices, setFilteredServices] = useState<ServiceResponse[]>([]);
     const [services, setServices] = useState<ServiceResponse[]>([]);
-    const [, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     // Fetch services from API
@@ -96,14 +98,18 @@ export default function ServicesGrid() {
                         </div>
                     </div>
 
-                    {/* Cards Grid */}
-                    {filteredServices.length === 0 ? (
+                    {/* Cards Grid or Skeleton Loaders */}
+                    {loading ? (
+                        <div className="mt-[60px]">
+                            <ServiceCardSkeletonGrid />
+                        </div>
+                    ) : filteredServices.length === 0 ? (
                         <div className="text-center py-12">
                             <p className="text-[#02070D] text-lg">No services found {query ? `for "${query}"` : ''}</p>
                             <p className="text-[#02070D] text-sm mt-2">Try adjusting your search terms</p>
                         </div>
                     ) : (
-                        <div className="grid gap-6 lg:gap-[13px] lg:gap-y-[40px] sm:grid-cols-2 lg:grid-cols-4 mb-8">
+                        <div className="grid gap-6 lg:gap-[13px] lg:gap-y-[40px] sm:grid-cols-2 lg:grid-cols-4 mb-8 mt-[60px]">
                             {filteredServices.map((service) => (
                                 <div
                                     key={service.id}
@@ -130,12 +136,12 @@ export default function ServicesGrid() {
                                         <p className="text-[14px] text-[#02070DCC] leading-[20px] lg:leading-[22px] flex-grow">
                                             {service.snippet?.service_description}
                                         </p>
-                                        <a
-                                            href={`/services/dynamic/${service.snippet?.service_name?.toLowerCase().replace(/\s+/g, '-')}`}
+                                        <Link
+                                            to={`/services/dynamic/${encodeURIComponent(service.id)}`}
                                             className="mt-[20px] lg:mt-[40px] py-[10px] mx-auto w-full lg:w-[90%] border border-[#02070D] rounded-full font-medium text-[14px] lg:leading-[27px] hover:bg-gray-100 transition text-center"
                                         >
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             ))}

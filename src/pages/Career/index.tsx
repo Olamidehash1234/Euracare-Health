@@ -1,11 +1,11 @@
 import Hero from './hero';
-import Jobs from './jobs'
+import JobsCard from './jobs'
 
 export default function Career() {
     return (
         <div>
             <Hero />
-            <Jobs />
+            <JobsCard />
         </div>
     );
 }

@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 
 type ServiceCardProps = {
+  id: string;
   image: string;
   title: string;
   description: string;
-  slug: string;
 };
 
-export default function ServiceCard({ image, title, description, slug }: ServiceCardProps) {
+export default function ServiceCard({ id, image, title, description }: ServiceCardProps) {
   return (
     <div className="relative overflow-hidden rounded-[8px] lg:rounded-[12px] shadow-lg bg-[#1A2C47] w-full h-[319px] lg:w-[296px] lg:h-[399px] flex flex-col justify-end group">
       <div className="absolute inset-0 bg-gray-200">
@@ -39,7 +39,8 @@ export default function ServiceCard({ image, title, description, slug }: Service
         <p className="text-[14px] text-white leading-[20px] lg:leading-[21px] mb-[10px] flex-grow opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">
           {description}
         </p>
-        <Link to={`/services/dynamic/${slug}`} className="inline-block">
+        {/* Link to dynamic service page by ID (API uses id for getServiceById) */}
+        <Link to={`/services/dynamic/${encodeURIComponent(id)}`} className="inline-block">
           <button className="border border-white rounded-full px-[60px] py-[10px] text-white font-medium transition hover:bg-white/10">
             Learn More
           </button>

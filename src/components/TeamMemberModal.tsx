@@ -56,9 +56,10 @@ export default function TeamMemberModal({ isOpen, onClose, member }: TeamMemberM
 
                                 {member.bio && (
                                     <div className="mt-4 max-h-[140px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-                                        <p className="text-sm sm:text-[16px] text-gray-500">
-                                            {member.bio}
-                                        </p>
+                                        <div 
+                                            className="text-sm sm:text-[16px] text-gray-500 prose prose-sm max-w-none"
+                                            dangerouslySetInnerHTML={{ __html: member.bio }}
+                                        />
                                     </div>
                                 )}
 

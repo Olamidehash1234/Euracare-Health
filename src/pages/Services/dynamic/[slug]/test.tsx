@@ -1,6 +1,7 @@
-import type { ServiceData } from "../../../../data/services";
-
-export default function Test({ service }: { service: ServiceData }) {
+export default function Test({ service }: { service: any }) {
+    // Handle both local data and API data
+    const testSubtitle = (service as any).testSubtitle || 'Tests and Diagnostics';
+    const testList = (service as any).testList || (service as any).page?.test_and_diagnostics || [];
     return (
         <div id="tests" className="px-[16px] py-[60px] lg:px-[80px] lg:pt-[0px] lg:pb-[60px]">
             <div className="mb-[30px] lg:mb-[60px]">
@@ -8,12 +9,12 @@ export default function Test({ service }: { service: ServiceData }) {
                     Tests and Diagnostics
                 </p>
                 <h2 className="text-[24px] lg:max-w-[700px] tracking-[-0.5px] lg:text-[24px] leading-[28px] lg:tracking-[-0.54px] font-medium text-[#02070D]">
-                    {service.testSubtitle}
+                    {testSubtitle}
                 </h2>
             </div>
 
             <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[20px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                {service.testList?.map((v) => (
+                {testList?.map((v) => (
                     <article
                         key={v}
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"

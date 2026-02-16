@@ -1,13 +1,41 @@
 import type { JobPosition } from '../../data/jobs';
+import type { JobResponse } from '../../types/api-responses';
+import { timeAgo } from '../../utils/dateFormatter';
 
 interface JobCardProps {
-    job: JobPosition;
+    job: JobPosition | JobResponse;
     isExpanded: boolean;
     onToggle: () => void;
     onApplyClick: () => void;
 }
 
 export default function JobCard({ job, isExpanded, onToggle, onApplyClick }: JobCardProps) {
+        // Normalize fields from API (snake_case) and local data (camelCase)
+        const rawDuties = (job as any).dutiesAndResponsibilities ?? (job as any).duties_and_responsibilities ?? null;
+        const dutiesList: string[] = Array.isArray(rawDuties)
+            ? rawDuties
+            : Array.isArray(rawDuties?.list)
+                ? rawDuties.list
+                : [];
+
+        const rawQualifications = (job as any).qualificationsAndRequirements ?? (job as any).qualifications_and_requirements ?? null;
+        // qualifications might be { required: [], preferred: [] } or { list: [] } or an array
+        const requiredQuals: string[] = Array.isArray(rawQualifications?.required)
+            ? rawQualifications.required
+            : Array.isArray(rawQualifications?.list)
+                ? rawQualifications.list
+                : Array.isArray(rawQualifications)
+                    ? rawQualifications
+                    : [];
+
+        const preferredQuals: string[] = Array.isArray(rawQualifications?.preferred)
+            ? rawQualifications.preferred
+            : [];
+
+        // Determine posted text from timestamps if available
+        const createdAt = (job as any).created_at ?? (job as any).updated_at ?? (job as any).postedDate ?? null;
+        const postedText = createdAt ? timeAgo(createdAt) : ((job as any).postedDate ?? '');
+
     return (
         <div className="border-[0.5px] border-[#0C2141CC] rounded-[20px] overflow-hidden bg-white">
             {/* Job Header - Always visible, clickable to expand */}
@@ -35,7 +63,7 @@ export default function JobCard({ job, isExpanded, onToggle, onApplyClick }: Job
                                 </div>
                                 <div className="flex items-center gap-1 text-[14px] lg:text-sm text-[#0C2141]">
                                     <img src="/time.svg" alt="" />
-                                    <span>{job.postedDate}</span>
+                                    <span>{postedText}</span>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +130,7 @@ export default function JobCard({ job, isExpanded, onToggle, onApplyClick }: Job
                             <div>
                                 <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#0C2141] mb-3">Duties & Responsibilities</button>
                                 <ul className="space-y-2 lg:space-y-[8px]">
-                                    {job.dutiesAndResponsibilities.map((duty, index) => (
+                                    {dutiesList.map((duty, index) => (
                                         <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-base text-[#0C2141]">
                                             <span className="text-[#0C2141]  font-bold flex-shrink-0">•</span>
                                             <span className='tracking-[-0.54px] lg:leading-[24px] font-[300]'>{duty}</span>
@@ -121,7 +149,7 @@ export default function JobCard({ job, isExpanded, onToggle, onApplyClick }: Job
                                 {/* Required Qualifications */}
                                 <div>
                                     <ul className="space-y-2">
-                                        {job.qualificationsAndRequirements.required.map((qual, index) => (
+                                        {requiredQuals.map((qual, index) => (
                                             <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-base text-[#0C2141]">
                                                 <span className="text-[#0C2141]  font-bold flex-shrink-0">•</span>
                                                 <span className='tracking-[-0.54px] lg:leading-[24px] font-[300]'>{qual}</span>
@@ -131,10 +159,10 @@ export default function JobCard({ job, isExpanded, onToggle, onApplyClick }: Job
                                 </div>
 
                                 {/* Preferred Qualifications */}
-                                {job.qualificationsAndRequirements.preferred && job.qualificationsAndRequirements.preferred.length > 0 && (
+                                {preferredQuals.length > 0 && (
                                     <div className="mt-4 pt-4 border-t border-gray-200">
                                         <ul className="space-y-2">
-                                            {job.qualificationsAndRequirements.preferred.map((qual, index) => (
+                                            {preferredQuals.map((qual, index) => (
                                                 <li key={index} className="flex gap-2 text-[14px] lg:text-sm text-[#0C2141]">
                                                     <span className="text-[#0C2141]  font-bold flex-shrink-0">•</span>
                                                     <span>{qual}</span>

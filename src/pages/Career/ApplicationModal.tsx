@@ -44,8 +44,12 @@ export default function ApplicationModal({ isOpen, jobTitle, onClose }: Applicat
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      showToast('Please fill in all required fields', 'error');
+    const validation = validateForm();
+    if (!validation.isValid) {
+      const missingFieldMessage = validation.missingField
+        ? `Please fill in the ${validation.missingField} field`
+        : 'Please fill in all required fields';
+      showToast(missingFieldMessage, 'error');
       return;
     }
 
@@ -53,9 +57,9 @@ export default function ApplicationModal({ isOpen, jobTitle, onClose }: Applicat
     showToast('Processing your application...', 'loading');
 
     try {
-      await submitCareerApplication(formData);
+      await submitCareerApplication(formData, jobTitle);
       resetForm();
-      showToast('Application submitted successfully! We will review it shortly.', 'success');
+      showToast('Your application was successful, we will review it shortly', 'success');
       setTimeout(() => {
         onClose();
         hideToast();

@@ -169,6 +169,8 @@ export interface JobResponse {
   objective: string;
   duties_and_responsibilities: Record<string, any> | string;
   qualifications_and_requirements: Record<string, any> | string;
+  created_at?: string;
+  updated_at?: string;
 }
 
 export interface JobListResponse {
