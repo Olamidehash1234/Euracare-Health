@@ -18,7 +18,7 @@ export default function Procedures({ service }: { service: any }) {
                 </h2>
 
                 <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[20px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                    {procedureList?.map((v) => (
+                    {procedureList?.map((v: string) => (
                         <article key={v} className="pb-[20px] lg:pb-[30px] border-b border-[#676767]">
                             <div className="flex gap-[16px] items-start">
                                 <img src="/service-d/test.svg" alt="" className="w-[32px] h-[32px] lg:h-auto lg:w-auto"/>
@@ -39,7 +39,7 @@ export default function Procedures({ service }: { service: any }) {
                     </h2>
 
                     <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[20px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                        {additionalProcedureList.map((v) => (
+                        {additionalProcedureList.map((v: string) => (
                             <article key={v} className="pb-[20px] lg:pb-[30px] border-b border-[#676767]">
                                 <div className="flex gap-[16px] items-start">
                                     <img src="/service-d/test.svg" alt="" className="w-[32px] h-[32px] lg:h-auto lg:w-auto"/>
@@ -61,7 +61,7 @@ export default function Procedures({ service }: { service: any }) {
                     </h2>
 
                     <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[20px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                        {additionalProcedureList2.map((v) => (
+                        {additionalProcedureList2.map((v: string) => (
                             <article key={v} className="pb-[20px] lg:pb-[30px] border-b border-[#676767]">
                                 <div className="flex gap-[16px] items-start">
                                     <img src="/service-d/test.svg" alt="" className="w-[32px] h-[32px] lg:h-auto lg:w-auto"/>

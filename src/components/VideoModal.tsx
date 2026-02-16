@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { extractYoutubeId } from "../utils/youtubeId";
 
 type VideoModalProps = {
   open: boolean;
@@ -8,13 +9,6 @@ type VideoModalProps = {
 
 const VideoModal: React.FC<VideoModalProps> = ({ open, videoUrl, onClose }) => {
   const modalRef = useRef<HTMLDivElement>(null);
-
-  // Function to extract YouTube video ID
-  const getYoutubeVideoId = (url: string) => {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
-    const match = url.match(regExp);
-    return match && match[2].length === 11 ? match[2] : null;
-  };
 
   useEffect(() => {
     if (!open) return;
@@ -29,7 +23,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ open, videoUrl, onClose }) => {
 
   if (!open || !videoUrl) return null;
 
-  const videoId = getYoutubeVideoId(videoUrl);
+  const videoId = extractYoutubeId(videoUrl);
   const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1` : null;
 
   if (!embedUrl) return null;

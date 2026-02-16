@@ -1,3 +1,5 @@
+import { getYoutubeEmbedUrl } from '../../../../utils/youtubeId';
+
 export default function MedicalContentVideo({ service }: { service: any }) {
     // Handle both local data and API data
     const overviewText = (service as any).overviewText || (service as any).page?.service_overview || '';
@@ -51,7 +53,7 @@ export default function MedicalContentVideo({ service }: { service: any }) {
                         >
                             <iframe
                                 className="h-full w-full"
-                                src={`https://www.youtube.com/embed/${url}?si=Q6VFw_wxLDZvBzs2`}
+                                src={getYoutubeEmbedUrl(url)}
                                 title={`YouTube video player ${idx + 1}`}
                                 loading="lazy"
                                 frameBorder="0"

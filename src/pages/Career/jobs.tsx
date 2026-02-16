@@ -11,7 +11,6 @@ export default function Jobs() {
   const [expandedJobId, setExpandedJobId] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedJobTitle, setSelectedJobTitle] = useState('');
-  const [selectedJob, setSelectedJob] = useState<JobResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedFilter, setSelectedFilter] = useState('ALL');
@@ -56,14 +55,12 @@ export default function Jobs() {
 
   const handleApplyClick = (job: JobResponse) => {
     setSelectedJobTitle(job.title);
-    setSelectedJob(job);
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedJobTitle('');
-    setSelectedJob(null);
   };
 
   return (

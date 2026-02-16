@@ -15,7 +15,7 @@ export default function PatientTestimonials({ service }: { service: any }) {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 w-full mt-[40px] gap-4">
-                {testimonialVideoUrl.map((videoUrl, index) => (
+                {testimonialVideoUrl.map((videoUrl: string, index: number) => (
                     <div key={index} className="lg:h-[400px] h-[250px] overflow-hidden lg:rounded-[20px] rounded-[8px] bg-black">
                         <iframe
                             className="h-full w-full"

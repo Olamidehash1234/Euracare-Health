@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Toast from '../../components/Toast';
 import { useCareerForm } from './useCareerForm';
-import { submitCareerApplication } from '../../apiCalls/careerService';
+import { submitCareerApplication } from '../../services/careerService';
 import type { ToastState } from '../../types/types';
 
 interface ApplicationModalProps {

@@ -17,7 +17,7 @@ export default function Faq({ service }: { service: any }) {
             </div>
 
             <div className="space-y-[10px]">
-                {faqs.map((faq, index) => (
+                {faqs.map((faq: any, index: number) => (
                     <div
                         key={index}
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}

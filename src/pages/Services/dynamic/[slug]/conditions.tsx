@@ -16,7 +16,7 @@ export default function Conditions({ service }: { service: any }) {
             </div>
 
             <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                {conditionList?.map((v) => (
+                {conditionList?.map((v: string) => (
                     <article
                         key={v}
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"
@@ -38,7 +38,7 @@ export default function Conditions({ service }: { service: any }) {
             </h2>}
 
             {additionalconditionList?.length > 0 && <div className="mt-[30px] lg:mt-[60px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-[30px] lg:gap-y-[40px] lg:gap-x-[25px]">
-                {additionalconditionList?.map((v) => (
+                {additionalconditionList?.map((v: string) => (
                     <article
                         key={v}
                         className="pb-[20px] lg:pb-[30px] border-b border-[#676767]"
