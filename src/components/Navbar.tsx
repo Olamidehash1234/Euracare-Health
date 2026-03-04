@@ -47,6 +47,16 @@ export default function Navbar() {
               <div className="absolute left-[-25px] right-[-60px] transform pt-[30px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className=" bg-[#F8F8F8] border-[1px] border-[#0C2141] py-[32px] px-[30px] rounded-[20px]">
                   <NavLink
+                    to="/home/news"
+                    className={({ isActive }) =>
+                      `block text-[16px] leading-[20px] hover:text-[#0C2141] ${isActive ? "text-[#0C2141]" : "text-[#02070D]"
+                      }`
+                    }
+                  >
+                    News & Updates
+                  </NavLink>
+                  <div className="h-[1px] bg-[#0C21411A] lg:my-[20px]"></div>
+                  <NavLink
                     to="/patient-information/what-to-expect"
                     className={({ isActive }) =>
                       `block text-[16px] leading-[20px] hover:text-[#0C2141] ${isActive ? "text-[#0C2141]" : "text-[#02070D]"
@@ -65,16 +75,6 @@ export default function Navbar() {
                   >
                     International Patient
                   </NavLink>
-                  <div className="h-[1px] bg-[#0C21411A] lg:my-[20px]"></div>
-                  <NavLink
-                    to="/home/news"
-                    className={({ isActive }) =>
-                      `block text-[16px] leading-[20px] hover:text-[#0C2141] ${isActive ? "text-[#0C2141]" : "text-[#02070D]"
-                      }`
-                    }
-                  >
-                    News & Updates
-                  </NavLink>
                 </div>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
 
           {/* Call Button */}
           <div className="hidden lg:flex">
-            <a href="tel: +2349094444413">
+            <a href="https://wa.link/jq5wd7">
               <button className="flex items-center border-[1px] border-[#02070D] px-5 py-[14px] px-[40px] rounded-[48px] hover:bg-gray-100 transition">
                 <img src="/navbar/call.svg" alt="Call Icon" className="mr-2" />
                 <span className="text-[16px] font-medium lg:leading-[27px]">Call us today</span>
@@ -153,14 +153,14 @@ export default function Navbar() {
             </button>
             {mobileDropdownOpen && (
               <div className="mt-[10px] pl-4 space-y-[20px]">
+                <a href="/home/news" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                  News & Updates
+                </a>
                 <a href="/patient-information/what-to-expect" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
                   What To Expect
                 </a>
                 <a href="/patient-information/international-patients" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
                   International Patient
-                </a>
-                <a href="/home/news" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
-                  News & Updates
                 </a>
               </div>
             )}

@@ -12,7 +12,7 @@ const Banner = () => {
               </span>{" "}
               or send an email to{" "}
               <span className="hover:underline underline-offset-[4px]">
-                <a href="mailto:info@euracarenigeria.com">info@euracarenigeria.com</a>
+                <a href="mailto:info@euracare.com.ng">info@euracare.com.ng</a>
               </span>
             </h1>
           </div>
@@ -25,7 +25,7 @@ const Banner = () => {
             </span>{" "}
             or send an email to{" "}
             <span className="hover:underline underline-offset-[4px]">
-              <a href="mailto:info@euracarenigeria.com">info@euracarenigeria.com</a>
+              <a href="mailto:info@euracare.com.ng">info@euracare.com.ng</a>
             </span>
           </h1>
         </div>

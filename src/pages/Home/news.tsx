@@ -52,12 +52,12 @@ const EuracareNews = () => {
   };
 
   // Generate slug from title for linking
-  const getSlug = (title: string): string => {
-    return title
-      .toLowerCase()
-      .replace(/\s+/g, '-')
-      .replace(/[^a-z0-9-]/g, '');
-  };
+  // const getSlug = (title: string): string => {
+  //   return title
+  //     .toLowerCase()
+  //     .replace(/\s+/g, '-')
+  //     .replace(/[^a-z0-9-]/g, '');
+  // };
 
   const featuredArticle = articles.length > 0 ? articles[0] : null;
   const additionalArticles = articles.length > 1 ? articles.slice(1, 5) : [];
@@ -116,7 +116,7 @@ const EuracareNews = () => {
                     </div>
 
                     {/* Featured Content with Dark Overlay */}
-                    <Link to={`/home/news#${getSlug(featuredArticle.snippet?.title || '')}`}>
+                    <Link to={`/home/news#${featuredArticle.id}`}>
                       <div className="bg-[#0C2141] text-white p-[20px] lg:p-[30px] cursor-pointer hover:bg-[#142e4d] transition">
                         <p className="text-[12px] lg:text-[16px] text-white leading-[24px] tracking-[-0.48px] mb-[20px] lg:mb-[20px]">
                           {formatDate(featuredArticle.createdAt)}
@@ -138,7 +138,7 @@ const EuracareNews = () => {
                 <div className="lg:col-span-2">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-[16px] h-full">
                     {additionalArticles.map((article) => (
-                      <Link key={article.id} to={`/home/news#${getSlug(article.snippet?.title || '')}`}>
+                      <Link key={article.id} to={`/home/news#${article.id}`}>
                         <div
                           className="bg-white rounded-[12px] p-[20px] lg:p-[25px] transition-all duration-200 cursor-pointer group flex flex-col justify-between h-full"
                           style={{ minHeight: 0, height: "100%" }}
@@ -166,7 +166,7 @@ const EuracareNews = () => {
             {remainingArticles.length > 0 && (
               <div className="mt-[16px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-[16px]">
                 {remainingArticles.map((article) => (
-                  <Link key={article.id} to={`/home/news#${getSlug(article.snippet?.title || '')}`}>
+                  <Link key={article.id} to={`/home/news#${article.id}`}>
                     <div
                       className="bg-white rounded-[12px] p-[20px] lg:p-[25px] transition-all duration-200 cursor-pointer group justify-between flex flex-col h-full"
                       style={{ minHeight: 0, height: "100%" }}

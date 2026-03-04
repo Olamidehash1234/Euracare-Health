@@ -13,7 +13,7 @@ export const transformDoctor = (doctor: DoctorResponse) => {
     id: doctor.id,
     name: doctor.full_name,
     specialty: doctor.programs_and_specialty || [],
-    title: doctor.qualification?.[0] || '',
+    title: doctor.title || '',
     image: doctor.profile_picture_url || '',
     yearsOfExperience: doctor.years_of_experince,
     bio: doctor.bio || '',

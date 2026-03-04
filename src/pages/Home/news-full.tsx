@@ -10,13 +10,13 @@ import NotFound from "../../components/NotFound";
 const transformArticle = (article: ArticleResponse) => {
   const heroImage = article.snippet?.cover_image_url || 'https://via.placeholder.com/1200x600';
   const dateTime = article.createdAt || (article as any).created_at;
-//   console.log('Transform: heroImage =', heroImage, 'date =', dateTime);
+  const content = (article.page?.content?.main as any) || (() => <>No content available</>);
   
   return {
     id: article.id,
     title: article.snippet?.title || "Untitled Article",
     heroImage,
-    content: article.page?.content || {},
+    content: content,
     category: article.page?.category || "News",
     createdAt: dateTime,
   };
@@ -155,15 +155,11 @@ export default function NewsFullPage() {
 											{selectedArticle.title}
 										</h2>
 										<div className="space-y-[16px] text-[15px] lg:text-[18px] text-[#1F2A44]">
-											{/* Render HTML content from API */}
-											{typeof selectedArticle.content === 'object' && Object.keys(selectedArticle.content).length > 0 ? (
-												Object.values(selectedArticle.content).map((htmlContent, index) => (
-													<div
-														key={index}
-														dangerouslySetInnerHTML={{ __html: htmlContent as string }}
-														className="prose prose-sm lg:prose-base"
-													/>
-												))
+											{/* Render JSX content directly */}
+											{typeof selectedArticle.content === 'function' ? (
+												<div className="prose prose-sm lg:prose-base">
+													{selectedArticle.content()}
+												</div>
 											) : (
 												<p>No content available for this article.</p>
 											)}

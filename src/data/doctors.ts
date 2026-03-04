@@ -32,7 +32,7 @@ export const doctors: Doctor[] = [
         bio: "Dr Tosin Majekodunmi is a UK-trained Consultant Cardiologist with subspeciality interests in Adult Congenital Heart disease, and Interventional / Structural Cardiology, and is also the Medical Director at Euracare. He earned his medical degree from St Georges Hospital Medical School in London and completed general internal medicine and specialist training in cardiology in London and the West Midlands before pursuing advanced fellowships in adult congenital heart disease in London and interventional / structural cardiology in Toronto, Canada. Dr Majekodunmi is committed to delivering world-class cardiovascular care in Nigeria, with expertise in coronary angioplasty, cardiac device insertion and structural heart disease interventions in both children and adults. His vision is to provide cutting-edge, minimally invasive cardiac treatments to improve patient outcomes and quality of life across West Africa.",
         program: ["Structural heart interventions", "Congenital heart disease management", "Minimally invasive valve and cardiac therapies", "Pregnancy-related heart disease care"],
         researchInterests: ["Hypertension", "Congenital heart disease", "Pulmonary hypertension"],
-        degree: ["BSc (Hons), King’s College London", "PhD in Biochemistry, University of Southampton", "MBBS, St. George’s Hospital Medical School, London", "MRCP (London)", "CCT Cardiology (London)"],
+        degree: ["BSc (Hons), King's College London", "PhD in Biochemistry, University of Southampton", "MBBS, St. George’s Hospital Medical School, London", "MRCP (London)", "CCT Cardiology (London)"],
         languages: ["English", "Yoruba"],
     },
     {

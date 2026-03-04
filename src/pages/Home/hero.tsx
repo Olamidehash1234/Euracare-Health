@@ -5,13 +5,6 @@ import SEO from '../../components/SEO';
 export default function Hero() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
-    // Add popup state for initial visit
-    const [showPopup, setShowPopup] = useState(false);
-
-    // --- changed: use timestamp-based dismissal so popup resets after 24 hours ---
-    const STORAGE_KEY = 'homePopupDismissedAt';
-    const TTL_MS = 24 * 60 * 60 * 1000; // 24 hours
-
     // Preload hero images
     useEffect(() => {
         const desktopHeroImage = new Image();
@@ -20,75 +13,11 @@ export default function Hero() {
         const mobileHeroImage = new Image();
         mobileHeroImage.src = '/home/hero-mobile.png';
 
-        const popupImage = new Image();
-        popupImage.src = '/home/popup.jpg';
-
         const lifelineImage = new Image();
         lifelineImage.src = '/home/lifeline.svg';
     }, []);
 
-    useEffect(() => {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        const now = Date.now();
-        let shouldShow = false;
 
-        if (!raw) {
-            // never dismissed -> show
-            shouldShow = true;
-        } else {
-            const ts = Number(raw);
-            // if stored value is invalid or older than TTL -> show
-            if (isNaN(ts) || now - ts >= TTL_MS) {
-                shouldShow = true;
-            }
-        }
-
-        if (shouldShow) {
-            const t = window.setTimeout(() => setShowPopup(true), 500);
-            return () => window.clearTimeout(t);
-        }
-    }, []);
-
-    useEffect(() => {
-        const onKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape' && showPopup) {
-                closePopup();
-            }
-        };
-        window.addEventListener('keydown', onKey);
-        return () => window.removeEventListener('keydown', onKey);
-    }, [showPopup]);
-
-    // --- New: disable background scrolling while popup is open ---
-    useEffect(() => {
-        const prevBodyOverflow = document.body.style.overflow;
-        const prevHtmlOverflow = document.documentElement.style.overflow;
-
-        if (showPopup) {
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-        }
-
-        return () => {
-            document.body.style.overflow = prevBodyOverflow;
-            document.documentElement.style.overflow = prevHtmlOverflow;
-        };
-    }, [showPopup]);
-
-    // prevent touchmove on mobile while popup open
-    useEffect(() => {
-        if (!showPopup) return;
-        const prevent = (e: TouchEvent) => e.preventDefault();
-        document.addEventListener('touchmove', prevent, { passive: false });
-        return () => document.removeEventListener('touchmove', prevent);
-    }, [showPopup]);
-    // --- end new code ---
-
-    const closePopup = () => {
-        // store dismissal timestamp; popup will reappear after 24 hours
-        localStorage.setItem(STORAGE_KEY, String(Date.now()));
-        setShowPopup(false);
-    };
 
     return (
         <>
@@ -112,41 +41,6 @@ export default function Hero() {
                     "digital X-ray Lagos"
                 ]}
             />
-
-            {/* Popup shown on initial visit */}
-            {showPopup && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-label="Welcome popup"
-                    onClick={closePopup} // close when clicking backdrop
-                >
-                    <div
-                        className="relative max-w-[95vw] max-h-[95vh] rounded-lg overflow-hidden"
-                        onClick={(e) => e.stopPropagation()} // prevent backdrop click closing when interacting with the image or button
-                    >
-                        {/* Close button top-right of the image */}
-                        <button
-                            onClick={closePopup}
-                            aria-label="Close popup"
-                            className="absolute top-3 right-3 z-30 bg-white/90 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow"
-                        >
-                            {/* simple X icon */}
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-
-                        {/* Popup image */}
-                        <img
-                            src="/home/popup.jpg"
-                            alt="Welcome"
-                            className="block w-full h-auto max-h-[95vh] object-cover"
-                        />
-                    </div>
-                </div>
-            )}
 
             <section className="relative w-full lg:pt-[100px]">
                 {/* Background Image - Desktop */}

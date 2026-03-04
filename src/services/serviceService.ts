@@ -3,50 +3,49 @@
  * Handles all service-related API calls
  */
 
-import { makeRequest } from './api.service';
-import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
+// import { makeRequest } from './api.service';
+// import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
 import type { ServiceResponse } from '../types/api-responses';
+import { services as dummyServices } from '../data/services';
+
+/**
+ * Transform local service data to API response format
+ */
+const transformServiceToResponse = (service: typeof dummyServices[0]): ServiceResponse => ({
+  id: service.slug,
+  snippet: {
+    service_name: service.title,
+    service_description: service.description,
+    cover_image_url: service.image,
+  },
+  page: {
+    banner_image_url: service.heroImage,
+    service_overview: service.overviewText,
+    video_url: service.videoUrls?.[0] || service.testimonialVideoUrl?.[0] || '',
+    conditions_we_treat: service.conditionList || [],
+    test_and_diagnostics: service.testList || [],
+    treatments_and_procedures: service.procedureList || [],
+  },
+});
 
 /**
  * Get all services
  */
 export const getServices = async (): Promise<ServiceResponse[]> => {
-  try {
-    const response = await makeRequest<{ services: ServiceResponse[] }>(
-      API_ENDPOINTS.SERVICES,
-      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
-    );
-
-    if (response.success && response.data?.services) {
-      return response.data.services;
-    }
-
-    throw new Error(response.message || 'Failed to fetch services');
-  } catch (error) {
-    console.error('Error fetching services:', error);
-    throw error;
-  }
+  // Using dummy data
+  return dummyServices.map(transformServiceToResponse);
 };
 
 /**
  * Get single service by ID
  */
 export const getServiceById = async (id: string): Promise<ServiceResponse> => {
-  try {
-    const response = await makeRequest<{ service: ServiceResponse }>(
-      API_ENDPOINTS.SERVICE_BY_ID(id),
-      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
-    );
-
-    if (response.success && response.data?.service) {
-      return response.data.service;
-    }
-
-    throw new Error(response.message || `Failed to fetch service with ID: ${id}`);
-  } catch (error) {
-    console.error(`Error fetching service ${id}:`, error);
-    throw error;
+  // Using dummy data
+  const service = dummyServices.find(s => s.slug === id);
+  if (service) {
+    return transformServiceToResponse(service);
   }
+  throw new Error(`Service with ID: ${id} not found`);
 };
 
 /**

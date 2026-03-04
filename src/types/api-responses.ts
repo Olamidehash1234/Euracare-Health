@@ -11,6 +11,7 @@ export interface DoctorResponse {
   phone: string;
   language?: string;
   bio?: string;
+  title?: string;
   profile_picture_url?: string;
   reg_number?: string;
   years_of_experince?: string;

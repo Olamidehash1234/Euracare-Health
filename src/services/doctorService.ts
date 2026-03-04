@@ -3,50 +3,49 @@
  * Handles all doctor-related API calls
  */
 
-import { makeRequest } from './api.service';
-import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
 import type { DoctorResponse } from '../types/api-responses';
+import { doctors as dummyDoctors } from '../data/doctors';
+
+/**
+ * Transform local doctor data to API response format
+ */
+const transformDoctorToResponse = (doctor: typeof dummyDoctors[0]): DoctorResponse => ({
+  id: doctor.id,
+  full_name: doctor.name,
+  title: doctor.title,
+  email: '',
+  phone: '',
+  language: doctor.languages?.join(', ') || '',
+  bio: doctor.bio,
+  profile_picture_url: doctor.profileImg || doctor.image,
+  reg_number: '',
+  years_of_experince: doctor.yearsOfExperience,
+  programs_and_specialty: [...(doctor.specialty || []), ...(doctor.program || [])],
+  professional_association: doctor.associations?.join(', ') || '',
+  research_interest: doctor.researchInterests || [],
+  qualification: doctor.degree || [],
+  training_and_education: doctor.education || [],
+  certification: doctor.certifications || [],
+});
 
 /**
  * Get all doctors
  */
 export const getDoctors = async (): Promise<DoctorResponse[]> => {
-  try {
-    const response = await makeRequest<{ doctor: DoctorResponse[] }>(
-      API_ENDPOINTS.DOCTORS,
-      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
-    );
-
-    if (response.success && response.data?.doctor) {
-      return response.data.doctor;
-    }
-
-    throw new Error(response.message || 'Failed to fetch doctors');
-  } catch (error) {
-    console.error('Error fetching doctors:', error);
-    throw error;
-  }
+  // Using dummy data
+  return dummyDoctors.map(transformDoctorToResponse);
 };
 
 /**
  * Get single doctor by ID
  */
 export const getDoctorById = async (id: string): Promise<DoctorResponse> => {
-  try {
-    const response = await makeRequest<{ doctor: DoctorResponse }>(
-      API_ENDPOINTS.DOCTOR_BY_ID(id),
-      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
-    );
-
-    if (response.success && response.data?.doctor) {
-      return response.data.doctor;
-    }
-
-    throw new Error(response.message || `Failed to fetch doctor with ID: ${id}`);
-  } catch (error) {
-    console.error(`Error fetching doctor ${id}:`, error);
-    throw error;
+  // Using dummy data
+  const doctor = dummyDoctors.find(d => d.id === id);
+  if (doctor) {
+    return transformDoctorToResponse(doctor);
   }
+  throw new Error(`Doctor with ID: ${id} not found`);
 };
 
 /**
