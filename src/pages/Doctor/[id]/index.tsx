@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { useDoctorById } from "../../../hooks/useDoctors";
 import { transformDoctor } from "../../../utils/dataTransform";
 import { Link } from "react-router-dom";
-import type { Doctor } from "../../../data/doctors";
+// import type { Doctor } from "../../../data/doctors";
 import Hero from "./hero";
 import { DoctorDetailSkeleton } from '../../../components/Skeletons/DoctorDetailSkeleton';
 
