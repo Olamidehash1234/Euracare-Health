@@ -1,35 +1,18 @@
-import { useState, useEffect } from 'react';
-import { getTeamMembers } from '../../services/teamService';
+import { useState } from 'react';
+import { useTeamMembers, useInvalidateTeam } from '../../hooks/useTeamMembers';
 import type { TeamMemberResponse } from '../../types/api-responses';
 import TeamMemberModal from '../../components/TeamMemberModal';
 import { TeamMemberGridSkeleton } from '../../components/Skeletons/TeamMemberCardSkeleton';
 import NotFound from '../../components/NotFound';
 
 const LeadershipTeam = () => {
-    const [teamMembers, setTeamMembers] = useState<TeamMemberResponse[]>([]);
     const [selectedMember, setSelectedMember] = useState<TeamMemberResponse | null>(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    // Fetch team members from API
-    const fetchTeamMembers = async () => {
-        try {
-            setLoading(true);
-            setError(null);
-            const data = await getTeamMembers();
-            setTeamMembers(data);
-        } catch (err) {
-            const errorMsg = err instanceof Error ? err.message : 'Failed to load team members';
-            setError(errorMsg);
-            // console.error('Error fetching team members:', err);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchTeamMembers();
-    }, []);
+    
+    // Use TanStack Query hook for caching
+    const { data: teamMembers = [], isLoading: loading, error: queryError } = useTeamMembers();
+    const { invalidateAll } = useInvalidateTeam();
+    
+    const error = queryError ? (queryError instanceof Error ? queryError.message : 'Failed to load team members') : null;
 
     return (
         <div className="bg-[#FEF8F5] py-[40px] px-4 lg:py-20 lg:px-20">
@@ -39,7 +22,7 @@ const LeadershipTeam = () => {
                     <div className="p-4 bg-white border border-red-200 rounded-lg">
                         <p className="text-red-600 text-sm">{error}</p>
                         <button
-                            onClick={fetchTeamMembers}
+                            onClick={() => invalidateAll()}
                             className="mt-3 px-4 py-2 bg-[#0C2141] text-white text-sm rounded hover:bg-[#0E2540] transition"
                         >
                             Retry
@@ -69,7 +52,7 @@ const LeadershipTeam = () => {
                     description="Our leadership team information is not currently available. Please check back soon to meet our dedicated healthcare professionals."
                     imageSrc="/not-found.png"
                     ctaText="Retry"
-                    onCta={fetchTeamMembers}
+                    onCta={() => invalidateAll()}
                     className="mt-[60px] border-none"
                 />
             ) : (

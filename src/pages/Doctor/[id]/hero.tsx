@@ -1,4 +1,5 @@
 import type { Doctor } from "../../../data/doctors";
+import { Link } from "react-router-dom";
 import Breadcrumb from "../../../components/Breadcrumb";
 
 export default function Hero({ doctor }: { doctor: Doctor }) {
@@ -124,12 +125,12 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                                 </div>
                             </div>
 
-                            {doctor.certifications && (
+                            {doctor.certifications && doctor.certifications.length > 0 && (
                                 <div>
                                     <hr className="my-1 border-[#ADB4BF]" />
 
                                     {/* certifications */}
-                                    <div className="flex flex-col sm:flex-row sm:items-center">
+                                    <div className="flex flex-col sm:flex-row sm:items-center lg:mt-[40px]">
                                         <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
                                             CERTIFICATION(S):
                                         </div>
@@ -144,11 +145,11 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                                 </div>
                             )}
 
-                            {doctor.associations && (
+                            {doctor.associations && doctor.associations.length > 0 && (
                                 <div>
                                     <hr className="my-1 border-[#ADB4BF]" />
 
-                                    <div className="flex flex-col sm:flex-row sm:items-center">
+                                    <div className="flex flex-col sm:flex-row sm:items-center lg:mt-[40px]">
                                         <div className="w-[304px] min-w-[304px] text-[#0C2141] font-medium text-[14px] lg:text-[18px] lg:leading-[28px] mb-[10px] sm:mb-0">
                                             PROFESSIONAL ASSOCIATION(S):
                                         </div>
@@ -168,12 +169,11 @@ export default function Hero({ doctor }: { doctor: Doctor }) {
                     {/* Right: Sticky Buttons */}
                     <div className="w-full  mt-8 lg:mt-[86px] lg:w-[20%] flex-shrink-0">
                         <div className="lg:sticky lg:top-[165px] flex flex-col gap-[10px] bg-[#EFF8F8] rounded-[12px] p-[25px] lg:p-[30px]">
-                            <a href="/enquiry">
+                            <Link to="/enquiry">
                                 <button className="w-full bg-[#0C2141] text-white rounded-[12px] lg:rounded-[48px] py-[10px] lg:py-[14px] font-medium text-[16px] lg:text-[18px] lg:leading-[27px] lg:tracking-[-0.54px] hover:bg-[#0C2141]/90 transition">
                                     Book now
                                 </button>
-                            </a>
-                            <a href="tel: +2349094444413">
+                            </Link>                            <a href="tel: +2349094444413">
                                 <button className="w-full border border-[#0C2141] text-[#0C2141] rounded-[12px] lg:rounded-[48px] py-[10px] lg:py-[14px] font-medium text-[16px] lg:text-[18px] lg:leading-[27px] lg:tracking-[-0.54px] flex items-center justify-center gap-[10px] hover:bg-gray-50 transition">
                                     <img src="/call.svg" alt="" />
                                     Call to book

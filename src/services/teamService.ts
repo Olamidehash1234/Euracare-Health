@@ -3,41 +3,50 @@
  * Handles all team member-related API calls
  */
 
-// import { makeRequest } from './api.service';
-// import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
+import { makeRequest } from './api.service';
+import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
 import type { TeamMemberResponse } from '../types/api-responses';
-import { teamMembers as dummyTeamMembers } from '../data/team';
-
-/**
- * Transform local team data to API response format
- */
-const transformTeamMemberToResponse = (member: typeof dummyTeamMembers[0]): TeamMemberResponse => ({
-  id: member.id.toString(),
-  full_name: member.name,
-  role: member.position,
-  category: member.position.split('&')[0].trim(),
-  profile_picture_url: member.image,
-  bio: member.bio,
-});
 
 /**
  * Get all team members
  */
 export const getTeamMembers = async (): Promise<TeamMemberResponse[]> => {
-  // Using dummy data
-  return dummyTeamMembers.map(transformTeamMemberToResponse);
+  try {
+    const response = await makeRequest<{ team_members: TeamMemberResponse[] }>(
+      API_ENDPOINTS.TEAMS,
+      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
+    );
+
+    if (response.success && response.data?.team_members) {
+      return response.data.team_members;
+    }
+
+    throw new Error(response.message || 'Failed to fetch team members');
+  } catch (error) {
+    console.error('Error fetching team members:', error);
+    throw error;
+  }
 };
 
 /**
  * Get single team member by ID
  */
 export const getTeamMemberById = async (id: string): Promise<TeamMemberResponse> => {
-  // Using dummy data
-  const member = dummyTeamMembers.find(m => m.id.toString() === id);
-  if (member) {
-    return transformTeamMemberToResponse(member);
+  try {
+    const response = await makeRequest<TeamMemberResponse>(
+      API_ENDPOINTS.TEAM_BY_ID(id),
+      { cacheDuration: API_CONFIG.CACHE_DURATION.LONG }
+    );
+
+    if (response.success && response.data) {
+      return response.data;
+    }
+
+    throw new Error(response.message || `Failed to fetch team member with ID: ${id}`);
+  } catch (error) {
+    console.error(`Error fetching team member ${id}:`, error);
+    throw error;
   }
-  throw new Error(`Team member with ID: ${id} not found`);
 };
 
 /**

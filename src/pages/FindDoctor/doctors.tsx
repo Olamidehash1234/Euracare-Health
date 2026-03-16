@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { KeyboardEvent } from "react"
-import { getDoctors } from "../../services/doctorService";
+import { useDoctors, useInvalidateDoctors } from "../../hooks/useDoctors";
 import type { DoctorResponse } from "../../types/api-responses";
 import SearchSuggestions from "../../components/SearchSuggestions";
 import { Link } from 'react-router-dom';
@@ -14,32 +14,12 @@ export default function ServicesGrid() {
     const [confirmedSearch, setConfirmedSearch] = useState("");
     const [showSuggestions, setShowSuggestions] = useState(false);
     const [filteredDoctors, setFilteredDoctors] = useState<DoctorResponse[]>([]);
-    const [doctors, setDoctors] = useState<DoctorResponse[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    // Fetch doctors from API
-    const fetchDoctors = async () => {
-        try {
-            setLoading(true);
-            setError(null);
-            setDoctors([]);
-            setFilteredDoctors([]);
-            const data = await getDoctors();
-            setDoctors(data);
-            setFilteredDoctors(data);
-        } catch (err) {
-            const errorMsg = err instanceof Error ? err.message : 'Failed to load doctors';
-            setError(errorMsg);
-            // console.error('Error fetching doctors:', err);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchDoctors();
-    }, []);
+    
+    // Use TanStack Query hook for caching
+    const { data: doctors = [], isLoading: loading, error: queryError } = useDoctors();
+    const { invalidateAll } = useInvalidateDoctors();
+    
+    const error = queryError ? (queryError instanceof Error ? queryError.message : 'Failed to load doctors') : null;
 
     // Filter doctors based on search
     useEffect(() => {
@@ -49,8 +29,6 @@ export default function ServicesGrid() {
         );
         setFilteredDoctors(filtered);
     }, [confirmedSearch, doctors]);
-
-    // Prepare suggestions from doctors data
     const suggestionList = [
         ...Array.from(new Set(doctors.map(doc => ({ title: doc.full_name })))),
         ...Array.from(
@@ -106,22 +84,13 @@ export default function ServicesGrid() {
     const handleReload = async () => {
         setQuery("");
         setConfirmedSearch("");
-        await fetchDoctors();
+        // Invalidate the cache to trigger a refetch
+        invalidateAll();
     };
 
     const handleRetry = async () => {
-        try {
-            setLoading(true);
-            setError(null);
-            const data = await getDoctors();
-            setDoctors(data);
-            setFilteredDoctors(data);
-        } catch (err) {
-            const errorMsg = err instanceof Error ? err.message : 'Failed to load doctors';
-            setError(errorMsg);
-        } finally {
-            setLoading(false);
-        }
+        // Invalidate the cache to trigger a refetch
+        invalidateAll();
     };
 
     return (

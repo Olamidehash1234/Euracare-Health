@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { services } from '../data/services';
 
 type BreadcrumbProps = {
@@ -23,15 +23,15 @@ export default function Breadcrumb({ doctorName }: BreadcrumbProps) {
     return (
         <div className="bg-[#0C2141] overflow-x-auto lg:overflow-x-visible whitespace-nowrap scrollbar-hide">
             <div className="flex text-white items-center gap-[10px] lg:gap-[12px] px-[16px] py-4 lg:py-[24px] lg:px-20 text-[14px] min-w-max lg:min-w-0">
-                <a href="/"><img src="/hme.svg" alt="" /></a>
+                <Link to="/"><img src="/hme.svg" alt="" /></Link>
                 <span>|</span>
-                <a href="/doctors" className="hover:text-gray-200">Find a Doctor</a>
+                <Link to="/doctors" className="hover:text-gray-200">Find a Doctor</Link>
                 <span>|</span>
                 {isFromService && serviceTitle && serviceSlug && (
                     <>
-                        <a href={`/services/dynamic/${serviceSlug}`} className="hover:text-gray-200">
+                        <Link to={`/services/dynamic/${serviceSlug}`} className="hover:text-gray-200">
                             {serviceTitle}
-                        </a>
+                        </Link>
                         <span>|</span>
                     </>
                 )}

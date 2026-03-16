@@ -1,31 +1,12 @@
-import { useState, useEffect } from 'react';
 import ServiceCard from '../../components/ServiceCard';
-import { getServices } from '../../services/serviceService';
-import type { ServiceResponse } from '../../types/api-responses';
+import { useServices } from '../../hooks/useServices';
+import { Link } from 'react-router-dom';
 
 const ServiceLines = () => {
-  const [services, setServices] = useState<ServiceResponse[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await getServices();
-        setServices(data);
-      } catch (err) {
-        const errorMsg = err instanceof Error ? err.message : 'Failed to load services';
-        setError(errorMsg);
-        console.error('Error fetching services:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchServices();
-  }, []);
+  // Use TanStack Query hook for caching
+  const { data: services = [], isLoading: loading, error: queryError } = useServices();
+  
+  const error = queryError ? (queryError instanceof Error ? queryError.message : 'Failed to load services') : null;
 
   if (loading) {
     return (
@@ -89,14 +70,14 @@ const ServiceLines = () => {
                   teams work collaboratively to deliver clear answers, rapid access,
                   and the highest level of medical precision.
                 </p>
-                <a href="/services">
+                <Link to="/services">
                   <button className="mt-[40px] w-full lg:w-auto justify-center lg:mt-[80px] lg:text-[16px] inline-flex items-center gap-[8px] rounded-full border border-[#F8F8F8] px-5 py-3 lg:px-[96px] lg:py-[22px] text-sm font-medium text-white transition hover:bg-white/10">
                     <img src="/home/search2.svg" alt="" />
                     <span>
                       View all <span className="font-bold">Services</span>
                     </span>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

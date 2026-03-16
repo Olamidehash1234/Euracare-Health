@@ -1,40 +1,14 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getPublishedArticles } from "../../services/articleService";
-import type { ArticleResponse } from "../../types/api-responses";
+import { usePublishedArticles, useInvalidateArticles } from "../../hooks/useArticles";
 import { NewsGridSkeleton } from "../../components/Skeletons/NewsCardSkeleton";
 import NotFound from "../../components/NotFound";
 
 const EuracareNews = () => {
-  const [articles, setArticles] = useState<ArticleResponse[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  // Fetch published articles from API
-  const fetchArticles = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      setArticles([]);
-      const data = await getPublishedArticles();
-      // Normalize the data to ensure createdAt field exists
-      const normalized = data.map(article => ({
-        ...article,
-        createdAt: article.createdAt || (article as any).created_at
-      }));
-      setArticles(normalized);
-    } catch (err) {
-      const errorMsg = err instanceof Error ? err.message : 'Failed to load articles';
-      setError(errorMsg);
-      // console.error('Error fetching articles:', err);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  useEffect(() => {
-    fetchArticles();
-  }, []);
+  // Use TanStack Query hook for caching
+  const { data: articles = [], isLoading: loading, error: queryError } = usePublishedArticles();
+  const { invalidatePublished } = useInvalidateArticles();
+  
+  const error = queryError ? (queryError instanceof Error ? queryError.message : 'Failed to load articles') : null;
 
   // Format date from timestamp
   const formatDate = (dateString?: string): string => {
@@ -79,7 +53,7 @@ const EuracareNews = () => {
           <div className="mb-4 p-4 bg-white border border-red-200 rounded-lg">
             <p className="text-red-600 text-sm">{error}</p>
             <button
-              onClick={fetchArticles}
+              onClick={() => invalidatePublished()}
               className="mt-3 px-4 py-2 bg-[#0C2141] text-white text-sm rounded hover:bg-[#0E2540] transition"
             >
               Retry
@@ -96,7 +70,7 @@ const EuracareNews = () => {
             description="We're currently preparing our latest health insights and medical updates. Check back soon for expert articles from our healthcare professionals."
             imageSrc="/not-found.png"
             ctaText="Refresh Articles"
-            onCta={fetchArticles}
+            onCta={() => invalidatePublished()}
             className="border-none"
           />
         ) : (

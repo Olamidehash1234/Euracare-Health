@@ -3,45 +3,71 @@
  * Handles all article-related API calls
  */
 
+import { makeRequest } from './api.service';
+import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
 import type { ArticleResponse } from '../types/api-responses';
-import { newsArticles as dummyArticles } from '../data/news.tsx';
-
-/**
- * Transform local news article to API response format
- */
-const transformArticleToResponse = (article: typeof dummyArticles[0]): ArticleResponse => ({
-  id: article.id,
-  snippet: {
-    title: article.title,
-    cover_image_url: article.heroImage,
-  },
-  page: {
-    content: {
-      main: article.content, // JSX content component
-    } as any,
-    category: article.category,
-  },
-  createdAt: article.date,
-});
 
 /**
  * Get all articles
  */
 export const getArticles = async (): Promise<ArticleResponse[]> => {
-  // Using dummy data
-  return dummyArticles.map(transformArticleToResponse);
+  try {
+    // console.log('articleService: Making API request to', API_ENDPOINTS.ARTICLES);
+    const response = await makeRequest<{
+      articles: { articles: ArticleResponse[] };
+    }>(
+      API_ENDPOINTS.ARTICLES,
+      { cacheDuration: API_CONFIG.CACHE_DURATION.MEDIUM }
+    );
+
+    // console.log('articleService: Raw API response:', response);
+    // console.log('articleService: Response success:', response.success);
+    // console.log('articleService: Response data structure:', {
+    //   hasData: !!response.data,
+    //   hasArticles: !!response.data?.articles,
+    //   hasArticlesArray: !!response.data?.articles?.articles,
+    //   articlesLength: response.data?.articles?.articles?.length || 0
+    // });
+
+    if (response.success && response.data?.articles?.articles) {
+      // Normalize dates - handle both createdAt and created_at
+      const normalized = response.data.articles.articles.map(article => ({
+        ...article,
+        createdAt: article.createdAt || (article as any).created_at
+      }));
+      return normalized;
+    }
+
+    throw new Error(response.message || 'Failed to fetch articles');
+  } catch (error) {
+    console.error('articleService: Error fetching articles:', error);
+    throw error;
+  }
 };
 
 /**
  * Get single article by ID
  */
 export const getArticleById = async (id: string): Promise<ArticleResponse> => {
-  // Using dummy data
-  const article = dummyArticles.find(a => a.id === id);
-  if (article) {
-    return transformArticleToResponse(article);
+  try {
+    const response = await makeRequest<{ article: ArticleResponse }>(
+      API_ENDPOINTS.ARTICLE_BY_ID(id),
+      { cacheDuration: API_CONFIG.CACHE_DURATION.MEDIUM }
+    );
+
+    if (response.success && response.data?.article) {
+      // Normalize dates
+      return {
+        ...response.data.article,
+        createdAt: response.data.article.createdAt || (response.data.article as any).created_at
+      };
+    }
+
+    throw new Error(response.message || `Failed to fetch article with ID: ${id}`);
+  } catch (error) {
+    console.error(`Error fetching article ${id}:`, error);
+    throw error;
   }
-  throw new Error(`Article with ID: ${id} not found`);
 };
 
 /**
@@ -57,10 +83,17 @@ export const getPublishedArticles = async (): Promise<ArticleResponse[]> => {
     const published = allArticles.filter(article => 
       article.status === 'published' || !article.status
     );
+    
+    // Normalize createdAt field - handle both createdAt and created_at
+    const normalized = published.map(article => ({
+      ...article,
+      createdAt: article.createdAt || (article as any).created_at
+    }));
+    
     // console.log('articleService: Published articles after filtering:', published);
     // console.log('articleService: Filter details - Total articles:', allArticles.length, 'Published:', published.length);
     
-    return published;
+    return normalized;
   } catch (error) {
     // console.error('articleService: Error fetching published articles:', error);
     throw error;
@@ -73,6 +106,7 @@ export const getPublishedArticles = async (): Promise<ArticleResponse[]> => {
 export const getArticlesByCategory = async (category: string): Promise<ArticleResponse[]> => {
   try {
     const allArticles = await getPublishedArticles();
+    // Articles are already normalized by getPublishedArticles
     return allArticles.filter(article =>
       article.page?.category?.toLowerCase() === category.toLowerCase()
     );

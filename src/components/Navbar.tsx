@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,25 +11,25 @@ export default function Navbar() {
         <div className="flex justify-between lg:h-[85px] h-[58px] items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/">
+            <Link to="/">
               {/* Desktop Logo */}
               <img src="/logo.svg" alt="Euracare Logo" className="hidden lg:block" />
               {/* Mobile Logo */}
               <img src="/logo-mobile.svg" alt="Euracare Mobile Logo" className="block lg:hidden" />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-[30px]">
-            <a href="/about" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <NavLink to="/about" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               About Euracare
-            </a>
-            <a href="/services" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            </NavLink>
+            <NavLink to="/services" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               Our Services
-            </a>
-            <a href="/doctors" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            </NavLink>
+            <NavLink to="/doctors" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               Find a Doctor
-            </a>
+            </NavLink>
 
             {/* Patient & Visitor Dropdown */}
             <div className="relative group">
@@ -79,12 +79,12 @@ export default function Navbar() {
               </div>
             </div>
 
-            <a href="/enquiry" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <NavLink to="/enquiry" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               Book Appointment
-            </a>
-            <a href="/careers" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            </NavLink>
+            <NavLink to="/careers" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               Careers
-            </a>
+            </NavLink>
           </div>
 
           {/* Call Button */}
@@ -124,15 +124,15 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="sm:flex flex-col lg:hidden px-4 py-[40px] space-y-[30px]">
-          <a href="/about" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <NavLink to="/about" className={({ isActive }) => `block text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
             About Euracare
-          </a>
-          <a href="/services" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          </NavLink>
+          <NavLink to="/services" className={({ isActive }) => `block text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
             Our Services
-          </a>
-          <a href="/doctors" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          </NavLink>
+          <NavLink to="/doctors" className={({ isActive }) => `block text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
             Find a Doctor
-          </a>
+          </NavLink>
 
           {/* Mobile Dropdown Toggle */}
           <div>
@@ -153,26 +153,26 @@ export default function Navbar() {
             </button>
             {mobileDropdownOpen && (
               <div className="mt-[10px] pl-4 space-y-[20px]">
-                <a href="/home/news" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                <NavLink to="/home/news" className={({ isActive }) => `block text-[15px] text-[#02070D] hover:text-[#0C2141] ${isActive ? 'text-[#0C2141]' : ''}` }>
                   News & Updates
-                </a>
-                <a href="/patient-information/what-to-expect" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                </NavLink>
+                <NavLink to="/patient-information/what-to-expect" className={({ isActive }) => `block text-[15px] text-[#02070D] hover:text-[#0C2141] ${isActive ? 'text-[#0C2141]' : ''}` }>
                   What To Expect
-                </a>
-                <a href="/patient-information/international-patients" className="block text-[15px] text-[#02070D] hover:text-[#0C2141]">
+                </NavLink>
+                <NavLink to="/patient-information/international-patients" className={({ isActive }) => `block text-[15px] text-[#02070D] hover:text-[#0C2141] ${isActive ? 'text-[#0C2141]' : ''}` }>
                   International Patient
-                </a>
+                </NavLink>
               </div>
             )}
           </div>
 
-          <a href="/enquiry" className="block text-[#02070D] hover:text-[#0C2141] text-[15px]">
+          <NavLink to="/enquiry" className={({ isActive }) => `block text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
             Book Appointment
-          </a>
+          </NavLink>
           <div>
-            <a href="/careers" className="text-[#02070D] hover:text-[#0C2141] text-[15px]">
+            <NavLink to="/careers" className={({ isActive }) => `text-[#02070D] hover:text-[#0C2141] text-[15px] ${isActive ? 'text-[#0C2141]' : ''}` }>
               Careers
-            </a>
+            </NavLink>
           </div>
         </div>
       )}

@@ -3,39 +3,50 @@
  * Handles all testimonial-related API calls
  */
 
+import { makeRequest } from './api.service';
+import { API_ENDPOINTS, API_CONFIG } from '../config/api.config';
 import type { TestimonialResponse } from '../types/api-responses';
-import { testimonials as dummyTestimonials } from '../data/testimonials';
-
-/**
- * Transform local testimonial data to API response format
- */
-const transformTestimonialToResponse = (testimonial: typeof dummyTestimonials[0]): TestimonialResponse => ({
-  id: testimonial.id.toString(),
-  title: testimonial.quote,
-  patient_name: testimonial.author,
-  service: testimonial.department,
-  video_url: testimonial.video,
-  thumbnail_url: testimonial.image,
-});
 
 /**
  * Get all testimonials
  */
 export const getTestimonials = async (): Promise<TestimonialResponse[]> => {
-  // Using dummy data
-  return dummyTestimonials.map(transformTestimonialToResponse);
+  try {
+    const response = await makeRequest<{ testimonials: TestimonialResponse[] }>(
+      API_ENDPOINTS.TESTIMONIALS,
+      { cacheDuration: API_CONFIG.CACHE_DURATION.MEDIUM }
+    );
+
+    if (response.success && response.data?.testimonials) {
+      return response.data.testimonials;
+    }
+
+    throw new Error(response.message || 'Failed to fetch testimonials');
+  } catch (error) {
+    console.error('Error fetching testimonials:', error);
+    throw error;
+  }
 };
 
 /**
  * Get single testimonial by ID
  */
 export const getTestimonialById = async (id: string): Promise<TestimonialResponse> => {
-  // Using dummy data
-  const testimonial = dummyTestimonials.find(t => t.id.toString() === id);
-  if (testimonial) {
-    return transformTestimonialToResponse(testimonial);
+  try {
+    const response = await makeRequest<{ testimonial: TestimonialResponse }>(
+      API_ENDPOINTS.TESTIMONIAL_BY_ID(id),
+      { cacheDuration: API_CONFIG.CACHE_DURATION.MEDIUM }
+    );
+
+    if (response.success && response.data?.testimonial) {
+      return response.data.testimonial;
+    }
+
+    throw new Error(response.message || `Failed to fetch testimonial with ID: ${id}`);
+  } catch (error) {
+    console.error(`Error fetching testimonial ${id}:`, error);
+    throw error;
   }
-  throw new Error(`Testimonial with ID: ${id} not found`);
 };
 
 /**

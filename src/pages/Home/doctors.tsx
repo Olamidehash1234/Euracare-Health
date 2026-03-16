@@ -41,11 +41,11 @@ const DoctorsSection: React.FC = () => {
             You are in Good Hands
           </h2>
         </div>
-        <a href="/doctors">
+        <Link to="/doctors">
           <button className="hidden md:flex items-center gap-2 border border-[#0C2141] text-[#0C2141] lg:text-[16px] rounded-[48px] px-5 py-2 lg:px-[32px] lg:py-[14px] hover:bg-gray-100 transition">
             <span><img src="/doctors.svg" alt="" /></span> See all Doctors
           </button>
-        </a>
+        </Link>
       </div>
 
       {/* Error State */}
