@@ -39,29 +39,27 @@ export default function NewsFullPage() {
 	const error = queryError ? (queryError instanceof Error ? queryError.message : 'Failed to load articles') : null;
 	const transformedArticles = articlesData.map(transformArticle);
 
-	const [selectedId, setSelectedId] = useState<string | null>(null);
+	const [currentHash, setCurrentHash] = useState(() => window.location.hash.replace("#", ""));
 
 	// Listen for hash changes
 	useEffect(() => {
 		const onHashChange = () => {
 			const hash = window.location.hash.replace("#", "");
-			if (hash && transformedArticles.some((a) => a.id === hash)) {
-				setSelectedId(hash);
-			}
+			setCurrentHash(hash);
 		};
 		window.addEventListener("hashchange", onHashChange);
 		return () => window.removeEventListener("hashchange", onHashChange);
-	}, [transformedArticles]);
+	}, []);
 
-	// Scroll to top when selectedId changes
+	// Scroll to top when currentHash changes
 	useEffect(() => {
-		if (typeof window !== "undefined" && selectedId) {
+		if (typeof window !== "undefined" && currentHash) {
 			window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 		}
-	}, [selectedId]);
+	}, [currentHash]);
 
-	const selectedArticle = transformedArticles.find((a) => a.id === selectedId) || transformedArticles[0];
-	const filteredArticles = transformedArticles.filter((card) => card.id !== selectedId);
+	const selectedArticle = transformedArticles.find((a) => a.id === currentHash) || transformedArticles[0];
+	const filteredArticles = transformedArticles.filter((card) => card.id !== selectedArticle.id);
 
 	return (
 		<>
@@ -160,14 +158,15 @@ export default function NewsFullPage() {
 											<button
 												key={article.id}
 												onClick={() => {
-													setSelectedId(article.id);
-													window.location.hash = `#${article.id}`;
+													const newHash = article.id;
+													setCurrentHash(newHash);
+													window.location.hash = `#${newHash}`;
 												}}
-												className={`w-full text-left bg-white rounded-[12px] p-[20px] lg:p-[25px] transition-all duration-200 cursor-pointer group flex flex-col justify-between border border-[#0C21411A] ${selectedId === article.id
+												className={`w-full text-left bg-white rounded-[12px] p-[20px] lg:p-[25px] transition-all duration-200 cursor-pointer group flex flex-col justify-between border border-[#0C21411A] ${currentHash === article.id
 													? "ring-1 ring-[#0C2141]"
 													: ""
 													}`}
-												aria-current={selectedId === article.id ? "true" : undefined}
+												aria-current={currentHash === article.id ? "true" : undefined}
 											>
 												<div>
 													<p className="text-[12px] leading-[20px] lg:text-[16px] lg:leading-[24px] text-[#626F82] mb-[10px] lg:mb-[20px] font-medium">
